@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Language</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:app/staging">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/staging"
+                                       data-filter=":sdk:app/staging"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.script.core.api.language/Language///PointingToDeclaration//171228622">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.script.core.api.language</a><span class="delimiter">/</span><span class="current">Language</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Language</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Language</a> : <a href="../../com.m8test.plugin.api/-pluggable-apk-plugin/index.html">PluggableApkPlugin</a></div><p class="paragraph">语言定义接口.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">M8Test, contact@m8test.com, https://m8test.com</p></span><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-composable-language/index.html">ComposableLanguage</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-view-language/index.html">ViewLanguage</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../com.m8test.script.core.impl.language/-abstract-language/index.html">AbstractLanguage</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-118373341%2FFunctions%2F171228622" anchor-label="addClassLoader" id="-118373341%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-dex-class-loaders/add-class-loader.html"><span>add</span><wbr></wbr><span>Class</span><wbr></wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-118373341%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-dex-class-loaders/add-class-loader.html"><span class="token function">addClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classLoader<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">直接添加一个 <a href="https://developer.android.com/reference/kotlin/dalvik/system/DexClassLoader.html">DexClassLoader</a> .</p></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-dex-class-loaders/add-class-loader.html"><span class="token function">addClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classLoaderConfig<span class="token operator">: </span><a href="../../com.m8test.plugin.api/-dex-class-loader-config/index.html">DexClassLoaderConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">添加一个 <a href="https://developer.android.com/reference/kotlin/dalvik/system/DexClassLoader.html">DexClassLoader</a> .</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="776475654%2FFunctions%2F171228622" anchor-label="configureClassLoader" id="776475654%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-dex-class-loaders/configure-class-loader.html"><span>configure</span><wbr></wbr><span>Class</span><wbr></wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="776475654%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-dex-class-loaders/configure-class-loader.html"><span class="token function">configureClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classLoaderConfig<span class="token operator">: </span><a href="../../com.m8test.plugin.api/-dex-class-loader-config/index.html">DexClassLoaderConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">配置 <a href="https://developer.android.com/reference/kotlin/dalvik/system/DexClassLoader.html">DexClassLoader</a> , 一般用于排除指定的类, 如果找不到 <a href="https://developer.android.com/reference/kotlin/dalvik/system/DexClassLoader.html">DexClassLoader</a> 会抛异常.</p></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-dex-class-loaders/configure-class-loader.html"><span class="token function">configureClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dexClassLoader<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a><span class="token punctuation">, </span></span><span class="parameter ">classLoaderConfig<span class="token operator">: </span><a href="../../com.m8test.plugin.api/-dex-class-loader-config/index.html">DexClassLoaderConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">配置指定的 <a href="https://developer.android.com/reference/kotlin/dalvik/system/DexClassLoader.html">DexClassLoader</a> , 如果找不到 <a href="https://developer.android.com/reference/kotlin/dalvik/system/DexClassLoader.html">DexClassLoader</a> 会抛异常.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="685271778%2FFunctions%2F171228622" anchor-label="createClassLoader" id="685271778%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-dex-class-loaders/create-class-loader.html"><span>create</span><wbr></wbr><span>Class</span><wbr></wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="685271778%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-dex-class-loaders/create-class-loader.html"><span class="token function">createClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classLoaderConfig<span class="token operator">: </span><a href="../../com.m8test.plugin.api/-dex-class-loader-config/index.html">DexClassLoaderConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a></div><div class="brief "><p class="paragraph">新建一个 <a href="https://developer.android.com/reference/kotlin/dalvik/system/DexClassLoader.html">DexClassLoader</a> .</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1424768390%2FFunctions%2F171228622" anchor-label="createScript" id="1424768390%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-script.html"><span>create</span><wbr></wbr><span><span>Script</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1424768390%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="create-script.html"><span class="token function">createScript</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scriptEngine<span class="token operator">: </span><a href="../../com.m8test.script.core.api.engine/-script-engine/index.html">ScriptEngine</a><span class="token punctuation">, </span></span><span class="parameter ">scriptContext<span class="token operator">: </span><a href="../../com.m8test.script.core.api.engine/-script-context/index.html">ScriptContext</a><span class="token punctuation">, </span></span><span class="parameter ">scriptConfig<span class="token operator">: </span><a href="../../com.m8test.script.core.api.config/-script-config/index.html">ScriptConfig</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.engine/-script/index.html">Script</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">创建脚本.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1631977513%2FFunctions%2F171228622" anchor-label="getApplication" id="-1631977513%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-apk-plugin/get-application.html"><span>get</span><wbr></wbr><span><span>Application</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1631977513%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-apk-plugin/get-application.html"><span class="token function">getApplication</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a></div><div class="brief "><p class="paragraph">获取 android 的 <a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a> 对象.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1796502789%2FFunctions%2F171228622" anchor-label="getBuildPluginProviderClass" id="1796502789%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-build-plugin-provider-class.html"><span>get</span><wbr></wbr><span>Build</span><wbr></wbr><span>Plugin</span><wbr></wbr><span>Provider</span><wbr></wbr><span><span>Class</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1796502789%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-build-plugin-provider-class.html"><span class="token function">getBuildPluginProviderClass</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">获取构建插件提供器的类, 实现接口 com.m8test.script.builder.api.BuildPluginProvider, 必须要有无参构造函数, 因为需要通过反射调用.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1046720361%2FFunctions%2F171228622" anchor-label="getClassLoader" id="-1046720361%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-dex-plugin/get-class-loader.html"><span>get</span><wbr></wbr><span>Class</span><wbr></wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1046720361%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-dex-plugin/get-class-loader.html"><span class="token function">getClassLoader</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a></div><div class="brief "><p class="paragraph">获取插件的类加载器.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-516025861%2FFunctions%2F171228622" anchor-label="getClassLoaders" id="-516025861%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-dex-class-loaders/get-class-loaders.html"><span>get</span><wbr></wbr><span>Class</span><wbr></wbr><span><span>Loaders</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-516025861%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-dex-class-loaders/get-class-loaders.html"><span class="token function">getClassLoaders</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/dalvik/system/DexClassLoader.html">DexClassLoader</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">获取所有的 <a href="https://developer.android.com/reference/kotlin/dalvik/system/DexClassLoader.html">DexClassLoader</a> .</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1496233608%2FFunctions%2F171228622" anchor-label="getExtensionIconId" id="1496233608%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-extension-icon-id.html"><span>get</span><wbr></wbr><span>Extension</span><wbr></wbr><span>Icon</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1496233608%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-extension-icon-id.html"><span class="token function">getExtensionIconId</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">extension<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取扩展名对应的图标 id.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1264051849%2FFunctions%2F171228622" anchor-label="getExtensions" id="-1264051849%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-extensions.html"><span>get</span><wbr></wbr><span><span>Extensions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1264051849%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-extensions.html"><span class="token function">getExtensions</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-language-extension/index.html">LanguageExtension</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">获取语言支持的所有扩展.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-922822472%2FFunctions%2F171228622" anchor-label="getFilesDir" id="-922822472%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-pluggable-apk-plugin/get-files-dir.html"><span>get</span><wbr></wbr><span>Files</span><wbr></wbr><span><span>Dir</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-922822472%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-pluggable-apk-plugin/get-files-dir.html"><span class="token function">getFilesDir</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/io/File.html">File</a></div><div class="brief "><p class="paragraph">获取插件安装路径.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1727723805%2FFunctions%2F171228622" anchor-label="getName" id="-1727723805%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-pluggable-apk-plugin/get-name.html"><span>get</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1727723805%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-pluggable-apk-plugin/get-name.html"><span class="token function">getName</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">获取插件名.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1513902189%2FFunctions%2F171228622" anchor-label="getPackageInfo" id="-1513902189%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-apk-plugin/get-package-info.html"><span>get</span><wbr></wbr><span>Package</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1513902189%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-apk-plugin/get-package-info.html"><span class="token function">getPackageInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/pm/PackageInfo.html">PackageInfo</a></div><div class="brief "><p class="paragraph">获取 apk 插件的 <a href="https://developer.android.com/reference/kotlin/android/content/pm/PackageInfo.html">PackageInfo</a> 对象.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-699020563%2FFunctions%2F171228622" anchor-label="getPluginInfo" id="-699020563%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-pluggable-apk-plugin/get-plugin-info.html"><span>get</span><wbr></wbr><span>Plugin</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-699020563%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-pluggable-apk-plugin/get-plugin-info.html"><span class="token function">getPluginInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.plugin.api/-pluggable-apk-plugin-info/index.html">PluggableApkPluginInfo</a></div><div class="brief "><p class="paragraph">获取插件信息.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1667153118%2FFunctions%2F171228622" anchor-label="getResources" id="-1667153118%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-apk-plugin/get-resources.html"><span>get</span><wbr></wbr><span><span>Resources</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1667153118%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-apk-plugin/get-resources.html"><span class="token function">getResources</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/res/Resources.html">Resources</a></div><div class="brief "><p class="paragraph">获取 apk 插件的 <a href="https://developer.android.com/reference/kotlin/android/content/res/Resources.html">Resources</a> 对象.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="838479819%2FFunctions%2F171228622" anchor-label="getSettings" id="838479819%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-pluggable-apk-plugin/get-settings.html"><span>get</span><wbr></wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="838479819%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-pluggable-apk-plugin/get-settings.html"><span class="token function">getSettings</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.plugin.api/-pluggable-apk-plugin-settings/index.html">PluggableApkPluginSettings</a></div><div class="brief "><p class="paragraph">获取插件配置信息.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1754006627%2FFunctions%2F171228622" anchor-label="getVariablePrefix" id="-1754006627%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-variable-prefix.html"><span>get</span><wbr></wbr><span>Variable</span><wbr></wbr><span><span>Prefix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1754006627%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-variable-prefix.html"><span class="token function">getVariablePrefix</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">获取变量名前缀.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="25443262%2FFunctions%2F171228622" anchor-label="getVariableSuffix" id="25443262%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-variable-suffix.html"><span>get</span><wbr></wbr><span>Variable</span><wbr></wbr><span><span>Suffix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="25443262%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-variable-suffix.html"><span class="token function">getVariableSuffix</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">获取变量名后缀.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-859371406%2FFunctions%2F171228622" anchor-label="isExtensionValid" id="-859371406%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-extension-valid.html"><span>is</span><wbr></wbr><span>Extension</span><wbr></wbr><span><span>Valid</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-859371406%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-extension-valid.html"><span class="token function">isExtensionValid</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">extension<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">判断语言是否可以处理给定的扩展名.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1290079619%2FFunctions%2F171228622" anchor-label="loadClass" id="-1290079619%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-dex-class-loaders/load-class.html"><span>load</span><wbr></wbr><span><span>Class</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1290079619%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-dex-class-loaders/load-class.html"><span class="token function">loadClass</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">className<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">加载指定的类.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-904350381%2FFunctions%2F171228622" anchor-label="removeClassLoader" id="-904350381%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.plugin.api/-dex-class-loaders/remove-class-loader.html"><span>remove</span><wbr></wbr><span>Class</span><wbr></wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-904350381%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.plugin.api/-dex-class-loaders/remove-class-loader.html"><span class="token function">removeClassLoader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">classLoader<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/dalvik/system/BaseDexClassLoader.html">BaseDexClassLoader</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">移除一个 <a href="https://developer.android.com/reference/kotlin/dalvik/system/DexClassLoader.html">DexClassLoader</a> .</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>powered by m8test</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
