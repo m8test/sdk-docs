@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>NavigationRoutes</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:app/staging">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/staging"
+                                       data-filter=":sdk:app/staging"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.navigation/NavigationRoutes///PointingToDeclaration//171228622">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.navigation</a><span class="delimiter">/</span><span class="current">NavigationRoutes</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Navigation</span><wbr></wbr><span><span>Routes</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">NavigationRoutes</a></div><p class="paragraph">Description TODO</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">M8Test, contact@m8test.com, https://m8test.com</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-779833076%2FFunctions%2F171228622" anchor-label="getAbout" id="-779833076%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-about.html"><span>get</span><wbr></wbr><span><span>About</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-779833076%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-about.html"><span class="token function">getAbout</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1060131902%2FFunctions%2F171228622" anchor-label="getActivationCode" id="1060131902%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activation-code.html"><span>get</span><wbr></wbr><span>Activation</span><wbr></wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1060131902%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-activation-code.html"><span class="token function">getActivationCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="256708083%2FFunctions%2F171228622" anchor-label="getAddTask" id="256708083%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-add-task.html"><span>get</span><wbr></wbr><span>Add</span><wbr></wbr><span><span>Task</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="256708083%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-add-task.html"><span class="token function">getAddTask</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="483024203%2FFunctions%2F171228622" anchor-label="getBuild" id="483024203%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-build.html"><span>get</span><wbr></wbr><span><span>Build</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="483024203%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-build.html"><span class="token function">getBuild</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-385423346%2FFunctions%2F171228622" anchor-label="getCommand" id="-385423346%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-command.html"><span>get</span><wbr></wbr><span><span>Command</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-385423346%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-command.html"><span class="token function">getCommand</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1657290664%2FFunctions%2F171228622" anchor-label="getCommandHistory" id="-1657290664%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-command-history.html"><span>get</span><wbr></wbr><span>Command</span><wbr></wbr><span><span>History</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1657290664%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-command-history.html"><span class="token function">getCommandHistory</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="462578832%2FFunctions%2F171228622" anchor-label="getCommandList" id="462578832%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-command-list.html"><span>get</span><wbr></wbr><span>Command</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="462578832%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-command-list.html"><span class="token function">getCommandList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1084896949%2FFunctions%2F171228622" anchor-label="getCommonApkPlugin" id="1084896949%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-common-apk-plugin.html"><span>get</span><wbr></wbr><span>Common</span><wbr></wbr><span>Apk</span><wbr></wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1084896949%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-common-apk-plugin.html"><span class="token function">getCommonApkPlugin</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1970096228%2FFunctions%2F171228622" anchor-label="getComponent" id="-1970096228%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-component.html"><span>get</span><wbr></wbr><span><span>Component</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1970096228%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-component.html"><span class="token function">getComponent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1877027183%2FFunctions%2F171228622" anchor-label="getCustomStorage" id="1877027183%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-custom-storage.html"><span>get</span><wbr></wbr><span>Custom</span><wbr></wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1877027183%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-custom-storage.html"><span class="token function">getCustomStorage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="139068980%2FFunctions%2F171228622" anchor-label="getEditor" id="139068980%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-editor.html"><span>get</span><wbr></wbr><span><span>Editor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="139068980%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-editor.html"><span class="token function">getEditor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-343224905%2FFunctions%2F171228622" anchor-label="getEditorApkPlugin" id="-343224905%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-editor-apk-plugin.html"><span>get</span><wbr></wbr><span>Editor</span><wbr></wbr><span>Apk</span><wbr></wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-343224905%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-editor-apk-plugin.html"><span class="token function">getEditorApkPlugin</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1620444471%2FFunctions%2F171228622" anchor-label="getExternalStorage" id="-1620444471%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-external-storage.html"><span>get</span><wbr></wbr><span>External</span><wbr></wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1620444471%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-external-storage.html"><span class="token function">getExternalStorage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1561790604%2FFunctions%2F171228622" anchor-label="getGroupHistory" id="1561790604%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-group-history.html"><span>get</span><wbr></wbr><span>Group</span><wbr></wbr><span><span>History</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1561790604%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-group-history.html"><span class="token function">getGroupHistory</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1953404930%2FFunctions%2F171228622" anchor-label="getHome" id="1953404930%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-home.html"><span>get</span><wbr></wbr><span><span>Home</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1953404930%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-home.html"><span class="token function">getHome</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1792065829%2FFunctions%2F171228622" anchor-label="getInstallLightScript" id="-1792065829%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-install-light-script.html"><span>get</span><wbr></wbr><span>Install</span><wbr></wbr><span>Light</span><wbr></wbr><span><span>Script</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1792065829%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-install-light-script.html"><span class="token function">getInstallLightScript</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="567809467%2FFunctions%2F171228622" anchor-label="getInternalStorage" id="567809467%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-internal-storage.html"><span>get</span><wbr></wbr><span>Internal</span><wbr></wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="567809467%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-internal-storage.html"><span class="token function">getInternalStorage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-246030252%2FFunctions%2F171228622" anchor-label="getInvitedUsers" id="-246030252%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-invited-users.html"><span>get</span><wbr></wbr><span>Invited</span><wbr></wbr><span><span>Users</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-246030252%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-invited-users.html"><span class="token function">getInvitedUsers</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-471971017%2FFunctions%2F171228622" anchor-label="getJschTerminal" id="-471971017%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-jsch-terminal.html"><span>get</span><wbr></wbr><span>Jsch</span><wbr></wbr><span><span>Terminal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-471971017%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-jsch-terminal.html"><span class="token function">getJschTerminal</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="833700265%2FFunctions%2F171228622" anchor-label="getLanguage" id="833700265%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-language.html"><span>get</span><wbr></wbr><span><span>Language</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="833700265%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-language.html"><span class="token function">getLanguage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1090865304%2FFunctions%2F171228622" anchor-label="getLightScript" id="1090865304%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-light-script.html"><span>get</span><wbr></wbr><span>Light</span><wbr></wbr><span><span>Script</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1090865304%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-light-script.html"><span class="token function">getLightScript</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1455662027%2FFunctions%2F171228622" anchor-label="getLog" id="-1455662027%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-log.html"><span>get</span><wbr></wbr><span><span>Log</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1455662027%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-log.html"><span class="token function">getLog</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1446128286%2FFunctions%2F171228622" anchor-label="getPluggableApkPluginSettings" id="-1446128286%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-pluggable-apk-plugin-settings.html"><span>get</span><wbr></wbr><span>Pluggable</span><wbr></wbr><span>Apk</span><wbr></wbr><span>Plugin</span><wbr></wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1446128286%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-pluggable-apk-plugin-settings.html"><span class="token function">getPluggableApkPluginSettings</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1233494830%2FFunctions%2F171228622" anchor-label="getPlugin" id="1233494830%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-plugin.html"><span>get</span><wbr></wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1233494830%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-plugin.html"><span class="token function">getPlugin</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1817451619%2FFunctions%2F171228622" anchor-label="getPointHistory" id="-1817451619%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-point-history.html"><span>get</span><wbr></wbr><span>Point</span><wbr></wbr><span><span>History</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1817451619%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-point-history.html"><span class="token function">getPointHistory</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1116617165%2FFunctions%2F171228622" anchor-label="getProjectPlugin" id="1116617165%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-project-plugin.html"><span>get</span><wbr></wbr><span>Project</span><wbr></wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1116617165%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-project-plugin.html"><span class="token function">getProjectPlugin</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="569490608%2FFunctions%2F171228622" anchor-label="getPromotionHistory" id="569490608%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-promotion-history.html"><span>get</span><wbr></wbr><span>Promotion</span><wbr></wbr><span><span>History</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="569490608%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-promotion-history.html"><span class="token function">getPromotionHistory</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1014985023%2FFunctions%2F171228622" anchor-label="getRunCommand" id="-1014985023%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-run-command.html"><span>get</span><wbr></wbr><span>Run</span><wbr></wbr><span><span>Command</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1014985023%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-run-command.html"><span class="token function">getRunCommand</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1096903209%2FFunctions%2F171228622" anchor-label="getScriptManager" id="-1096903209%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-script-manager.html"><span>get</span><wbr></wbr><span>Script</span><wbr></wbr><span><span>Manager</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1096903209%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-script-manager.html"><span class="token function">getScriptManager</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1370291394%2FFunctions%2F171228622" anchor-label="getSettings" id="-1370291394%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-settings.html"><span>get</span><wbr></wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1370291394%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-settings.html"><span class="token function">getSettings</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="585733771%2FFunctions%2F171228622" anchor-label="getSettingsPlugin" id="585733771%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-settings-plugin.html"><span>get</span><wbr></wbr><span>Settings</span><wbr></wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="585733771%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-settings-plugin.html"><span class="token function">getSettingsPlugin</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="354515678%2FFunctions%2F171228622" anchor-label="getStorage" id="354515678%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-storage.html"><span>get</span><wbr></wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="354515678%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-storage.html"><span class="token function">getStorage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1682096612%2FFunctions%2F171228622" anchor-label="getTask" id="-1682096612%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-task.html"><span>get</span><wbr></wbr><span><span>Task</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1682096612%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-task.html"><span class="token function">getTask</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1731669243%2FFunctions%2F171228622" anchor-label="getTerminal" id="-1731669243%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-terminal.html"><span>get</span><wbr></wbr><span><span>Terminal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1731669243%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-terminal.html"><span class="token function">getTerminal</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1639841130%2FFunctions%2F171228622" anchor-label="getUser" id="-1639841130%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-user.html"><span>get</span><wbr></wbr><span><span>User</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1639841130%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-user.html"><span class="token function">getUser</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1490301621%2FFunctions%2F171228622" anchor-label="getUserScript" id="-1490301621%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-user-script.html"><span>get</span><wbr></wbr><span>User</span><wbr></wbr><span><span>Script</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1490301621%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-user-script.html"><span class="token function">getUserScript</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="129429257%2FFunctions%2F171228622" anchor-label="getWebTerminal" id="129429257%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-web-terminal.html"><span>get</span><wbr></wbr><span>Web</span><wbr></wbr><span><span>Terminal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="129429257%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-web-terminal.html"><span class="token function">getWebTerminal</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1544881408%2FFunctions%2F171228622" anchor-label="getWebView" id="-1544881408%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-web-view.html"><span>get</span><wbr></wbr><span>Web</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1544881408%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-web-view.html"><span class="token function">getWebView</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>powered by m8test</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
