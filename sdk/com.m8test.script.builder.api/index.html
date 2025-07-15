@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.m8test.script.builder.api</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../index.html">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:app/staging">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/staging"
+                                       data-filter=":sdk:app/staging"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="sdk::com.m8test.script.builder.api////PointingToDeclaration//171228622">
+  <div class="breadcrumbs"><a href="../../index.html">sdk</a><span class="delimiter">/</span><span class="current">com.m8test.script.builder.api</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1319687660%2FClasslikes%2F171228622" anchor-label="Action" id="-1319687660%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-action/index.html"><span><span>Action</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1319687660%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-action/index.html">Action</a></div><div class="brief "><p class="paragraph"><a href="-action/index.html">Action</a> 表示 <a href="-task/index.html">Task</a> 的一个步骤, 是最小的执行单元.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="472958061%2FClasslikes%2F171228622" anchor-label="ActionContainer" id="472958061%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-action-container/index.html"><span>Action</span><wbr></wbr><span><span>Container</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="472958061%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-action-container/index.html">ActionContainer</a></div><div class="brief "><p class="paragraph">动作容器, 用于管理 <a href="-action/index.html">Action</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="328835802%2FClasslikes%2F171228622" anchor-label="BuildApkConfig" id="328835802%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-build-apk-config/index.html"><span>Build</span><wbr></wbr><span>Apk</span><wbr></wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="328835802%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-build-apk-config/index.html">BuildApkConfig</a></div><div class="brief "><p class="paragraph">用于构建apk的配置.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1622597545%2FClasslikes%2F171228622" anchor-label="BuildPlugin" id="-1622597545%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-build-plugin/index.html"><span>Build</span><wbr></wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1622597545%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-build-plugin/index.html">BuildPlugin</a><span class="token operator">&lt;</span><a href="-build-plugin/index.html">T</a><span class="token operator">&gt;</span> : <a href="../com.m8test.plugin.api/-pluggable-apk-plugin/index.html">PluggableApkPlugin</a></div><div class="brief "><p class="paragraph">为构建过程扩展功能的apk插件, 可以为 <a href="-project/index.html">Project</a> 以及 <a href="-settings/index.html">Settings</a> 添加额外的功能.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="799208806%2FClasslikes%2F171228622" anchor-label="BuildPluginProvider" id="799208806%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-build-plugin-provider/index.html"><span>Build</span><wbr></wbr><span>Plugin</span><wbr></wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="799208806%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-build-plugin-provider/index.html">BuildPluginProvider</a></div><div class="brief "><p class="paragraph">用于提供 <a href="-build-plugin/index.html">BuildPlugin</a> 的接口.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1413202605%2FClasslikes%2F171228622" anchor-label="BuildResult" id="1413202605%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-build-result/index.html"><span>Build</span><wbr></wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1413202605%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-build-result/index.html">BuildResult</a></div><div class="brief "><p class="paragraph">工程 (<a href="-project/index.html">Project</a>) 构建的结果.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-364242403%2FClasslikes%2F171228622" anchor-label="BuildScriptConfig" id="-364242403%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-build-script-config/index.html"><span>Build</span><wbr></wbr><span>Script</span><wbr></wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-364242403%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-build-script-config/index.html">BuildScriptConfig</a> : <a href="../com.m8test.script.core.api.component/-variable/index.html">Variable</a></div><div class="brief "><p class="paragraph">在初始化构建脚本文件(init.build 和 init.settings)中配置脚本文件(build 以及 settings)的接口.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="201219652%2FClasslikes%2F171228622" anchor-label="ComposableBuildPlugin" id="201219652%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-composable-build-plugin/index.html"><span>Composable</span><wbr></wbr><span>Build</span><wbr></wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="201219652%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-composable-build-plugin/index.html">ComposableBuildPlugin</a><span class="token operator">&lt;</span><a href="-composable-build-plugin/index.html">T</a><span class="token operator">&gt;</span> : <a href="-build-plugin/index.html">BuildPlugin</a><span class="token operator">&lt;</span><a href="-composable-build-plugin/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.plugin.api/-composable-pluggable-apk-plugin/index.html">ComposablePluggableApkPlugin</a></div><div class="brief "><p class="paragraph">需要 Jetpack Compose 作为界面的 <a href="-build-plugin/index.html">BuildPlugin</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="92942859%2FClasslikes%2F171228622" anchor-label="ExtensionAware" id="92942859%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-extension-aware/index.html"><span>Extension</span><wbr></wbr><span><span>Aware</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="92942859%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-extension-aware/index.html">ExtensionAware</a></div><div class="brief "><p class="paragraph">需要用到 <a href="-extension-container/index.html">ExtensionContainer</a> 时需要实现本接口.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1332674232%2FClasslikes%2F171228622" anchor-label="ExtensionContainer" id="-1332674232%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-extension-container/index.html"><span>Extension</span><wbr></wbr><span><span>Container</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1332674232%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-extension-container/index.html">ExtensionContainer</a></div><div class="brief "><p class="paragraph">扩展的容器, 可以对扩展进行管理, 例如 <a href="-extension-container/add.html">add</a>, <a href="-extension-container/remove.html">remove</a>, <a href="-extension-container/get-by-name.html">getByName</a>, <a href="-extension-container/configure.html">configure</a> 等操作.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-522952777%2FClasslikes%2F171228622" anchor-label="Plugin" id="-522952777%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-plugin/index.html"><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-522952777%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-plugin/index.html">Plugin</a><span class="token operator">&lt;</span><a href="-plugin/index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">插件 <a href="-plugin/index.html">Plugin</a> 用于扩展构建的功能.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1703749613%2FClasslikes%2F171228622" anchor-label="PluginAware" id="1703749613%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-plugin-aware/index.html"><span>Plugin</span><wbr></wbr><span><span>Aware</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1703749613%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-plugin-aware/index.html">PluginAware</a><span class="token operator">&lt;</span><a href="-plugin-aware/index.html">P</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">需要用到 <a href="-plugin-container/index.html">PluginContainer</a> 时需要实现本接口.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-930990550%2FClasslikes%2F171228622" anchor-label="PluginContainer" id="-930990550%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-plugin-container/index.html"><span>Plugin</span><wbr></wbr><span><span>Container</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-930990550%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-plugin-container/index.html">PluginContainer</a><span class="token operator">&lt;</span><a href="-plugin-container/index.html">P</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">插件容器.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-229397761%2FClasslikes%2F171228622" anchor-label="Project" id="-229397761%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-project/index.html"><span><span>Project</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-229397761%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-project/index.html">Project</a> : <a href="-extension-aware/index.html">ExtensionAware</a>, <a href="-plugin-aware/index.html">PluginAware</a><span class="token operator">&lt;</span><a href="-project/index.html">Project</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.component/-variable/index.html">Variable</a>, <a href="../com.m8test.script.core.api.engine/-script-contextual/index.html">ScriptContextual</a></div><div class="brief "><p class="paragraph">表示项目的接口.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1092505740%2FClasslikes%2F171228622" anchor-label="ProjectPlugin" id="1092505740%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-project-plugin/index.html"><span>Project</span><wbr></wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1092505740%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-project-plugin/index.html">ProjectPlugin</a> : <a href="-build-plugin/index.html">BuildPlugin</a><span class="token operator">&lt;</span><a href="-project/index.html">Project</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">适用于 <a href="-project/index.html">Project</a> 的apk插件.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1724354183%2FClasslikes%2F171228622" anchor-label="Settings" id="1724354183%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-settings/index.html"><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1724354183%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-settings/index.html">Settings</a> : <a href="-plugin-aware/index.html">PluginAware</a><span class="token operator">&lt;</span><a href="-settings/index.html">Settings</a><span class="token operator">&gt; </span>, <a href="-extension-aware/index.html">ExtensionAware</a>, <a href="../com.m8test.script.core.api.component/-variable/index.html">Variable</a>, <a href="../com.m8test.script.core.api.engine/-script-contextual/index.html">ScriptContextual</a></div><div class="brief "><p class="paragraph">每个构建都需要一个 <a href="-settings/index.html">Settings</a>, 每个 <a href="-settings/index.html">Settings</a> 可以包含多个 <a href="-project/index.html">Project</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1735244005%2FClasslikes%2F171228622" anchor-label="SettingsConfig" id="1735244005%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-settings-config/index.html"><span>Settings</span><wbr></wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1735244005%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-settings-config/index.html">SettingsConfig</a></div><div class="brief "><p class="paragraph">settings 和 init.settings 脚本配置类.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1809093100%2FClasslikes%2F171228622" anchor-label="SettingsPlugin" id="-1809093100%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-settings-plugin/index.html"><span>Settings</span><wbr></wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1809093100%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-settings-plugin/index.html">SettingsPlugin</a> : <a href="-build-plugin/index.html">BuildPlugin</a><span class="token operator">&lt;</span><a href="-settings/index.html">Settings</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">适用于 <a href="-settings/index.html">Settings</a> 的apk插件.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-918455323%2FClasslikes%2F171228622" anchor-label="Task" id="-918455323%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-task/index.html"><span><span>Task</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-918455323%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-task/index.html">Task</a> : <a href="-extension-aware/index.html">ExtensionAware</a></div><div class="brief "><p class="paragraph">任务表示构建执行的某个独立工作单元.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-129569348%2FClasslikes%2F171228622" anchor-label="TaskContainer" id="-129569348%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-task-container/index.html"><span>Task</span><wbr></wbr><span><span>Container</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-129569348%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-task-container/index.html">TaskContainer</a></div><div class="brief "><p class="paragraph">任务容器.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1423868668%2FClasslikes%2F171228622" anchor-label="TaskInputs" id="1423868668%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-task-inputs/index.html"><span>Task</span><wbr></wbr><span><span>Inputs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1423868668%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-task-inputs/index.html">TaskInputs</a> : <a href="-task-i-o/index.html">TaskIO</a></div><div class="brief "><p class="paragraph">表示 <a href="-task/index.html">Task</a> 的输入.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="977095807%2FClasslikes%2F171228622" anchor-label="TaskIO" id="977095807%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-task-i-o/index.html"><span>Task</span><wbr></wbr><span><span>IO</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="977095807%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-task-i-o/index.html">TaskIO</a></div><div class="brief "><p class="paragraph">表示 <a href="-task/index.html">Task</a> 输入输出. <a href="-task-inputs/index.html">TaskInputs</a> 表示 <a href="-task/index.html">Task</a> 输出, <a href="-task-outputs/index.html">TaskOutputs</a> 表示输出.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1675649739%2FClasslikes%2F171228622" anchor-label="TaskOutputs" id="1675649739%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-task-outputs/index.html"><span>Task</span><wbr></wbr><span><span>Outputs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1675649739%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-task-outputs/index.html">TaskOutputs</a> : <a href="-task-i-o/index.html">TaskIO</a></div><div class="brief "><p class="paragraph">表示 <a href="-task/index.html">Task</a> 的输出.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1303717148%2FClasslikes%2F171228622" anchor-label="ViewBuildPlugin" id="1303717148%2FClasslikes%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-view-build-plugin/index.html"><span>View</span><wbr></wbr><span>Build</span><wbr></wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1303717148%2FClasslikes%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-view-build-plugin/index.html">ViewBuildPlugin</a><span class="token operator">&lt;</span><a href="-view-build-plugin/index.html">T</a><span class="token operator">&gt;</span> : <a href="-build-plugin/index.html">BuildPlugin</a><span class="token operator">&lt;</span><a href="-view-build-plugin/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.plugin.api/-view-pluggable-apk-plugin/index.html">ViewPluggableApkPlugin</a></div><div class="brief "><p class="paragraph">需要 <a href="https://developer.android.com/reference/kotlin/android/view/View.html">android.view.View</a> 作为界面的 <a href="-build-plugin/index.html">BuildPlugin</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>powered by m8test</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
