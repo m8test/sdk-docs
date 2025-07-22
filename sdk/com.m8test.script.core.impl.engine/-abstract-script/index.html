@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AbstractScript</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":sdk:app/staging">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/staging"
+                                       data-filter=":sdk:app/staging"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.script.core.impl.engine/AbstractScript///PointingToDeclaration//171228622">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.script.core.impl.engine</a><span class="delimiter">/</span><span class="current">AbstractScript</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Abstract</span><wbr></wbr><span><span>Script</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">AbstractScript</a><span class="token operator">&lt;</span><a href="index.html">S</a><span class="token operator"> : </span><a href="../../com.m8test.script.core.api.config/-script-config/index.html">ScriptConfig</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../../com.m8test.script.core.api.engine/-script-context/index.html">ScriptContext</a><span class="token punctuation">, </span></span><span class="parameter ">language<span class="token operator">: </span><a href="../../com.m8test.script.core.api.language/-language/index.html">Language</a><span class="token punctuation">, </span></span><span class="parameter ">scriptEngine<span class="token operator">: </span><a href="../../com.m8test.script.core.api.engine/-script-engine/index.html">ScriptEngine</a><span class="token punctuation">, </span></span><span class="parameter ">scriptConfig<span class="token operator">: </span><a href="index.html">S</a></span></span><span class="token punctuation">)</span> : <a href="../-abstract-script-closeable/index.html">AbstractScriptCloseable</a>, <a href="../../com.m8test.script.core.api.engine/-script/index.html">Script</a><span class="token operator">&lt;</span><a href="index.html">S</a><span class="token operator">&gt; </span></div><p class="paragraph">Description: 所有脚本都实现的类</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">M8Test, contact@m8test.com, https://m8test.com</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1296434584%2FConstructors%2F171228622" anchor-label="AbstractScript" id="1296434584%2FConstructors%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-abstract-script.html"><span>Abstract</span><wbr></wbr><span><span>Script</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1296434584%2FConstructors%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../../com.m8test.script.core.api.engine/-script-context/index.html">ScriptContext</a><span class="token punctuation">, </span></span><span class="parameter ">language<span class="token operator">: </span><a href="../../com.m8test.script.core.api.language/-language/index.html">Language</a><span class="token punctuation">, </span></span><span class="parameter ">scriptEngine<span class="token operator">: </span><a href="../../com.m8test.script.core.api.engine/-script-engine/index.html">ScriptEngine</a><span class="token punctuation">, </span></span><span class="parameter ">scriptConfig<span class="token operator">: </span><a href="index.html">S</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="564262250%2FFunctions%2F171228622" anchor-label="addLifecycleListener" id="564262250%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-lifecycle-listener.html"><span>add</span><wbr></wbr><span>Lifecycle</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="564262250%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="add-lifecycle-listener.html"><span class="token function">addLifecycleListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">lifecycleListener<span class="token operator">: </span><a href="../../com.m8test.script.core.api.engine/-script-lifecycle-listener/index.html">ScriptLifecycleListener</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test/-result/index.html">Result</a></div><div class="brief "><p class="paragraph">监听脚本生命周期的监听器.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-21602730%2FFunctions%2F171228622" anchor-label="close" id="-21602730%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.script.core.api.engine/-script-closeable/close.html"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-21602730%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../com.m8test.script.core.api.engine/-script-closeable/close.html"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">关闭当前对象, 如果没有调用本方法则会报错, 当然本方法由系统调用, 不需要手动调用.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-303701337%2FFunctions%2F171228622" anchor-label="executeFile" id="-303701337%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="execute-file.html"><span>execute</span><wbr></wbr><span><span>File</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-303701337%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="execute-file.html"><span class="token function">executeFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.config/-script-file-config/index.html">ScriptFileConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">在脚本中执行文件.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1478194307%2FFunctions%2F171228622" anchor-label="executeProject" id="-1478194307%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="execute-project.html"><span>execute</span><wbr></wbr><span><span>Project</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1478194307%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="execute-project.html"><span class="token function">executeProject</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.config/-script-project-config/index.html">ScriptProjectConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">在脚本中执行脚本工程包.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="778408391%2FFunctions%2F171228622" anchor-label="executeString" id="778408391%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="execute-string.html"><span>execute</span><wbr></wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="778408391%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="execute-string.html"><span class="token function">executeString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.config/-script-string-config/index.html">ScriptStringConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">在脚本中执行字符串.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1397126600%2FFunctions%2F171228622" anchor-label="getConfig" id="-1397126600%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-config.html"><span>get</span><wbr></wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1397126600%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-config.html"><span class="token function">getConfig</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">S</a></div><div class="brief "><p class="paragraph">获取脚本配置信息</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1758939887%2FFunctions%2F171228622" anchor-label="getContext" id="-1758939887%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-context.html"><span>get</span><wbr></wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1758939887%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-context.html"><span class="token function">getContext</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.engine/-script-context/index.html">ScriptContext</a></div><div class="brief "><p class="paragraph">获取脚本上下文对象 <a href="../../com.m8test.script.core.api.engine/-script-context/index.html">ScriptContext</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1576733896%2FFunctions%2F171228622" anchor-label="getEngine" id="-1576733896%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-engine.html"><span>get</span><wbr></wbr><span><span>Engine</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1576733896%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-engine.html"><span class="token function">getEngine</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.engine/-script-engine/index.html">ScriptEngine</a></div><div class="brief "><p class="paragraph">获取当前脚本所属的脚本引擎</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1726172244%2FFunctions%2F171228622" anchor-label="getGlobalName" id="-1726172244%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-global-name.html"><span>get</span><wbr></wbr><span>Global</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1726172244%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-global-name.html"><span class="token function">getGlobalName</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">获取作为全局变量时的名称.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-409477889%2FFunctions%2F171228622" anchor-label="getId" id="-409477889%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-id.html"><span>get</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-409477889%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-id.html"><span class="token function">getId</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">获取脚本唯一标识</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1951616094%2FFunctions%2F171228622" anchor-label="getLanguage" id="-1951616094%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-language.html"><span>get</span><wbr></wbr><span><span>Language</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1951616094%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-language.html"><span class="token function">getLanguage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.language/-language/index.html">Language</a></div><div class="brief "><p class="paragraph">获取脚本所属编程语言</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2028204672%2FFunctions%2F171228622" anchor-label="getProjectRootPath" id="2028204672%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-project-root-path.html"><span>get</span><wbr></wbr><span>Project</span><wbr></wbr><span>Root</span><wbr></wbr><span><span>Path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2028204672%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-project-root-path.html"><span class="token function">getProjectRootPath</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取项目根目录，如果不是工程项目则返回null</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="593936599%2FFunctions%2F171228622" anchor-label="getPublicType" id="593936599%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-public-type.html"><span>get</span><wbr></wbr><span>Public</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="593936599%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-public-type.html"><span class="token function">getPublicType</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/reflect/Type.html">Type</a></div><div class="brief "><p class="paragraph">获取 <a href="../../com.m8test.script.core.api.component/-variable/index.html">Variable</a> 注入到脚本时需要显示的类型.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1737557079%2FFunctions%2F171228622" anchor-label="getThreads" id="1737557079%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-threads.html"><span>get</span><wbr></wbr><span><span>Threads</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1737557079%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-threads.html"><span class="token function">getThreads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.thread/-threads/index.html">Threads</a></div><div class="brief "><p class="paragraph">获取脚本线程管理对象.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-707815419%2FFunctions%2F171228622" anchor-label="getVariable" id="-707815419%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-variable.html"><span>get</span><wbr></wbr><span><span>Variable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-707815419%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-variable.html">T</a><span class="token operator"> : </span><a href="../../com.m8test.script.core.api.component/-variable/index.html">Variable</a><span class="token operator">&gt; </span><a href="get-variable.html"><span class="token function">getVariable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">clazz<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><a href="get-variable.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-variable.html">T</a></div><div class="brief "><p class="paragraph">获取指定类型的变量.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-variable.html"><span class="token function">getVariable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></div><div class="brief "><p class="paragraph">获取指定名称的变量.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-variable.html">T</a><span class="token operator"> : </span><a href="../../com.m8test.script.core.api.component/-variable/index.html">Variable</a><span class="token operator">&gt; </span><a href="get-variable.html"><span class="token function">getVariable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">clazz<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><a href="get-variable.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-variable.html">T</a></div><div class="brief "><p class="paragraph">获取指定名称以及类型的变量.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1229443038%2FFunctions%2F171228622" anchor-label="getVariableName" id="1229443038%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-variable-name.html"><span>get</span><wbr></wbr><span>Variable</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1229443038%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-variable-name.html"><span class="token function">getVariableName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">variable<span class="token operator">: </span><a href="../../com.m8test.script.core.api.component/-variable/index.html">Variable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">获取变量在脚本中的名称.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1438303771%2FFunctions%2F171228622" anchor-label="getVariables" id="-1438303771%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-variables.html"><span>get</span><wbr></wbr><span><span>Variables</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1438303771%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-variables.html"><span class="token function">getVariables</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filter<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.component/-variable/index.html">Variable</a><span class="token punctuation">, </span><a href="../../com.m8test.script.core.api.component/-component/index.html">Component</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../com.m8test.script.core.api.component/-variable/index.html">Variable</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">获取脚本中所有满足 <a href="get-variables.html">filter</a> 的全局变量.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-952174483%2FFunctions%2F171228622" anchor-label="interrupt" id="-952174483%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="interrupt.html"><span><span>interrupt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-952174483%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="interrupt.html"><span class="token function">interrupt</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">中止脚本</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1248423402%2FFunctions%2F171228622" anchor-label="isClosed" id="-1248423402%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.script.core.api.engine/-script-closeable/is-closed.html"><span>is</span><wbr></wbr><span><span>Closed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1248423402%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.script.core.api.engine/-script-closeable/is-closed.html"><span class="token function">isClosed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">判断当前对象是否已经调用了 <a href="../../com.m8test.script.core.api.engine/-script-closeable/close.html">close</a> 方法.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="238052408%2FFunctions%2F171228622" anchor-label="isInterrupted" id="238052408%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-interrupted.html"><span>is</span><wbr></wbr><span><span>Interrupted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="238052408%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="is-interrupted.html"><span class="token function">isInterrupted</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">脚本是否中断</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-807570705%2FFunctions%2F171228622" anchor-label="isPrefixRequired" id="-807570705%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-prefix-required.html"><span>is</span><wbr></wbr><span>Prefix</span><wbr></wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-807570705%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="is-prefix-required.html"><span class="token function">isPrefixRequired</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">是否需要添加前缀, 每种编程语言添加的前缀不一样, 前缀可以通过 <a href="../../com.m8test.script.core.api.language/-language/get-variable-prefix.html">Language.getVariablePrefix</a> 获取.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1652556304%2FFunctions%2F171228622" anchor-label="isSuffixRequired" id="1652556304%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-suffix-required.html"><span>is</span><wbr></wbr><span>Suffix</span><wbr></wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1652556304%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="is-suffix-required.html"><span class="token function">isSuffixRequired</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">是否需要添加后缀, 每种编程语言添加的后缀不一样, 后缀可以通过 <a href="../../com.m8test.script.core.api.language/-language/get-variable-suffix.html">Language.getVariableSuffix</a> 获取.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-323750231%2FFunctions%2F171228622" anchor-label="isUiMode" id="-323750231%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-ui-mode.html"><span>is</span><wbr></wbr><span>Ui</span><wbr></wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-323750231%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="is-ui-mode.html"><span class="token function">isUiMode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">获取脚本当前是否为ui模式</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1646394693%2FFunctions%2F171228622" anchor-label="onError" id="-1646394693%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-error.html"><span>on</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1646394693%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-error.html"><span class="token function">onError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.exception/-throwable/index.html">Throwable</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">添加脚本错误时的监听器.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-676329533%2FFunctions%2F171228622" anchor-label="onFinish" id="-676329533%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-finish.html"><span>on</span><wbr></wbr><span><span>Finish</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-676329533%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-finish.html"><span class="token function">onFinish</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><span class="token punctuation">(</span>result<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">添加脚本完成时的监听器.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-143824550%2FFunctions%2F171228622" anchor-label="onInterrupt" id="-143824550%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-interrupt.html"><span>on</span><wbr></wbr><span><span>Interrupt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-143824550%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-interrupt.html"><span class="token function">onInterrupt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">添加脚本中断时的监听器.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1051226465%2FFunctions%2F171228622" anchor-label="removeLifecycleListener" id="1051226465%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-lifecycle-listener.html"><span>remove</span><wbr></wbr><span>Lifecycle</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1051226465%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="remove-lifecycle-listener.html"><span class="token function">removeLifecycleListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">lifecycleListener<span class="token operator">: </span><a href="../../com.m8test.script.core.api.engine/-script-lifecycle-listener/index.html">ScriptLifecycleListener</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test/-result/index.html">Result</a></div><div class="brief "><p class="paragraph">移除脚本生命周期监听器.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1663991920%2FFunctions%2F171228622" anchor-label="setUICreator" id="1663991920%2FFunctions%2F171228622" data-filterable-set=":sdk:app/staging"></a>
+          <div class="table-row" data-filterable-current=":sdk:app/staging" data-filterable-set=":sdk:app/staging">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-u-i-creator.html"><span>set</span><wbr></wbr><span><span>UICreator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1663991920%2FFunctions%2F171228622"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/staging"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="set-u-i-creator.html"><span class="token function">setUICreator</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 ViewCreator</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>powered by m8test</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
