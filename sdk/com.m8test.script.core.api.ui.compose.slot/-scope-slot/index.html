@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ScopeSlot</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:app/main">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/main"
+                                       data-filter=":sdk:app/main"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.script.core.api.ui.compose.slot/ScopeSlot///PointingToDeclaration//540289978">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.script.core.api.ui.compose.slot</a><span class="delimiter">/</span><span class="current">ScopeSlot</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Scope</span><wbr></wbr><span><span>Slot</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">ScopeSlot</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator"> : </span><a href="../../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="../-slot/index.html">Slot</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt; </span></div><p class="paragraph">具有作用域的插槽</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">M8Test, contact@m8test.com, https://m8test.com</p></span><h4 class="tableheader">Inheritors</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-box-scope-slot/index.html">BoxScopeSlot</a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-column-scope-slot/index.html">ColumnScopeSlot</a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-exposed-dropdown-menu-box-scope-slot/index.html">ExposedDropdownMenuBoxScopeSlot</a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-lazy-item-scope-slot/index.html">LazyItemScopeSlot</a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-row-scope-slot/index.html">RowScopeSlot</a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-tab-indicator-scope-slot/index.html">TabIndicatorScopeSlot</a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-unit-scope-slot/index.html">UnitScopeSlot</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-532139076%2FFunctions%2F540289978" anchor-label="AlertDialog" id="-532139076%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-alert-dialog.html"><span>Alert</span><wbr></wbr><span><span>Dialog</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-532139076%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-alert-dialog.html"><span class="token function">AlertDialog</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">alertDialogBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-alert-dialog/index.html">AlertDialog</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1892988484%2FFunctions%2F540289978" anchor-label="AndroidView" id="-1892988484%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-android-view.html"><span>Android</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1892988484%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-android-view.html"><span class="token function">AndroidView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">androidViewBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-android-view/index.html">AndroidView</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1752736248%2FFunctions%2F540289978" anchor-label="AssistChip" id="1752736248%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-assist-chip.html"><span>Assist</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1752736248%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-assist-chip.html"><span class="token function">AssistChip</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">androidViewBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-assist-chip/index.html">AssistChip</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="634217764%2FFunctions%2F540289978" anchor-label="AsyncImage" id="634217764%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-async-image.html"><span>Async</span><wbr></wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="634217764%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-async-image.html"><span class="token function">AsyncImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">asyncImageBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-async-image/index.html">AsyncImage</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="927034908%2FFunctions%2F540289978" anchor-label="Badge" id="927034908%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-badge.html"><span><span>Badge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="927034908%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-badge.html"><span class="token function">Badge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">badgeBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-badge/index.html">Badge</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="43226172%2FFunctions%2F540289978" anchor-label="BadgedBox" id="43226172%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-badged-box.html"><span>Badged</span><wbr></wbr><span><span>Box</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="43226172%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-badged-box.html"><span class="token function">BadgedBox</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">badgedBoxBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-badged-box/index.html">BadgedBox</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="723059112%2FFunctions%2F540289978" anchor-label="BottomAppBar" id="723059112%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-bottom-app-bar.html"><span>Bottom</span><wbr></wbr><span>App</span><wbr></wbr><span><span>Bar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="723059112%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-bottom-app-bar.html"><span class="token function">BottomAppBar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bottomAppBarBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-bottom-app-bar/index.html">BottomAppBar</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="726843516%2FFunctions%2F540289978" anchor-label="BottomSheetScaffold" id="726843516%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-bottom-sheet-scaffold.html"><span>Bottom</span><wbr></wbr><span>Sheet</span><wbr></wbr><span><span>Scaffold</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="726843516%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-bottom-sheet-scaffold.html"><span class="token function">BottomSheetScaffold</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bottomSheetScaffoldBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-bottom-sheet-scaffold/index.html">BottomSheetScaffold</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="985845276%2FFunctions%2F540289978" anchor-label="Box" id="985845276%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-box.html"><span><span>Box</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="985845276%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-box.html"><span class="token function">Box</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">boxBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-box/index.html">Box</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1416122942%2FFunctions%2F540289978" anchor-label="Button" id="1416122942%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-button.html"><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1416122942%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-button.html"><span class="token function">Button</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">buttonBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-button/index.html">Button</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-245028798%2FFunctions%2F540289978" anchor-label="Card" id="-245028798%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-card.html"><span><span>Card</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-245028798%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-card.html"><span class="token function">Card</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cardBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-card/index.html">Card</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-388370446%2FFunctions%2F540289978" anchor-label="CenterAlignedTopAppBar" id="-388370446%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-center-aligned-top-app-bar.html"><span>Center</span><wbr></wbr><span>Aligned</span><wbr></wbr><span>Top</span><wbr></wbr><span>App</span><wbr></wbr><span><span>Bar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-388370446%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-center-aligned-top-app-bar.html"><span class="token function">CenterAlignedTopAppBar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">topAppBarBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-center-aligned-top-app-bar/index.html">CenterAlignedTopAppBar</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-486821092%2FFunctions%2F540289978" anchor-label="Checkbox" id="-486821092%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-checkbox.html"><span><span>Checkbox</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-486821092%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-checkbox.html"><span class="token function">Checkbox</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">checkboxBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-checkbox/index.html">Checkbox</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1573010460%2FFunctions%2F540289978" anchor-label="CircularProgressIndicator" id="1573010460%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-circular-progress-indicator.html"><span>Circular</span><wbr></wbr><span>Progress</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1573010460%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-circular-progress-indicator.html"><span class="token function">CircularProgressIndicator</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">circularProgressIndicatorBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-circular-progress-indicator/index.html">CircularProgressIndicator</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1380491786%2FFunctions%2F540289978" anchor-label="Column" id="-1380491786%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-column.html"><span><span>Column</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1380491786%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-column.html"><span class="token function">Column</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">columnBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-column/index.html">Column</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1979818939%2FFunctions%2F540289978" anchor-label="CompositionLocalProvider" id="1979818939%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-composition-local-provider.html"><span>Composition</span><wbr></wbr><span>Local</span><wbr></wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1979818939%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-composition-local-provider.html"><span class="token function">CompositionLocalProvider</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">compositionLocalProviderBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.compositionlocal/-composition-local-provider/index.html">CompositionLocalProvider</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2100880366%2FFunctions%2F540289978" anchor-label="Dialog" id="-2100880366%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-dialog.html"><span><span>Dialog</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2100880366%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-dialog.html"><span class="token function">Dialog</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dialogBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-dialog/index.html">Dialog</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1814562114%2FFunctions%2F540289978" anchor-label="DropdownMenu" id="1814562114%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-dropdown-menu.html"><span>Dropdown</span><wbr></wbr><span><span>Menu</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1814562114%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-dropdown-menu.html"><span class="token function">DropdownMenu</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dropdownMenuBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-dropdown-menu/index.html">DropdownMenu</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1332730340%2FFunctions%2F540289978" anchor-label="DropdownMenuItem" id="-1332730340%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-dropdown-menu-item.html"><span>Dropdown</span><wbr></wbr><span>Menu</span><wbr></wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1332730340%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-dropdown-menu-item.html"><span class="token function">DropdownMenuItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dropdownMenuItemBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-dropdown-menu-item/index.html">DropdownMenuItem</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-229944732%2FFunctions%2F540289978" anchor-label="ElevatedAssistChip" id="-229944732%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-elevated-assist-chip.html"><span>Elevated</span><wbr></wbr><span>Assist</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-229944732%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-elevated-assist-chip.html"><span class="token function">ElevatedAssistChip</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filterChipBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-elevated-assist-chip/index.html">ElevatedAssistChip</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1779111214%2FFunctions%2F540289978" anchor-label="ElevatedCard" id="1779111214%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-elevated-card.html"><span>Elevated</span><wbr></wbr><span><span>Card</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1779111214%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-elevated-card.html"><span class="token function">ElevatedCard</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cardBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-elevated-card/index.html">ElevatedCard</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-63296314%2FFunctions%2F540289978" anchor-label="ElevatedFilterChip" id="-63296314%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-elevated-filter-chip.html"><span>Elevated</span><wbr></wbr><span>Filter</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-63296314%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-elevated-filter-chip.html"><span class="token function">ElevatedFilterChip</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filterChipBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-elevated-filter-chip/index.html">ElevatedFilterChip</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1534183122%2FFunctions%2F540289978" anchor-label="ElevatedSuggestionChip" id="-1534183122%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-elevated-suggestion-chip.html"><span>Elevated</span><wbr></wbr><span>Suggestion</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1534183122%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-elevated-suggestion-chip.html"><span class="token function">ElevatedSuggestionChip</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filterChipBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-elevated-suggestion-chip/index.html">ElevatedSuggestionChip</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="979031788%2FFunctions%2F540289978" anchor-label="ExposedDropdownMenuBox" id="979031788%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-exposed-dropdown-menu-box.html"><span>Exposed</span><wbr></wbr><span>Dropdown</span><wbr></wbr><span>Menu</span><wbr></wbr><span><span>Box</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="979031788%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-exposed-dropdown-menu-box.html"><span class="token function">ExposedDropdownMenuBox</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">exposedDropdownMenuBoxBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-exposed-dropdown-menu-box/index.html">ExposedDropdownMenuBox</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1565635988%2FFunctions%2F540289978" anchor-label="ExtendedFloatingActionButton" id="1565635988%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-extended-floating-action-button.html"><span>Extended</span><wbr></wbr><span>Floating</span><wbr></wbr><span>Action</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1565635988%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-extended-floating-action-button.html"><span class="token function">ExtendedFloatingActionButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">extendedFloatingActionButtonBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-extended-floating-action-button/index.html">ExtendedFloatingActionButton</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-517137062%2FFunctions%2F540289978" anchor-label="FilterChip" id="-517137062%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-filter-chip.html"><span>Filter</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-517137062%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-filter-chip.html"><span class="token function">FilterChip</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filterChipBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-filter-chip/index.html">FilterChip</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1811508602%2FFunctions%2F540289978" anchor-label="FloatingActionButton" id="-1811508602%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-floating-action-button.html"><span>Floating</span><wbr></wbr><span>Action</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1811508602%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-floating-action-button.html"><span class="token function">FloatingActionButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">floatingActionButtonBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-floating-action-button/index.html">FloatingActionButton</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1917861681%2FFunctions%2F540289978" anchor-label="getCompositionLocals" id="-1917861681%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/get-composition-locals.html"><span>get</span><wbr></wbr><span>Composition</span><wbr></wbr><span><span>Locals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1917861681%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/get-composition-locals.html"><span class="token function">getCompositionLocals</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.compositionlocal/-composition-locals/index.html">CompositionLocals</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1672606938%2FFunctions%2F540289978" anchor-label="getContext" id="1672606938%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.script.core.api.engine/-script-contextual/get-context.html"><span>get</span><wbr></wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1672606938%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.script.core.api.engine/-script-contextual/get-context.html"><span class="token function">getContext</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.engine/-script-context/index.html">ScriptContext</a></div><div class="brief "><p class="paragraph">获取脚本上下文对象 <a href="../../com.m8test.script.core.api.engine/-script-context/index.html">ScriptContext</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1957064228%2FFunctions%2F540289978" anchor-label="HorizontalDivider" id="-1957064228%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-horizontal-divider.html"><span>Horizontal</span><wbr></wbr><span><span>Divider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1957064228%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-horizontal-divider.html"><span class="token function">HorizontalDivider</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dividerBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-horizontal-divider/index.html">HorizontalDivider</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="837603376%2FFunctions%2F540289978" anchor-label="Icon" id="837603376%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-icon.html"><span><span>Icon</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="837603376%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-icon.html"><span class="token function">Icon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">iconBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-icon/index.html">Icon</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="591797644%2FFunctions%2F540289978" anchor-label="IconButton" id="591797644%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-icon-button.html"><span>Icon</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="591797644%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-icon-button.html"><span class="token function">IconButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">iconButtonBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-icon-button/index.html">IconButton</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="579530788%2FFunctions%2F540289978" anchor-label="IconToggleButton" id="579530788%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-icon-toggle-button.html"><span>Icon</span><wbr></wbr><span>Toggle</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="579530788%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-icon-toggle-button.html"><span class="token function">IconToggleButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">iconToggleButtonBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-icon-toggle-button/index.html">IconToggleButton</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1920175804%2FFunctions%2F540289978" anchor-label="InputChip" id="1920175804%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-input-chip.html"><span>Input</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1920175804%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-input-chip.html"><span class="token function">InputChip</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">androidViewBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-input-chip/index.html">InputChip</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="602964426%2FFunctions%2F540289978" anchor-label="LargeTopAppBar" id="602964426%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-large-top-app-bar.html"><span>Large</span><wbr></wbr><span>Top</span><wbr></wbr><span>App</span><wbr></wbr><span><span>Bar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="602964426%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-large-top-app-bar.html"><span class="token function">LargeTopAppBar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">topAppBarBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-large-top-app-bar/index.html">LargeTopAppBar</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1026174542%2FFunctions%2F540289978" anchor-label="LazyColumn" id="1026174542%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-lazy-column.html"><span>Lazy</span><wbr></wbr><span><span>Column</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1026174542%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-lazy-column.html"><span class="token function">LazyColumn</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">lazyColumnBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-lazy-column/index.html">LazyColumn</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="764565628%2FFunctions%2F540289978" anchor-label="LazyRow" id="764565628%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-lazy-row.html"><span>Lazy</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="764565628%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-lazy-row.html"><span class="token function">LazyRow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">lazyRowBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-lazy-row/index.html">LazyRow</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-631062858%2FFunctions%2F540289978" anchor-label="LeadingIconTab" id="-631062858%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-leading-icon-tab.html"><span>Leading</span><wbr></wbr><span>Icon</span><wbr></wbr><span><span>Tab</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-631062858%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-leading-icon-tab.html"><span class="token function">LeadingIconTab</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">leadingIconTabBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-leading-icon-tab/index.html">LeadingIconTab</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1260162140%2FFunctions%2F540289978" anchor-label="LinearProgressIndicator" id="1260162140%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-linear-progress-indicator.html"><span>Linear</span><wbr></wbr><span>Progress</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1260162140%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-linear-progress-indicator.html"><span class="token function">LinearProgressIndicator</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">linearProgressIndicatorBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-linear-progress-indicator/index.html">LinearProgressIndicator</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-830041472%2FFunctions%2F540289978" anchor-label="ListItem" id="-830041472%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-list-item.html"><span>List</span><wbr></wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-830041472%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-list-item.html"><span class="token function">ListItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listItemBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-list-item/index.html">ListItem</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1183745980%2FFunctions%2F540289978" anchor-label="MaterialTheme" id="1183745980%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-material-theme.html"><span>Material</span><wbr></wbr><span><span>Theme</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1183745980%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-material-theme.html"><span class="token function">MaterialTheme</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">materialThemeBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-material-theme/index.html">MaterialTheme</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-17017092%2FFunctions%2F540289978" anchor-label="MediumTopAppBar" id="-17017092%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-medium-top-app-bar.html"><span>Medium</span><wbr></wbr><span>Top</span><wbr></wbr><span>App</span><wbr></wbr><span><span>Bar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-17017092%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-medium-top-app-bar.html"><span class="token function">MediumTopAppBar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">topAppBarBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-medium-top-app-bar/index.html">MediumTopAppBar</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1158360468%2FFunctions%2F540289978" anchor-label="ModalBottomSheet" id="1158360468%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-modal-bottom-sheet.html"><span>Modal</span><wbr></wbr><span>Bottom</span><wbr></wbr><span><span>Sheet</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1158360468%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-modal-bottom-sheet.html"><span class="token function">ModalBottomSheet</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">modalBottomSheetLayoutBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-modal-bottom-sheet/index.html">ModalBottomSheet</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1039790780%2FFunctions%2F540289978" anchor-label="ModalNavigationDrawer" id="1039790780%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-modal-navigation-drawer.html"><span>Modal</span><wbr></wbr><span>Navigation</span><wbr></wbr><span><span>Drawer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1039790780%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-modal-navigation-drawer.html"><span class="token function">ModalNavigationDrawer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">modalDrawerBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-modal-navigation-drawer/index.html">ModalNavigationDrawer</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2144216475%2FFunctions%2F540289978" anchor-label="mutableStateListOf" id="2144216475%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/mutable-state-list-of.html"><span>mutable</span><wbr></wbr><span>State</span><wbr></wbr><span>List</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2144216475%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-slot/mutable-state-list-of.html">T</a><span class="token operator">&gt; </span><a href="../-slot/mutable-state-list-of.html"><span class="token function">mutableStateListOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-slot/mutable-state-list-of.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.state/-mutable-state-list/index.html">MutableStateList</a><span class="token operator">&lt;</span><a href="../-slot/mutable-state-list-of.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="235281173%2FFunctions%2F540289978" anchor-label="mutableStateOf" id="235281173%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/mutable-state-of.html"><span>mutable</span><wbr></wbr><span>State</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="235281173%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-slot/mutable-state-of.html">T</a><span class="token operator">&gt; </span><a href="../-slot/mutable-state-of.html"><span class="token function">mutableStateOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="../-slot/mutable-state-of.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.state/-mutable-state/index.html">MutableState</a><span class="token operator">&lt;</span><a href="../-slot/mutable-state-of.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-308621156%2FFunctions%2F540289978" anchor-label="NavigationBar" id="-308621156%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-navigation-bar.html"><span>Navigation</span><wbr></wbr><span><span>Bar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-308621156%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-navigation-bar.html"><span class="token function">NavigationBar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bottomNavigationBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-navigation-bar/index.html">NavigationBar</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="733146134%2FFunctions%2F540289978" anchor-label="NavigationRail" id="733146134%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-navigation-rail.html"><span>Navigation</span><wbr></wbr><span><span>Rail</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="733146134%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-navigation-rail.html"><span class="token function">NavigationRail</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">navigationRailBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-navigation-rail/index.html">NavigationRail</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1552291504%2FFunctions%2F540289978" anchor-label="NavigationRailItem" id="1552291504%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-navigation-rail-item.html"><span>Navigation</span><wbr></wbr><span>Rail</span><wbr></wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1552291504%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-navigation-rail-item.html"><span class="token function">NavigationRailItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">navigationRailItemBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-navigation-rail-item/index.html">NavigationRailItem</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-422573067%2FFunctions%2F540289978" anchor-label="newBottomSheetScaffoldState" id="-422573067%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/new-bottom-sheet-scaffold-state.html"><span>new</span><wbr></wbr><span>Bottom</span><wbr></wbr><span>Sheet</span><wbr></wbr><span>Scaffold</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-422573067%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/new-bottom-sheet-scaffold-state.html"><span class="token function">newBottomSheetScaffoldState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bottomSheetStateBuilder<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.ui.compose.state/BottomSheetScaffoldState///PointingToDeclaration/">BottomSheetScaffoldState</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.ui.compose.state/BottomSheetScaffoldState///PointingToDeclaration/">BottomSheetScaffoldState</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1109870157%2FFunctions%2F540289978" anchor-label="newCoroutineScope" id="-1109870157%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/new-coroutine-scope.html"><span>new</span><wbr></wbr><span>Coroutine</span><wbr></wbr><span><span>Scope</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1109870157%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/new-coroutine-scope.html"><span class="token function">newCoroutineScope</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">coroutineContextBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-coroutine-scope/index.html">CoroutineScope</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="126647617%2FFunctions%2F540289978" anchor-label="newDrawerState" id="126647617%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/new-drawer-state.html"><span>new</span><wbr></wbr><span>Drawer</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="126647617%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/new-drawer-state.html"><span class="token function">newDrawerState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">drawerStateBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.state/-drawer-state/index.html">DrawerState</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.state/-drawer-state/index.html">DrawerState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-476522497%2FFunctions%2F540289978" anchor-label="newLazyListState" id="-476522497%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/new-lazy-list-state.html"><span>new</span><wbr></wbr><span>Lazy</span><wbr></wbr><span>List</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-476522497%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/new-lazy-list-state.html"><span class="token function">newLazyListState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stateBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.state/-lazy-list-state/index.html">LazyListState</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.state/-lazy-list-state/index.html">LazyListState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1560148131%2FFunctions%2F540289978" anchor-label="newModifier" id="1560148131%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/new-modifier.html"><span>new</span><wbr></wbr><span><span>Modifier</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1560148131%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/new-modifier.html"><span class="token function">newModifier</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">modifierBuilder<span class="token operator">: </span><a href="index.html">M</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">M</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1803506616%2FFunctions%2F540289978" anchor-label="newMutableInteractionSource" id="-1803506616%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/new-mutable-interaction-source.html"><span>new</span><wbr></wbr><span>Mutable</span><wbr></wbr><span>Interaction</span><wbr></wbr><span><span>Source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1803506616%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/new-mutable-interaction-source.html"><span class="token function">newMutableInteractionSource</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.foundation.interaction/-mutable-interaction-source/index.html">MutableInteractionSource</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1498437259%2FFunctions%2F540289978" anchor-label="newRangeSliderState" id="-1498437259%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/new-range-slider-state.html"><span>new</span><wbr></wbr><span>Range</span><wbr></wbr><span>Slider</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1498437259%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/new-range-slider-state.html"><span class="token function">newRangeSliderState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stateBuilder<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.ui.compose.state/RangeSliderState///PointingToDeclaration/">RangeSliderState</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.ui.compose.state/RangeSliderState///PointingToDeclaration/">RangeSliderState</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1779215479%2FFunctions%2F540289978" anchor-label="newScrollState" id="-1779215479%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/new-scroll-state.html"><span>new</span><wbr></wbr><span>Scroll</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1779215479%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/new-scroll-state.html"><span class="token function">newScrollState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stateBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.state/-scroll-state/index.html">ScrollState</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.state/-scroll-state/index.html">ScrollState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-297052011%2FFunctions%2F540289978" anchor-label="newSheetState" id="-297052011%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/new-sheet-state.html"><span>new</span><wbr></wbr><span>Sheet</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-297052011%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/new-sheet-state.html"><span class="token function">newSheetState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stateBuilder<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.ui.compose.state/SheetState///PointingToDeclaration/">SheetState</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.ui.compose.state/SheetState///PointingToDeclaration/">SheetState</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1837630817%2FFunctions%2F540289978" anchor-label="newSliderState" id="1837630817%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/new-slider-state.html"><span>new</span><wbr></wbr><span>Slider</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1837630817%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/new-slider-state.html"><span class="token function">newSliderState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stateBuilder<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.ui.compose.state/SliderState///PointingToDeclaration/">SliderState</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.ui.compose.state/SliderState///PointingToDeclaration/">SliderState</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-675532279%2FFunctions%2F540289978" anchor-label="newSnackbarHostState" id="-675532279%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/new-snackbar-host-state.html"><span>new</span><wbr></wbr><span>Snackbar</span><wbr></wbr><span>Host</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-675532279%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/new-snackbar-host-state.html"><span class="token function">newSnackbarHostState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">snackBarHostStateBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.state/-snackbar-host-state/index.html">SnackbarHostState</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.state/-snackbar-host-state/index.html">SnackbarHostState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="919415349%2FFunctions%2F540289978" anchor-label="newSwipeToDismissBoxState" id="919415349%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/new-swipe-to-dismiss-box-state.html"><span>new</span><wbr></wbr><span>Swipe</span><wbr></wbr><span>To</span><wbr></wbr><span>Dismiss</span><wbr></wbr><span>Box</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="919415349%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/new-swipe-to-dismiss-box-state.html"><span class="token function">newSwipeToDismissBoxState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stateBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.state/-swipe-to-dismiss-box-state/index.html">SwipeToDismissBoxState</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.state/-swipe-to-dismiss-box-state/index.html">SwipeToDismissBoxState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1357446342%2FFunctions%2F540289978" anchor-label="OutlinedButton" id="-1357446342%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-outlined-button.html"><span>Outlined</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1357446342%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-outlined-button.html"><span class="token function">OutlinedButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">outlinedButtonBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-outlined-button/index.html">OutlinedButton</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="675077566%2FFunctions%2F540289978" anchor-label="OutlinedCard" id="675077566%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-outlined-card.html"><span>Outlined</span><wbr></wbr><span><span>Card</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="675077566%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-outlined-card.html"><span class="token function">OutlinedCard</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cardBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-outlined-card/index.html">OutlinedCard</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="771368732%2FFunctions%2F540289978" anchor-label="OutlinedTextField" id="771368732%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-outlined-text-field.html"><span>Outlined</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Field</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="771368732%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-outlined-text-field.html"><span class="token function">OutlinedTextField</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">outlineTextFieldBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-outlined-text-field/index.html">OutlinedTextField</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="734813308%2FFunctions%2F540289978" anchor-label="Popup" id="734813308%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-popup.html"><span><span>Popup</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="734813308%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-popup.html"><span class="token function">Popup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">popupBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-popup/index.html">Popup</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="794632060%2FFunctions%2F540289978" anchor-label="PrimaryScrollableTabRow" id="794632060%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-primary-scrollable-tab-row.html"><span>Primary</span><wbr></wbr><span>Scrollable</span><wbr></wbr><span>Tab</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="794632060%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-primary-scrollable-tab-row.html"><span class="token function">PrimaryScrollableTabRow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tabRowBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-primary-scrollable-tab-row/index.html">PrimaryScrollableTabRow</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="5856156%2FFunctions%2F540289978" anchor-label="PrimaryTabRow" id="5856156%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-primary-tab-row.html"><span>Primary</span><wbr></wbr><span>Tab</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="5856156%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-primary-tab-row.html"><span class="token function">PrimaryTabRow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tabRowBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-primary-tab-row/index.html">PrimaryTabRow</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="112865116%2FFunctions%2F540289978" anchor-label="RadioButton" id="112865116%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-radio-button.html"><span>Radio</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="112865116%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-radio-button.html"><span class="token function">RadioButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">radioButtonBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-radio-button/index.html">RadioButton</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1466469380%2FFunctions%2F540289978" anchor-label="RangeSlider" id="-1466469380%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-range-slider.html"><span>Range</span><wbr></wbr><span><span>Slider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1466469380%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-range-slider.html"><span class="token function">RangeSlider</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rangeSliderBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-range-slider/index.html">RangeSlider</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1410234492%2FFunctions%2F540289978" anchor-label="Row" id="1410234492%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-row.html"><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1410234492%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-row.html"><span class="token function">Row</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rowBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-row/index.html">Row</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1684289930%2FFunctions%2F540289978" anchor-label="Scaffold" id="-1684289930%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-scaffold.html"><span><span>Scaffold</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1684289930%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-scaffold.html"><span class="token function">Scaffold</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scaffoldBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-scaffold/index.html">Scaffold</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1775286730%2FFunctions%2F540289978" anchor-label="ScrollableTabRow" id="1775286730%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-scrollable-tab-row.html"><span>Scrollable</span><wbr></wbr><span>Tab</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1775286730%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-scrollable-tab-row.html"><span class="token function">ScrollableTabRow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tabRowBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-scrollable-tab-row/index.html">ScrollableTabRow</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-93409924%2FFunctions%2F540289978" anchor-label="SecondaryScrollableTabRow" id="-93409924%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-secondary-scrollable-tab-row.html"><span>Secondary</span><wbr></wbr><span>Scrollable</span><wbr></wbr><span>Tab</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-93409924%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-secondary-scrollable-tab-row.html"><span class="token function">SecondaryScrollableTabRow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tabRowBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-secondary-scrollable-tab-row/index.html">SecondaryScrollableTabRow</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="226543068%2FFunctions%2F540289978" anchor-label="SecondaryTabRow" id="226543068%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-secondary-tab-row.html"><span>Secondary</span><wbr></wbr><span>Tab</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="226543068%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-secondary-tab-row.html"><span class="token function">SecondaryTabRow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tabRowBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-secondary-tab-row/index.html">SecondaryTabRow</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1392652832%2FFunctions%2F540289978" anchor-label="Slider" id="-1392652832%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-slider.html"><span><span>Slider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1392652832%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-slider.html"><span class="token function">Slider</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sliderBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-slider/index.html">Slider</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="366367512%2FFunctions%2F540289978" anchor-label="Snackbar" id="366367512%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-snackbar.html"><span><span>Snackbar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="366367512%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-snackbar.html"><span class="token function">Snackbar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">snackBarBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-snackbar/index.html">Snackbar</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1859070584%2FFunctions%2F540289978" anchor-label="SnackbarHost" id="-1859070584%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-snackbar-host.html"><span>Snackbar</span><wbr></wbr><span><span>Host</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1859070584%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-snackbar-host.html"><span class="token function">SnackbarHost</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">snackBarHostBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-snackbar-host/index.html">SnackbarHost</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1364469174%2FFunctions%2F540289978" anchor-label="Spacer" id="-1364469174%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-spacer.html"><span><span>Spacer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1364469174%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-spacer.html"><span class="token function">Spacer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">spacerBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-spacer/index.html">Spacer</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1739955906%2FFunctions%2F540289978" anchor-label="SuggestionChip" id="1739955906%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-suggestion-chip.html"><span>Suggestion</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1739955906%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-suggestion-chip.html"><span class="token function">SuggestionChip</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">androidViewBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-suggestion-chip/index.html">SuggestionChip</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1232869796%2FFunctions%2F540289978" anchor-label="Surface" id="-1232869796%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-surface.html"><span><span>Surface</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1232869796%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-surface.html"><span class="token function">Surface</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">surfaceBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-surface/index.html">Surface</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1882360900%2FFunctions%2F540289978" anchor-label="SwipeToDismissBox" id="-1882360900%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-swipe-to-dismiss-box.html"><span>Swipe</span><wbr></wbr><span>To</span><wbr></wbr><span>Dismiss</span><wbr></wbr><span><span>Box</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1882360900%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-swipe-to-dismiss-box.html"><span class="token function">SwipeToDismissBox</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">swipeToDismissBoxBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-swipe-to-dismiss-box/index.html">SwipeToDismissBox</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2031463366%2FFunctions%2F540289978" anchor-label="Switch" id="-2031463366%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-switch.html"><span><span>Switch</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2031463366%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-switch.html"><span class="token function">Switch</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">switchBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-switch/index.html">Switch</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1644315228%2FFunctions%2F540289978" anchor-label="Tab" id="1644315228%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-tab.html"><span><span>Tab</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1644315228%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-tab.html"><span class="token function">Tab</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tabBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-tab/index.html">Tab</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="983721880%2FFunctions%2F540289978" anchor-label="TabRow" id="983721880%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-tab-row.html"><span>Tab</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="983721880%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-tab-row.html"><span class="token function">TabRow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tabRowBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-tab-row/index.html">TabRow</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1921611208%2FFunctions%2F540289978" anchor-label="Text" id="1921611208%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-text.html"><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1921611208%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-text.html"><span class="token function">Text</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-text/index.html">Text</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-440604636%2FFunctions%2F540289978" anchor-label="TextButton" id="-440604636%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-text-button.html"><span>Text</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-440604636%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-text-button.html"><span class="token function">TextButton</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textButtonBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-text-button/index.html">TextButton</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-927295268%2FFunctions%2F540289978" anchor-label="TextField" id="-927295268%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-text-field.html"><span>Text</span><wbr></wbr><span><span>Field</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-927295268%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-text-field.html"><span class="token function">TextField</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textFieldBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-text-field/index.html">TextField</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-962942404%2FFunctions%2F540289978" anchor-label="Thumb" id="-962942404%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-thumb.html"><span><span>Thumb</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-962942404%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-thumb.html"><span class="token function">Thumb</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">thumbBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-thumb/index.html">Thumb</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="810546076%2FFunctions%2F540289978" anchor-label="TopAppBar" id="810546076%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-top-app-bar.html"><span>Top</span><wbr></wbr><span>App</span><wbr></wbr><span><span>Bar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="810546076%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-top-app-bar.html"><span class="token function">TopAppBar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">topAppBarBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-top-app-bar/index.html">TopAppBar</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="284951836%2FFunctions%2F540289978" anchor-label="Track" id="284951836%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-track.html"><span><span>Track</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="284951836%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-track.html"><span class="token function">Track</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">thumbBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-track/index.html">Track</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-313531120%2FFunctions%2F540289978" anchor-label="TriStateCheckbox" id="-313531120%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-tri-state-checkbox.html"><span>Tri</span><wbr></wbr><span>State</span><wbr></wbr><span><span>Checkbox</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-313531120%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-tri-state-checkbox.html"><span class="token function">TriStateCheckbox</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">triStateCheckboxBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-tri-state-checkbox/index.html">TriStateCheckbox</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-248830180%2FFunctions%2F540289978" anchor-label="VerticalDivider" id="-248830180%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slot/-vertical-divider.html"><span>Vertical</span><wbr></wbr><span><span>Divider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-248830180%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-slot/-vertical-divider.html"><span class="token function">VerticalDivider</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dividerBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.widget/-vertical-divider/index.html">VerticalDivider</a><span class="token operator">&lt;</span><a href="index.html">M</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>powered by m8test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
