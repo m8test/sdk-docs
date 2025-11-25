@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Typography</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:app/main">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/main"
+                                       data-filter=":sdk:app/main"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.script.core.api.ui.compose.material3/Typography///PointingToDeclaration//540289978">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.script.core.api.ui.compose.material3</a><span class="delimiter">/</span><span class="current">Typography</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Typography</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Typography</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for androidx.compose.material3.Typography<span class="token operator">&gt; </span></div><p class="paragraph">封装了 Material Design 的类型比例（Typography Scale）。</p><p class="paragraph">类型比例是一套预定义的、具有层次感的文本样式集合，用于构建清晰、美观且一致的用户界面。 此接口允许在自动化脚本中查询或自定义主题中的各种文本样式。</p><p class="paragraph">类型比例包含以下几类样式：</p><ul><li><p class="paragraph"><strong>Display</strong>：用于屏幕上的大号、醒目文本，通常用于短句。</p></li><li><p class="paragraph"><strong>Headline</strong>：用于标题，吸引用户的注意力。</p></li><li><p class="paragraph"><strong>Title</strong>：比标题字号稍小，适用于次级标题或强调性文本。</p></li><li><p class="paragraph"><strong>Body</strong>：用于长段落文本，强调可读性。</p></li><li><p class="paragraph"><strong>Label</strong>：用于组件中的标签，如按钮、标签页等。</p></li></ul><p class="paragraph">要了解更多关于排版的信息，请参阅 <a href="https://m3.material.io/styles/typography/overview">Material Design 排版</a>。</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1588604593%2FFunctions%2F540289978" anchor-label="getBodyLarge" id="-1588604593%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-body-large.html"><span>get</span><wbr></wbr><span>Body</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1588604593%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-body-large.html"><span class="token function">getBodyLarge</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">bodyLarge</code> 样式。适用于长篇文章，强调可读性。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="652058395%2FFunctions%2F540289978" anchor-label="getBodyMedium" id="652058395%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-body-medium.html"><span>get</span><wbr></wbr><span>Body</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="652058395%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-body-medium.html"><span class="token function">getBodyMedium</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">bodyMedium</code> 样式。默认的正文样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1016310525%2FFunctions%2F540289978" anchor-label="getBodySmall" id="-1016310525%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-body-small.html"><span>get</span><wbr></wbr><span>Body</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1016310525%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-body-small.html"><span class="token function">getBodySmall</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">bodySmall</code> 样式。用于辅助性文本或注释。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1339064377%2FFunctions%2F540289978" anchor-label="getDisplayLarge" id="1339064377%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-display-large.html"><span>get</span><wbr></wbr><span>Display</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1339064377%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-display-large.html"><span class="token function">getDisplayLarge</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">displayLarge</code> 样式。这是最大的展示文本，适用于屏幕标题等场景。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1215483249%2FFunctions%2F540289978" anchor-label="getDisplayMedium" id="1215483249%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-display-medium.html"><span>get</span><wbr></wbr><span>Display</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1215483249%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-display-medium.html"><span class="token function">getDisplayMedium</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">displayMedium</code> 样式。这是第二大的展示文本。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1911358445%2FFunctions%2F540289978" anchor-label="getDisplaySmall" id="1911358445%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-display-small.html"><span>get</span><wbr></wbr><span>Display</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1911358445%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-display-small.html"><span class="token function">getDisplaySmall</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">displaySmall</code> 样式。这是最小的展示文本。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1146369153%2FFunctions%2F540289978" anchor-label="getHeadlineLarge" id="1146369153%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-headline-large.html"><span>get</span><wbr></wbr><span>Headline</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1146369153%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-headline-large.html"><span class="token function">getHeadlineLarge</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">headlineLarge</code> 样式。这是最大的标题，适用于简短、重要的文本或数字。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-463101399%2FFunctions%2F540289978" anchor-label="getHeadlineMedium" id="-463101399%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-headline-medium.html"><span>get</span><wbr></wbr><span>Headline</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-463101399%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-headline-medium.html"><span class="token function">getHeadlineMedium</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">headlineMedium</code> 样式。这是第二大的标题。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1718663221%2FFunctions%2F540289978" anchor-label="getHeadlineSmall" id="1718663221%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-headline-small.html"><span>get</span><wbr></wbr><span>Headline</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1718663221%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-headline-small.html"><span class="token function">getHeadlineSmall</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">headlineSmall</code> 样式。这是最小的标题。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1973910571%2FFunctions%2F540289978" anchor-label="getLabelLarge" id="1973910571%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-label-large.html"><span>get</span><wbr></wbr><span>Label</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1973910571%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-label-large.html"><span class="token function">getLabelLarge</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">labelLarge</code> 样式。用于按钮、标签页等组件中的行动号召文本。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-579121217%2FFunctions%2F540289978" anchor-label="getLabelMedium" id="-579121217%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-label-medium.html"><span>get</span><wbr></wbr><span>Label</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-579121217%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-label-medium.html"><span class="token function">getLabelMedium</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">labelMedium</code> 样式。用于需要较小字号的标签文本。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1748762657%2FFunctions%2F540289978" anchor-label="getLabelSmall" id="-1748762657%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-label-small.html"><span>get</span><wbr></wbr><span>Label</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1748762657%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-label-small.html"><span class="token function">getLabelSmall</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">labelSmall</code> 样式。这是最小的标签样式，用于非常次要的文本。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1786046321%2FFunctions%2F540289978" anchor-label="getTitleLarge" id="-1786046321%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-title-large.html"><span>get</span><wbr></wbr><span>Title</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1786046321%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-title-large.html"><span class="token function">getTitleLarge</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">titleLarge</code> 样式。适用于中等强调的短文本，如对话框标题。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1173667877%2FFunctions%2F540289978" anchor-label="getTitleMedium" id="-1173667877%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-title-medium.html"><span>get</span><wbr></wbr><span>Title</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1173667877%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-title-medium.html"><span class="token function">getTitleMedium</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">titleMedium</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1213752253%2FFunctions%2F540289978" anchor-label="getTitleSmall" id="-1213752253%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-title-small.html"><span>get</span><wbr></wbr><span>Title</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1213752253%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-title-small.html"><span class="token function">getTitleSmall</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取 <code class="lang-kotlin">titleSmall</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-544924537%2FFunctions%2F540289978" anchor-label="setBodyLarge" id="-544924537%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-body-large.html"><span>set</span><wbr></wbr><span>Body</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-544924537%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-body-large.html"><span class="token function">setBodyLarge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">bodyLarge</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-72625477%2FFunctions%2F540289978" anchor-label="setBodyMedium" id="-72625477%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-body-medium.html"><span>set</span><wbr></wbr><span>Body</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-72625477%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-body-medium.html"><span class="token function">setBodyMedium</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">bodyMedium</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1982069563%2FFunctions%2F540289978" anchor-label="setBodySmall" id="1982069563%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-body-small.html"><span>set</span><wbr></wbr><span>Body</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1982069563%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-body-small.html"><span class="token function">setBodySmall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">bodySmall</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="545074009%2FFunctions%2F540289978" anchor-label="setDisplayLarge" id="545074009%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-display-large.html"><span>set</span><wbr></wbr><span>Display</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="545074009%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-display-large.html"><span class="token function">setDisplayLarge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">displayLarge</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-642408919%2FFunctions%2F540289978" anchor-label="setDisplayMedium" id="-642408919%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-display-medium.html"><span>set</span><wbr></wbr><span>Display</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-642408919%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-display-medium.html"><span class="token function">setDisplayMedium</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">displayMedium</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1222899187%2FFunctions%2F540289978" anchor-label="setDisplaySmall" id="-1222899187%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-display-small.html"><span>set</span><wbr></wbr><span>Display</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1222899187%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-display-small.html"><span class="token function">setDisplaySmall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">displaySmall</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1011818183%2FFunctions%2F540289978" anchor-label="setHeadlineLarge" id="-1011818183%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-headline-large.html"><span>set</span><wbr></wbr><span>Headline</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1011818183%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-headline-large.html"><span class="token function">setHeadlineLarge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">headlineLarge</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1661426615%2FFunctions%2F540289978" anchor-label="setHeadlineMedium" id="-1661426615%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-headline-medium.html"><span>set</span><wbr></wbr><span>Headline</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1661426615%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-headline-medium.html"><span class="token function">setHeadlineMedium</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">headlineMedium</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1515175917%2FFunctions%2F540289978" anchor-label="setHeadlineSmall" id="1515175917%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-headline-small.html"><span>set</span><wbr></wbr><span>Headline</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1515175917%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-headline-small.html"><span class="token function">setHeadlineSmall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">headlineSmall</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="619580363%2FFunctions%2F540289978" anchor-label="setLabelLarge" id="619580363%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-label-large.html"><span>set</span><wbr></wbr><span>Label</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="619580363%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-label-large.html"><span class="token function">setLabelLarge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">labelLarge</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1667288055%2FFunctions%2F540289978" anchor-label="setLabelMedium" id="1667288055%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-label-medium.html"><span>set</span><wbr></wbr><span>Label</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1667288055%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-label-medium.html"><span class="token function">setLabelMedium</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">labelMedium</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1148392833%2FFunctions%2F540289978" anchor-label="setLabelSmall" id="-1148392833%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-label-small.html"><span>set</span><wbr></wbr><span>Label</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1148392833%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-label-small.html"><span class="token function">setLabelSmall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">labelSmall</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2133047087%2FFunctions%2F540289978" anchor-label="setTitleLarge" id="2133047087%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-title-large.html"><span>set</span><wbr></wbr><span>Title</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2133047087%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-title-large.html"><span class="token function">setTitleLarge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">titleLarge</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1340116243%2FFunctions%2F540289978" anchor-label="setTitleMedium" id="1340116243%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-title-medium.html"><span>set</span><wbr></wbr><span>Title</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1340116243%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-title-medium.html"><span class="token function">setTitleMedium</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">titleMedium</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="365073891%2FFunctions%2F540289978" anchor-label="setTitleSmall" id="365073891%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-title-small.html"><span>set</span><wbr></wbr><span>Title</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="365073891%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-title-small.html"><span class="token function">setTitleSmall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textStyleBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text/-text-style/index.html">TextStyle</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">titleSmall</code> 样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>powered by m8test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

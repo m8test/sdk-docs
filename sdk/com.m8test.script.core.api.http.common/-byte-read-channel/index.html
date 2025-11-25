@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ByteReadChannel</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:app/main">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/main"
+                                       data-filter=":sdk:app/main"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.script.core.api.http.common/ByteReadChannel///PointingToDeclaration//540289978">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.script.core.api.http.common</a><span class="delimiter">/</span><span class="current">ByteReadChannel</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Byte</span><wbr></wbr><span>Read</span><wbr></wbr><span><span>Channel</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">ByteReadChannel</a> : <a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel<span class="token operator">&gt; </span></div><p class="paragraph">用于异步读取字节序列的通道。</p><p class="paragraph">该接口是对 Ktor 原始 <code class="lang-kotlin">io.ktor.utils.io.ByteReadChannel</code> 的封装， 用于在脚本环境中提供非阻塞的IO读取能力。</p><p class="paragraph">这是一个 <strong>单读取者通道</strong>，意味着不应在多个协程中并发地从此通道读取数据。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">M8Test, contact@m8test.com, https://m8test.com</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1354775748%2FFunctions%2F540289978" anchor-label="also" id="1354775748%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/also.html"><span><span>also</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1354775748%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/also.html"><span class="token function">also</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel<span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel<span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">对 ObjectWrapper<T> 调用给定的 <a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/also.html">block</a> 函数，并返回 ObjectWrapper<T> 本身。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1238092181%2FFunctions%2F540289978" anchor-label="apply" id="1238092181%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/apply.html"><span><span>apply</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1238092181%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/apply.html"><span class="token function">apply</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel<span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">对 ObjectWrapper<T> 调用给定的 <a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/apply.html">block</a> 函数，并返回 ObjectWrapper<T> 本身。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1256617271%2FFunctions%2F540289978" anchor-label="cancel" id="-1256617271%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cancel.html"><span><span>cancel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1256617271%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="cancel.html"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cause<span class="token operator">: </span><a href="../../com.m8test.script.core.api.exception/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">取消此通道。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1152796087%2FFunctions%2F540289978" anchor-label="copyToByteWriteChannel" id="-1152796087%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="copy-to-byte-write-channel.html"><span>copy</span><wbr></wbr><span>To</span><wbr></wbr><span>Byte</span><wbr></wbr><span>Write</span><wbr></wbr><span><span>Channel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1152796087%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="copy-to-byte-write-channel.html"><span class="token function">copyToByteWriteChannel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-coroutine-scope/index.html">CoroutineScope</a><span class="token punctuation">, </span></span><span class="parameter ">byteWriteChannel<span class="token operator">: </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">, </span></span><span class="parameter ">limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-deferred/index.html">Deferred</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">异步地将此通道中的字节复制到目标 <code class="lang-kotlin">byteWriteChannel</code> 中.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1595720351%2FFunctions%2F540289978" anchor-label="copyToByteWriteChannelAndClose" id="1595720351%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="copy-to-byte-write-channel-and-close.html"><span>copy</span><wbr></wbr><span>To</span><wbr></wbr><span>Byte</span><wbr></wbr><span>Write</span><wbr></wbr><span>Channel</span><wbr></wbr><span>And</span><wbr></wbr><span><span>Close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1595720351%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="copy-to-byte-write-channel-and-close.html"><span class="token function">copyToByteWriteChannelAndClose</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-coroutine-scope/index.html">CoroutineScope</a><span class="token punctuation">, </span></span><span class="parameter ">byteWriteChannel<span class="token operator">: </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-deferred/index.html">Deferred</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">异步地将此通道中所有剩余的字节复制到目标 <code class="lang-kotlin">byteWriteChannel</code> 中，并在完成后关闭两个通道。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1998719610%2FFunctions%2F540289978" anchor-label="discard" id="1998719610%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="discard.html"><span><span>discard</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1998719610%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="discard.html"><span class="token function">discard</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-coroutine-scope/index.html">CoroutineScope</a><span class="token punctuation">, </span></span><span class="parameter ">max<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-deferred/index.html">Deferred</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">异步丢弃（跳过）此通道中最多 <code class="lang-kotlin">max</code> 个字节。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1371747428%2FFunctions%2F540289978" anchor-label="getOrigin" id="-1371747428%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/get-origin.html"><span>get</span><wbr></wbr><span><span>Origin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1371747428%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/get-origin.html"><span class="token function">getOrigin</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel</div><div class="brief "><p class="paragraph">获取原始的对象.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1016724864%2FFunctions%2F540289978" anchor-label="isClosedForRead" id="1016724864%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-closed-for-read.html"><span>is</span><wbr></wbr><span>Closed</span><wbr></wbr><span>For</span><wbr></wbr><span><span>Read</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1016724864%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="is-closed-for-read.html"><span class="token function">isClosedForRead</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">检查通道是否已对读取操作关闭。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1762225557%2FFunctions%2F540289978" anchor-label="let" id="1762225557%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/let.html"><span><span>let</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1762225557%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/let.html">R</a><span class="token operator">&gt; </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/let.html"><span class="token function">let</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel<span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.http.common/ByteReadChannel/let/#kotlin.Function1[&amp;lt;ERROR CLASS&amp;gt; ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel,TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.http.common/ByteReadChannel/let/#kotlin.Function1[&amp;lt;ERROR CLASS&amp;gt; ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel,TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">对 ObjectWrapper<T> 调用给定的 <a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/let.html">block</a> 函数，并返回 <a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/let.html">block</a> 函数的结果包装在 ObjectWrapper<R> 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-520309552%2FFunctions%2F540289978" anchor-label="readAvailable" id="-520309552%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-available.html"><span>read</span><wbr></wbr><span><span>Available</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-520309552%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="read-available.html"><span class="token function">readAvailable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-coroutine-scope/index.html">CoroutineScope</a><span class="token punctuation">, </span></span><span class="parameter ">buffer<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">length<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-deferred/index.html">Deferred</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">异步地将通道中当前可用的字节读入指定的字节数组.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="547893864%2FFunctions%2F540289978" anchor-label="readByte" id="547893864%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-byte.html"><span>read</span><wbr></wbr><span><span>Byte</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="547893864%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="read-byte.html"><span class="token function">readByte</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-coroutine-scope/index.html">CoroutineScope</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-deferred/index.html">Deferred</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">异步读取并返回通道中的下一个字节。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2016171226%2FFunctions%2F540289978" anchor-label="readByteArray" id="2016171226%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-byte-array.html"><span>read</span><wbr></wbr><span>Byte</span><wbr></wbr><span><span>Array</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2016171226%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="read-byte-array.html"><span class="token function">readByteArray</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-coroutine-scope/index.html">CoroutineScope</a><span class="token punctuation">, </span></span><span class="parameter ">count<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-deferred/index.html">Deferred</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">异步读取并返回一个包含确切 <code class="lang-kotlin">count</code> 字节的字节数组。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1225248475%2FFunctions%2F540289978" anchor-label="readInt" id="-1225248475%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-int.html"><span>read</span><wbr></wbr><span><span>Int</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1225248475%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="read-int.html"><span class="token function">readInt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-coroutine-scope/index.html">CoroutineScope</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-deferred/index.html">Deferred</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">异步读取四个字节并将其作为 <code class="lang-kotlin">Int</code> (大端序) 返回。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="43532939%2FFunctions%2F540289978" anchor-label="readRemaining" id="43532939%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-remaining.html"><span>read</span><wbr></wbr><span><span>Remaining</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="43532939%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="read-remaining.html"><span class="token function">readRemaining</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-coroutine-scope/index.html">CoroutineScope</a><span class="token punctuation">, </span></span><span class="parameter ">max<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-deferred/index.html">Deferred</a><span class="token operator">&lt;</span><a href="../../com.m8test.script.core.api.io/-source/index.html">Source</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">异步读取此通道中所有剩余的字节。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1730807655%2FFunctions%2F540289978" anchor-label="readStream" id="-1730807655%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-stream.html"><span>read</span><wbr></wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1730807655%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="read-stream.html"><span class="token function">readStream</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bufferSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines.flow/-flow/index.html">Flow</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">以冷流（Cold Flow）的形式返回一个字节块序列，用于流式读取此通道的数据。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="555410737%2FFunctions%2F540289978" anchor-label="readUTF8Line" id="555410737%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-u-t-f8-line.html"><span>read</span><wbr></wbr><span><span>UTF8Line</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="555410737%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="read-u-t-f8-line.html"><span class="token function">readUTF8Line</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-coroutine-scope/index.html">CoroutineScope</a><span class="token punctuation">, </span></span><span class="parameter ">max<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.coroutines/-deferred/index.html">Deferred</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">异步读取一行 UTF-8 编码的文本。 识别 <code class="lang-kotlin">CR</code>, <code class="lang-kotlin">LF</code>, <code class="lang-kotlin">CRLF</code> 作为行分隔符。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2123335163%2FFunctions%2F540289978" anchor-label="run" id="-2123335163%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/run.html"><span><span>run</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2123335163%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/run.html">R</a><span class="token operator">&gt; </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/run.html"><span class="token function">run</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.http.common/ByteReadChannel/run/#kotlin.Function1[&amp;lt;ERROR CLASS&amp;gt; ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel,TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.http.common/ByteReadChannel/run/#kotlin.Function1[&amp;lt;ERROR CLASS&amp;gt; ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel,TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">对 ObjectWrapper<T> 调用给定的 <a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/run.html">block</a> 函数，并返回 <a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/run.html">block</a> 函数的结果包装在 ObjectWrapper<R> 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1994096366%2FFunctions%2F540289978" anchor-label="setOrigin" id="1994096366%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/set-origin.html"><span>set</span><wbr></wbr><span><span>Origin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1994096366%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/set-origin.html"><span class="token function">setOrigin</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">origin<span class="token operator">: </span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置原始对象</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="650651827%2FFunctions%2F540289978" anchor-label="takeIf" id="650651827%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/take-if.html"><span>take</span><wbr></wbr><span><span>If</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="650651827%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/take-if.html"><span class="token function">takeIf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel<span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel<span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">如果 ObjectWrapper<T> 满足给定的 <a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/take-if.html">predicate</a>，则返回 ObjectWrapper<T> 本身，否则返回 null 包装在 ObjectWrapper<T>? 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1297441982%2FFunctions%2F540289978" anchor-label="takeUnless" id="1297441982%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/take-unless.html"><span>take</span><wbr></wbr><span><span>Unless</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1297441982%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/take-unless.html"><span class="token function">takeUnless</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel<span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for io.ktor.utils.io.ByteReadChannel<span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">如果 ObjectWrapper<T> 不满足给定的 <a href="../../com.m8test.script.core.api.wrapper/-object-wrapper/take-unless.html">predicate</a>，则返回 ObjectWrapper<T> 本身，否则返回 null 包装在 ObjectWrapper<T>? 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>powered by m8test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

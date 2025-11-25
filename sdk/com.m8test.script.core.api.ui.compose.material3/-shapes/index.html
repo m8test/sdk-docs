@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Shapes</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:app/main">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/main"
+                                       data-filter=":sdk:app/main"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.script.core.api.ui.compose.material3/Shapes///PointingToDeclaration//540289978">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.script.core.api.ui.compose.material3</a><span class="delimiter">/</span><span class="current">Shapes</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Shapes</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Shapes</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for androidx.compose.material3.Shapes<span class="token operator">&gt; </span></div><p class="paragraph">定义了 Material 3 设计系统中的形状体系。</p><p class="paragraph">Material 表面可以以不同的形状显示。形状可以引导注意力、识别组件、传达状态并表达品牌。 形状体系定义了容器圆角的样式，提供了一系列从方形到完全圆形的圆润度。</p><p class="paragraph">形状有不同尺寸：</p><ul><li><p class="paragraph"><a href="get-extra-small.html">getExtraSmall</a> / <a href="set-extra-small.html">setExtraSmall</a></p></li><li><p class="paragraph"><a href="get-small.html">getSmall</a> / <a href="set-small.html">setSmall</a></p></li><li><p class="paragraph"><a href="get-medium.html">getMedium</a> / <a href="set-medium.html">setMedium</a></p></li><li><p class="paragraph"><a href="get-large.html">getLarge</a> / <a href="set-large.html">setLarge</a></p></li><li><p class="paragraph"><a href="get-extra-large.html">getExtraLarge</a> / <a href="set-extra-large.html">setExtraLarge</a></p></li></ul><p class="paragraph">您可以通过覆盖组件的 <code class="lang-kotlin">shape</code> 参数来更改其形状。</p><p class="paragraph">要了解更多关于形状的信息，请参阅 <a href="https://m3.material.io/styles/shape/overview">Material Design 形状</a>。</p><h4 class="tableheader">See also</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><span>androidx.</span><wbr></wbr><span>compose.</span><wbr></wbr><span>material3.</span><wbr></wbr><span>Material</span><wbr></wbr><span>Theme.</span><wbr></wbr><span>shapes</span></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1152868188%2FFunctions%2F540289978" anchor-label="getExtraLarge" id="-1152868188%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-extra-large.html"><span>get</span><wbr></wbr><span>Extra</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1152868188%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-extra-large.html"><span class="token function">getExtraLarge</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.foundation.shape/-corner-based-shape/index.html">CornerBasedShape</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">表示 <code class="lang-kotlin">extraLarge</code> 尺寸的圆角形状。 其尺寸大于 <code class="lang-kotlin">large</code> 尺寸且小于 androidx.compose.foundation.shape.CircleShape。 默认情况下，大号悬浮按钮（large FABs）使用此形状。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-580574120%2FFunctions%2F540289978" anchor-label="getExtraSmall" id="-580574120%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-extra-small.html"><span>get</span><wbr></wbr><span>Extra</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-580574120%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-extra-small.html"><span class="token function">getExtraSmall</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.foundation.shape/-corner-based-shape/index.html">CornerBasedShape</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">表示 <code class="lang-kotlin">extraSmall</code> 尺寸的圆角形状。 其尺寸大于 androidx.compose.ui.graphics.RectangleShape 且小于 <code class="lang-kotlin">small</code> 尺寸。 默认情况下，自动完成菜单、选择菜单、SnackBar、标准菜单和文本字段使用此形状。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="650080784%2FFunctions%2F540289978" anchor-label="getLarge" id="650080784%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-large.html"><span>get</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="650080784%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-large.html"><span class="token function">getLarge</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.foundation.shape/-corner-based-shape/index.html">CornerBasedShape</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">表示 <code class="lang-kotlin">large</code> 尺寸的圆角形状。 其尺寸大于 <code class="lang-kotlin">medium</code> 且小于 <code class="lang-kotlin">extraLarge</code> 尺寸。 默认情况下，扩展悬浮按钮（extended FABs）、常规悬浮按钮（FABs）和导航抽屉（navigation drawers）使用此形状。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1331828346%2FFunctions%2F540289978" anchor-label="getMedium" id="1331828346%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-medium.html"><span>get</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1331828346%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-medium.html"><span class="token function">getMedium</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.foundation.shape/-corner-based-shape/index.html">CornerBasedShape</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">表示 <code class="lang-kotlin">medium</code> 尺寸的圆角形状。 其尺寸大于 <code class="lang-kotlin">small</code> 且小于 <code class="lang-kotlin">large</code> 尺寸。 默认情况下，卡片（Cards）和小号悬浮按钮（small FABs）使用此形状。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1222374852%2FFunctions%2F540289978" anchor-label="getSmall" id="1222374852%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-small.html"><span>get</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1222374852%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-small.html"><span class="token function">getSmall</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.foundation.shape/-corner-based-shape/index.html">CornerBasedShape</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">表示 <code class="lang-kotlin">small</code> 尺寸的圆角形状。 其尺寸大于 <code class="lang-kotlin">extraSmall</code> 且小于 <code class="lang-kotlin">medium</code> 尺寸。 默认情况下，标签（Chips）使用此形状。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1803652316%2FFunctions%2F540289978" anchor-label="setExtraLarge" id="1803652316%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-extra-large.html"><span>set</span><wbr></wbr><span>Extra</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1803652316%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-extra-large.html"><span class="token function">setExtraLarge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">shapeBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.foundation.shape/-corner-based-shape/index.html">CornerBasedShape</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">extraLarge</code> 尺寸的圆角形状。 其尺寸大于 <code class="lang-kotlin">large</code> 尺寸且小于 androidx.compose.foundation.shape.CircleShape。 默认情况下，大号悬浮按钮（large FABs）使用此形状。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1714116184%2FFunctions%2F540289978" anchor-label="setExtraSmall" id="-1714116184%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-extra-small.html"><span>set</span><wbr></wbr><span>Extra</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1714116184%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-extra-small.html"><span class="token function">setExtraSmall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">shapeBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.foundation.shape/-corner-based-shape/index.html">CornerBasedShape</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">extraSmall</code> 尺寸的圆角形状。 其尺寸大于 androidx.compose.ui.graphics.RectangleShape 且小于 <code class="lang-kotlin">small</code> 尺寸。 默认情况下，自动完成菜单、选择菜单、SnackBar、标准菜单和文本字段使用此形状。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1650201944%2FFunctions%2F540289978" anchor-label="setLarge" id="1650201944%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-large.html"><span>set</span><wbr></wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1650201944%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-large.html"><span class="token function">setLarge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">shapeBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.foundation.shape/-corner-based-shape/index.html">CornerBasedShape</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">large</code> 尺寸的圆角形状。 其尺寸大于 <code class="lang-kotlin">medium</code> 且小于 <code class="lang-kotlin">extraLarge</code> 尺寸。 默认情况下，扩展悬浮按钮（extended FABs）、常规悬浮按钮（FABs）和导航抽屉（navigation drawers）使用此形状。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-466994490%2FFunctions%2F540289978" anchor-label="setMedium" id="-466994490%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-medium.html"><span>set</span><wbr></wbr><span><span>Medium</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-466994490%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-medium.html"><span class="token function">setMedium</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">shapeBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.foundation.shape/-corner-based-shape/index.html">CornerBasedShape</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">medium</code> 尺寸的圆角形状。 其尺寸大于 <code class="lang-kotlin">small</code> 且小于 <code class="lang-kotlin">large</code> 尺寸。 默认情况下，卡片（Cards）和小号悬浮按钮（small FABs）使用此形状。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1867566556%2FFunctions%2F540289978" anchor-label="setSmall" id="-1867566556%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-small.html"><span>set</span><wbr></wbr><span><span>Small</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1867566556%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-small.html"><span class="token function">setSmall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">shapeBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.foundation.shape/-corner-based-shape/index.html">CornerBasedShape</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置 <code class="lang-kotlin">small</code> 尺寸的圆角形状。 其尺寸大于 <code class="lang-kotlin">extraSmall</code> 且小于 <code class="lang-kotlin">medium</code> 尺寸。 默认情况下，标签（Chips）使用此形状。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>powered by m8test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
