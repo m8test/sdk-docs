@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>TextStyle</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:app/main">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/main"
+                                       data-filter=":sdk:app/main"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.script.core.api.ui.compose.text/TextStyle///PointingToDeclaration//540289978">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.script.core.api.ui.compose.text</a><span class="delimiter">/</span><span class="current">TextStyle</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Text</span><wbr></wbr><span><span>Style</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">TextStyle</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for androidx.compose.ui.text.TextStyle<span class="token operator">&gt; </span></div><p class="paragraph">封装了用于描述文本外观的所有样式参数。</p><p class="paragraph">此接口包装了 androidx.compose.ui.text.TextStyle，提供了一种在自动化脚本中 以声明方式<strong>配置</strong>或<strong>验证</strong>文本样式属性的能力，例如颜色、字体大小、粗细等。</p><p class="paragraph"><strong>使用示例</strong>：</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// 验证一个文本组件的样式<br>val textNode = findNode(Text(&quot;Hello&quot;))<br>textNode.assertTextStyle {<br>    // 验证颜色是否为红色<br>    getColor().assert { red == 255 }<br>    // 验证字体大小是否为 16sp<br>    getFontSize().assertEquals(textUnit.sp(16))<br>    // 验证字体是否为粗体<br>    getFontWeight().assertEquals(fontWeights.Bold)<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">M8Test, contact@m8test.com, https://m8test.com</p></span><h4 class="tableheader">See also</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><span>androidx.</span><wbr></wbr><span>compose.</span><wbr></wbr><span>ui.</span><wbr></wbr><span>text.</span><wbr></wbr><span>TextStyle</span></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="2059518804%2FFunctions%2F540289978" anchor-label="getBackground" id="2059518804%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-background.html"><span>get</span><wbr></wbr><span><span>Background</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2059518804%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-background.html"><span class="token function">getBackground</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-color/index.html">Color</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取文本的背景颜色。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2050942469%2FFunctions%2F540289978" anchor-label="getBaselineShift" id="-2050942469%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-baseline-shift.html"><span>get</span><wbr></wbr><span>Baseline</span><wbr></wbr><span><span>Shift</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2050942469%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-baseline-shift.html"><span class="token function">getBaselineShift</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-baseline-shift/index.html">BaselineShift</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取基线偏移量，用于调整文本相对于基线的垂直位置。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1169081749%2FFunctions%2F540289978" anchor-label="getColor" id="1169081749%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-color.html"><span>get</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1169081749%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-color.html"><span class="token function">getColor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-color/index.html">Color</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取文本的前景颜色。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-98228337%2FFunctions%2F540289978" anchor-label="getFontFamily" id="-98228337%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-family.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Family</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-98228337%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-family.html"><span class="token function">getFontFamily</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text.font/-font-family/index.html">FontFamily</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取字体族。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="956475054%2FFunctions%2F540289978" anchor-label="getFontFeatureSettings" id="956475054%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-feature-settings.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span>Feature</span><wbr></wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="956475054%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-feature-settings.html"><span class="token function">getFontFeatureSettings</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取高级排版设置。这是一个遵循 CSS <code class="lang-kotlin">font-feature-settings</code> 格式的字符串。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-517319918%2FFunctions%2F540289978" anchor-label="getFontSize" id="-517319918%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-size.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-517319918%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-size.html"><span class="token function">getFontSize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-text-unit/index.html">TextUnit</a></div><div class="brief "><p class="paragraph">获取字体大小。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-294786634%2FFunctions%2F540289978" anchor-label="getFontStyle" id="-294786634%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-style.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Style</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-294786634%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-style.html"><span class="token function">getFontStyle</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text.font/-font-style/index.html">FontStyle</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取字体样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1556863949%2FFunctions%2F540289978" anchor-label="getFontSynthesis" id="-1556863949%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-synthesis.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Synthesis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1556863949%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-synthesis.html"><span class="token function">getFontSynthesis</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text.font/-font-synthesis/index.html">FontSynthesis</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取字体合成策略。该策略决定了当字体族中缺少粗体或斜体字形时，系统是否应自动“伪造”它们。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-353853701%2FFunctions%2F540289978" anchor-label="getFontWeight" id="-353853701%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-weight.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Weight</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-353853701%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-weight.html"><span class="token function">getFontWeight</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text.font/-font-weight/index.html">FontWeight</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取字体粗细。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1401901563%2FFunctions%2F540289978" anchor-label="getLetterSpacing" id="1401901563%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-letter-spacing.html"><span>get</span><wbr></wbr><span>Letter</span><wbr></wbr><span><span>Spacing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1401901563%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-letter-spacing.html"><span class="token function">getLetterSpacing</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-text-unit/index.html">TextUnit</a></div><div class="brief "><p class="paragraph">获取字符间距（字间距）。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1329132825%2FFunctions%2F540289978" anchor-label="getLineHeight" id="-1329132825%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-line-height.html"><span>get</span><wbr></wbr><span>Line</span><wbr></wbr><span><span>Height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1329132825%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-line-height.html"><span class="token function">getLineHeight</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-text-unit/index.html">TextUnit</a></div><div class="brief "><p class="paragraph">获取行高。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1398857250%2FFunctions%2F540289978" anchor-label="getShadow" id="1398857250%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-shadow.html"><span>get</span><wbr></wbr><span><span>Shadow</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1398857250%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-shadow.html"><span class="token function">getShadow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-shadow/index.html">Shadow</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取应用于文本的阴影效果。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1006286656%2FFunctions%2F540289978" anchor-label="getTextAlign" id="1006286656%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-align.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Align</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1006286656%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-align.html"><span class="token function">getTextAlign</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-align/index.html">TextAlign</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取文本的水平对齐方式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1088059173%2FFunctions%2F540289978" anchor-label="getTextDecoration" id="1088059173%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-decoration.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Decoration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1088059173%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-decoration.html"><span class="token function">getTextDecoration</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-decoration/index.html">TextDecoration</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取文本装饰，如下划线或删除线。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2134126598%2FFunctions%2F540289978" anchor-label="getTextDirection" id="2134126598%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-direction.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Direction</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2134126598%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-direction.html"><span class="token function">getTextDirection</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-direction/index.html">TextDirection</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取文本的显示方向。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1318823946%2FFunctions%2F540289978" anchor-label="getTextGeometricTransform" id="1318823946%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-geometric-transform.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span>Geometric</span><wbr></wbr><span><span>Transform</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1318823946%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-geometric-transform.html"><span class="token function">getTextGeometricTransform</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-geometric-transform/index.html">TextGeometricTransform</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取应用于文本的几何变换，例如水平缩放或倾斜。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1694581079%2FFunctions%2F540289978" anchor-label="getTextIndent" id="-1694581079%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-indent.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Indent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1694581079%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-indent.html"><span class="token function">getTextIndent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-indent/index.html">TextIndent</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取段落缩进设置。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="5691761%2FFunctions%2F540289978" anchor-label="setBackground" id="5691761%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-background.html"><span>set</span><wbr></wbr><span><span>Background</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="5691761%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-background.html"><span class="token function">setBackground</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">backgroundBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-color/index.html">Color</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置文本的背景颜色。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1993571476%2FFunctions%2F540289978" anchor-label="setBaselineShift" id="1993571476%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-baseline-shift.html"><span>set</span><wbr></wbr><span>Baseline</span><wbr></wbr><span><span>Shift</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1993571476%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-baseline-shift.html"><span class="token function">setBaselineShift</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">baselineShift<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-baseline-shifts/index.html">BaselineShifts</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-baseline-shift/index.html">BaselineShift</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置基线偏移量，常用于实现上标或下标效果。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1732089846%2FFunctions%2F540289978" anchor-label="setColor" id="-1732089846%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-color.html"><span>set</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1732089846%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-color.html"><span class="token function">setColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">colorBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-color/index.html">Color</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置文本的前景颜色。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-899547358%2FFunctions%2F540289978" anchor-label="setFontFamily" id="-899547358%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-font-family.html"><span>set</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Family</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-899547358%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-font-family.html"><span class="token function">setFontFamily</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fontFamily<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.text.font/-font-families/index.html">FontFamilies</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.text.font/-font-family/index.html">FontFamily</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置字体族。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-285406567%2FFunctions%2F540289978" anchor-label="setFontFeatureSettings" id="-285406567%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-font-feature-settings.html"><span>set</span><wbr></wbr><span>Font</span><wbr></wbr><span>Feature</span><wbr></wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-285406567%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-font-feature-settings.html"><span class="token function">setFontFeatureSettings</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fontFeatureSettings<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置高级排版设置，用于启用字体中的特殊字形，如连字。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-228242049%2FFunctions%2F540289978" anchor-label="setFontSize" id="-228242049%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-font-size.html"><span>set</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-228242049%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-font-size.html"><span class="token function">setFontSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fontSize<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-text-units/index.html">TextUnits</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-text-unit/index.html">TextUnit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置字体大小。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1673166936%2FFunctions%2F540289978" anchor-label="setFontStyle" id="-1673166936%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-font-style.html"><span>set</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Style</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1673166936%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-font-style.html"><span class="token function">setFontStyle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fontStyle<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.text.font/-font-styles/index.html">FontStyles</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.text.font/-font-style/index.html">FontStyle</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置字体样式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="352689913%2FFunctions%2F540289978" anchor-label="setFontSynthesis" id="352689913%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-font-synthesis.html"><span>set</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Synthesis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="352689913%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-font-synthesis.html"><span class="token function">setFontSynthesis</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fontSynthesis<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.text.font/-font-syntheses/index.html">FontSyntheses</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.text.font/-font-synthesis/index.html">FontSynthesis</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置字体合成策略。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1244037787%2FFunctions%2F540289978" anchor-label="setFontWeight" id="1244037787%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-font-weight.html"><span>set</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Weight</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1244037787%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-font-weight.html"><span class="token function">setFontWeight</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fontWeight<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.text.font/-font-weights/index.html">FontWeights</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.text.font/-font-weight/index.html">FontWeight</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置字体粗细。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-907685696%2FFunctions%2F540289978" anchor-label="setLetterSpacing" id="-907685696%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-letter-spacing.html"><span>set</span><wbr></wbr><span>Letter</span><wbr></wbr><span><span>Spacing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-907685696%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-letter-spacing.html"><span class="token function">setLetterSpacing</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">letterSpacing<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-text-units/index.html">TextUnits</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-text-unit/index.html">TextUnit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置字符间距。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2013893612%2FFunctions%2F540289978" anchor-label="setLineHeight" id="-2013893612%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-line-height.html"><span>set</span><wbr></wbr><span>Line</span><wbr></wbr><span><span>Height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2013893612%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-line-height.html"><span class="token function">setLineHeight</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">lineHeight<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-text-units/index.html">TextUnits</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-text-unit/index.html">TextUnit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置行高。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="891224662%2FFunctions%2F540289978" anchor-label="setShadow" id="891224662%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-shadow.html"><span>set</span><wbr></wbr><span><span>Shadow</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="891224662%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-shadow.html"><span class="token function">setShadow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">shadowBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-shadow/index.html">Shadow</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置文本的阴影效果。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="109861684%2FFunctions%2F540289978" anchor-label="setTextAlign" id="109861684%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-text-align.html"><span>set</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Align</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="109861684%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-text-align.html"><span class="token function">setTextAlign</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textAlign<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-aligns/index.html">TextAligns</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-align/index.html">TextAlign</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置文本的水平对齐方式。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1728939146%2FFunctions%2F540289978" anchor-label="setTextDecoration" id="1728939146%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-text-decoration.html"><span>set</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Decoration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1728939146%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-text-decoration.html"><span class="token function">setTextDecoration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">decorations<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-decorations/index.html">TextDecorations</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-decoration/index.html">TextDecoration</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置文本装饰。可以组合多个装饰效果。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-593150519%2FFunctions%2F540289978" anchor-label="setTextDirection" id="-593150519%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-text-direction.html"><span>set</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Direction</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-593150519%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-text-direction.html"><span class="token function">setTextDirection</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textDirection<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-directions/index.html">TextDirections</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-direction/index.html">TextDirection</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置文本的显示方向。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2041830185%2FFunctions%2F540289978" anchor-label="setTextGeometricTransform" id="-2041830185%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-text-geometric-transform.html"><span>set</span><wbr></wbr><span>Text</span><wbr></wbr><span>Geometric</span><wbr></wbr><span><span>Transform</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2041830185%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-text-geometric-transform.html"><span class="token function">setTextGeometricTransform</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-geometric-transforms/index.html">TextGeometricTransforms</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-geometric-transform/index.html">TextGeometricTransform</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置文本的几何变换。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-42275453%2FFunctions%2F540289978" anchor-label="setTextIndent" id="-42275453%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-text-indent.html"><span>set</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Indent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-42275453%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set-text-indent.html"><span class="token function">setTextIndent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textIndent<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.text.style/-text-indent/index.html">TextIndent</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置段落缩进。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>powered by m8test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

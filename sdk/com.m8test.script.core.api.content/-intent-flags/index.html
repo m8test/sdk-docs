@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>IntentFlags</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:app/main">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/main"
+                                       data-filter=":sdk:app/main"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.script.core.api.content/IntentFlags///PointingToDeclaration//540289978">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.script.core.api.content</a><span class="delimiter">/</span><span class="current">IntentFlags</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Intent</span><wbr></wbr><span><span>Flags</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">IntentFlags</a></div><p class="paragraph">Intent 标志位接口，定义了 Android Intent 中常用的 FLAG 常量。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">M8Test, contact@m8test.com, https://m8test.com</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1172951630%2FFunctions%2F540289978" anchor-label="getActivityClearTask" id="-1172951630%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-clear-task.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Clear</span><wbr></wbr><span><span>Task</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1172951630%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-clear-task.html"><span class="token function">getActivityClearTask</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，主要用于与 <a href="get-activity-new-task.html">getActivityNewTask</a> 结合使用。 它会导致在该 Activity 启动之前，与该 Activity 关联的任务被完全清空。 也就是说，新 Activity 将成为空任务的根 Activity，旧的 Activity 都被结束。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_CLEAR_TASK()">android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-704100114%2FFunctions%2F540289978" anchor-label="getActivityClearTop" id="-704100114%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-clear-top.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Clear</span><wbr></wbr><span><span>Top</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-704100114%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-clear-top.html"><span class="token function">getActivityClearTop</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，并且该 Activity 已经在当前任务中运行，则会销毁该 Activity 上面的所有 Activity， 使该 Activity 位于栈顶，并调用其 <a href="https://developer.android.com/reference/kotlin/android/app/Activity.html#onNewIntent(android.content.Intent)">android.app.Activity.onNewIntent</a> 方法。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_CLEAR_TOP()">android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="980966082%2FFunctions%2F540289978" anchor-label="getActivityExcludeFromRecents" id="980966082%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-exclude-from-recents.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Exclude</span><wbr></wbr><span>From</span><wbr></wbr><span><span>Recents</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="980966082%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-exclude-from-recents.html"><span class="token function">getActivityExcludeFromRecents</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，新的 Activity 不会保存在最近启动的 Activity 列表（最近任务列表）中。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS()">android.content.Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1437826658%2FFunctions%2F540289978" anchor-label="getActivityForwardResult" id="1437826658%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-forward-result.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Forward</span><wbr></wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1437826658%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-forward-result.html"><span class="token function">getActivityForwardResult</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，并且该 Activity 是从现有 Activity 启动的，则该 Activity 的结果（setResult） 将返回给现有 Activity 的调用者，而不是现有 Activity 本身。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_FORWARD_RESULT()">android.content.Intent.FLAG_ACTIVITY_FORWARD_RESULT</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1176680076%2FFunctions%2F540289978" anchor-label="getActivityLaunchedFromHistory" id="1176680076%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-launched-from-history.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Launched</span><wbr></wbr><span>From</span><wbr></wbr><span><span>History</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1176680076%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-launched-from-history.html"><span class="token function">getActivityLaunchedFromHistory</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，系统通常在从历史记录（长按 Home 键）启动 Activity 时设置此标志。 应用程序通常不需要手动设置。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_LAUNCHED_FROM_HISTORY()">android.content.Intent.FLAG_ACTIVITY_LAUNCHED_FROM_HISTORY</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2125211828%2FFunctions%2F540289978" anchor-label="getActivityMatchExternal" id="2125211828%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-match-external.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Match</span><wbr></wbr><span><span>External</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2125211828%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-match-external.html"><span class="token function">getActivityMatchExternal</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，在解析 Intent 时不仅要匹配内部应用，还要匹配外部存储上的应用。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_MATCH_EXTERNAL()">android.content.Intent.FLAG_ACTIVITY_MATCH_EXTERNAL</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="254215457%2FFunctions%2F540289978" anchor-label="getActivityMultipleTask" id="254215457%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-multiple-task.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Multiple</span><wbr></wbr><span><span>Task</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="254215457%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-multiple-task.html"><span class="token function">getActivityMultipleTask</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">用于告诉系统不要创建新任务，即使使用了 <a href="get-activity-new-task.html">getActivityNewTask</a>。 只有在必要时才使用此标志，通常由系统处理。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_MULTIPLE_TASK()">android.content.Intent.FLAG_ACTIVITY_MULTIPLE_TASK</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1732962985%2FFunctions%2F540289978" anchor-label="getActivityNewDocument" id="1732962985%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-new-document.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>New</span><wbr></wbr><span><span>Document</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1732962985%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-new-document.html"><span class="token function">getActivityNewDocument</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">用于创建文档类型的 Activity。 此标志将为该 Activity 打开一个新文档，将其放入最近任务列表中。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_NEW_DOCUMENT()">android.content.Intent.FLAG_ACTIVITY_NEW_DOCUMENT</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1366795009%2FFunctions%2F540289978" anchor-label="getActivityNewTask" id="-1366795009%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-new-task.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>New</span><wbr></wbr><span><span>Task</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1366795009%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-new-task.html"><span class="token function">getActivityNewTask</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，这个 Activity 会成为历史栈中一个新任务的开始。 通常用于从 Service 或 BroadcastReceiver 启动 Activity。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_NEW_TASK()">android.content.Intent.FLAG_ACTIVITY_NEW_TASK</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-778483775%2FFunctions%2F540289978" anchor-label="getActivityNoAnimation" id="-778483775%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-no-animation.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>No</span><wbr></wbr><span><span>Animation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-778483775%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-no-animation.html"><span class="token function">getActivityNoAnimation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，并在 Intent 中包含数据，则系统会在设备上查找匹配的 .obb 文件并将其挂载。 (自 Android API 21 起弃用，但在某些旧系统中可能仍有意义) 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_NO_ANIMATION()">android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1148383921%2FFunctions%2F540289978" anchor-label="getActivityNoHistory" id="1148383921%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-no-history.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>No</span><wbr></wbr><span><span>History</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1148383921%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-no-history.html"><span class="token function">getActivityNoHistory</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，新的 Activity 将不会保留在历史栈中。一旦用户离开它，它就会被销毁。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_NO_HISTORY()">android.content.Intent.FLAG_ACTIVITY_NO_HISTORY</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1410703092%2FFunctions%2F540289978" anchor-label="getActivityNoUserAction" id="1410703092%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-no-user-action.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>No</span><wbr></wbr><span>User</span><wbr></wbr><span><span>Action</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1410703092%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-no-user-action.html"><span class="token function">getActivityNoUserAction</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，当 Activity 暂停时，防止系统调用 <a href="https://developer.android.com/reference/kotlin/android/app/Activity.html#onUserLeaveHint()">android.app.Activity.onUserLeaveHint</a>。 通常用于由非用户操作（如电话呼入）触发的中断。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_NO_USER_ACTION()">android.content.Intent.FLAG_ACTIVITY_NO_USER_ACTION</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1019436336%2FFunctions%2F540289978" anchor-label="getActivityPreviousIsTop" id="-1019436336%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-previous-is-top.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Previous</span><wbr></wbr><span>Is</span><wbr></wbr><span><span>Top</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1019436336%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-previous-is-top.html"><span class="token function">getActivityPreviousIsTop</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，该 Activity 将被视为前一个 Activity 的顶级 Activity， 即使它实际上并不是。通常用于确定 Activity 转换动画。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_PREVIOUS_IS_TOP()">android.content.Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1677498013%2FFunctions%2F540289978" anchor-label="getActivityReorderToFront" id="-1677498013%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-reorder-to-front.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Reorder</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Front</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1677498013%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-reorder-to-front.html"><span class="token function">getActivityReorderToFront</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，如果该 Activity 已经运行，它将被移动到历史栈的前面（顶部）。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_REORDER_TO_FRONT()">android.content.Intent.FLAG_ACTIVITY_REORDER_TO_FRONT</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-559185954%2FFunctions%2F540289978" anchor-label="getActivityResetTaskIfNeeded" id="-559185954%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-reset-task-if-needed.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Reset</span><wbr></wbr><span>Task</span><wbr></wbr><span>If</span><wbr></wbr><span><span>Needed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-559185954%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-reset-task-if-needed.html"><span class="token function">getActivityResetTaskIfNeeded</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，并且任务被重置（例如用户从 Home 切换回应用）， 则需要在该 Activity 完成之前重置任务。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_RESET_TASK_IF_NEEDED()">android.content.Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-45002857%2FFunctions%2F540289978" anchor-label="getActivitySingleTop" id="-45002857%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-single-top.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Single</span><wbr></wbr><span><span>Top</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-45002857%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-single-top.html"><span class="token function">getActivitySingleTop</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，当这个 Activity 位于历史栈顶时，不再启动一个新的实例，而是复用栈顶的实例， 并调用其 <a href="https://developer.android.com/reference/kotlin/android/app/Activity.html#onNewIntent(android.content.Intent)">android.app.Activity.onNewIntent</a> 方法。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_SINGLE_TOP()">android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="270858643%2FFunctions%2F540289978" anchor-label="getActivityTaskOnHome" id="270858643%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-activity-task-on-home.html"><span>get</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Task</span><wbr></wbr><span>On</span><wbr></wbr><span><span>Home</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="270858643%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-activity-task-on-home.html"><span class="token function">getActivityTaskOnHome</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，此 Activity 将在 Home Activity 上启动（即按下 Back 键将返回 Home）。 需要与 <a href="get-activity-new-task.html">getActivityNewTask</a> 配合使用。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_ACTIVITY_TASK_ON_HOME()">android.content.Intent.FLAG_ACTIVITY_TASK_ON_HOME</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1198897704%2FFunctions%2F540289978" anchor-label="getDebugLogResolution" id="1198897704%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-debug-log-resolution.html"><span>get</span><wbr></wbr><span>Debug</span><wbr></wbr><span>Log</span><wbr></wbr><span><span>Resolution</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1198897704%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-debug-log-resolution.html"><span class="token function">getDebugLogResolution</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">启用调试日志记录以进行 Intent 解析。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_DEBUG_LOG_RESOLUTION()">android.content.Intent.FLAG_DEBUG_LOG_RESOLUTION</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1380902501%2FFunctions%2F540289978" anchor-label="getExcludeStoppedPackages" id="1380902501%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-exclude-stopped-packages.html"><span>get</span><wbr></wbr><span>Exclude</span><wbr></wbr><span>Stopped</span><wbr></wbr><span><span>Packages</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1380902501%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-exclude-stopped-packages.html"><span class="token function">getExcludeStoppedPackages</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，处于停止状态（force-stop）的应用将不会收到此广播。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_EXCLUDE_STOPPED_PACKAGES()">android.content.Intent.FLAG_EXCLUDE_STOPPED_PACKAGES</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1658565235%2FFunctions%2F540289978" anchor-label="getFromBackground" id="-1658565235%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-from-background.html"><span>get</span><wbr></wbr><span>From</span><wbr></wbr><span><span>Background</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1658565235%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-from-background.html"><span class="token function">getFromBackground</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">指示 Intent 来自后台操作。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_FROM_BACKGROUND()">android.content.Intent.FLAG_FROM_BACKGROUND</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-688824180%2FFunctions%2F540289978" anchor-label="getGrantPersistableUriPermission" id="-688824180%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-grant-persistable-uri-permission.html"><span>get</span><wbr></wbr><span>Grant</span><wbr></wbr><span>Persistable</span><wbr></wbr><span>Uri</span><wbr></wbr><span><span>Permission</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-688824180%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-grant-persistable-uri-permission.html"><span class="token function">getGrantPersistableUriPermission</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">当与 <a href="get-grant-read-uri-permission.html">getGrantReadUriPermission</a> 或 <a href="get-grant-write-uri-permission.html">getGrantWriteUriPermission</a> 一起使用时， 表示 URI 权限授予可以被持久化（通过 <a href="https://developer.android.com/reference/kotlin/android/content/ContentResolver.html#takePersistableUriPermission(android.net.Uri,kotlin.Int)">android.content.ContentResolver.takePersistableUriPermission</a>）。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_GRANT_PERSISTABLE_URI_PERMISSION()">android.content.Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1284927112%2FFunctions%2F540289978" anchor-label="getGrantPrefixUriPermission" id="-1284927112%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-grant-prefix-uri-permission.html"><span>get</span><wbr></wbr><span>Grant</span><wbr></wbr><span>Prefix</span><wbr></wbr><span>Uri</span><wbr></wbr><span><span>Permission</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1284927112%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-grant-prefix-uri-permission.html"><span class="token function">getGrantPrefixUriPermission</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">当与 <a href="get-grant-read-uri-permission.html">getGrantReadUriPermission</a> 或 <a href="get-grant-write-uri-permission.html">getGrantWriteUriPermission</a> 一起使用时， 权限授予将扩展到 URI 的前缀匹配。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_GRANT_PREFIX_URI_PERMISSION()">android.content.Intent.FLAG_GRANT_PREFIX_URI_PERMISSION</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2075862652%2FFunctions%2F540289978" anchor-label="getGrantReadUriPermission" id="2075862652%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-grant-read-uri-permission.html"><span>get</span><wbr></wbr><span>Grant</span><wbr></wbr><span>Read</span><wbr></wbr><span>Uri</span><wbr></wbr><span><span>Permission</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2075862652%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-grant-read-uri-permission.html"><span class="token function">getGrantReadUriPermission</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，接收该 Intent 的接收者将被授予对 Intent 数据中的 URI 执行读取操作的权限。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_GRANT_READ_URI_PERMISSION()">android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="31265661%2FFunctions%2F540289978" anchor-label="getGrantWriteUriPermission" id="31265661%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-grant-write-uri-permission.html"><span>get</span><wbr></wbr><span>Grant</span><wbr></wbr><span>Write</span><wbr></wbr><span>Uri</span><wbr></wbr><span><span>Permission</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="31265661%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-grant-write-uri-permission.html"><span class="token function">getGrantWriteUriPermission</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，接收该 Intent 的接收者将被授予对 Intent 数据中的 URI 执行写入操作的权限。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_GRANT_WRITE_URI_PERMISSION()">android.content.Intent.FLAG_GRANT_WRITE_URI_PERMISSION</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-376703181%2FFunctions%2F540289978" anchor-label="getIncludeStoppedPackages" id="-376703181%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-include-stopped-packages.html"><span>get</span><wbr></wbr><span>Include</span><wbr></wbr><span>Stopped</span><wbr></wbr><span><span>Packages</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-376703181%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-include-stopped-packages.html"><span class="token function">getIncludeStoppedPackages</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，即使应用处于停止状态（force-stop），也会尝试包含该应用作为接收者。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_INCLUDE_STOPPED_PACKAGES()">android.content.Intent.FLAG_INCLUDE_STOPPED_PACKAGES</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="901433011%2FFunctions%2F540289978" anchor-label="getReceiverForeground" id="901433011%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-receiver-foreground.html"><span>get</span><wbr></wbr><span>Receiver</span><wbr></wbr><span><span>Foreground</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="901433011%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-receiver-foreground.html"><span class="token function">getReceiverForeground</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，广播接收器将在前台运行，拥有更高的优先级，不太可能被系统杀死。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_RECEIVER_FOREGROUND()">android.content.Intent.FLAG_RECEIVER_FOREGROUND</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2109721483%2FFunctions%2F540289978" anchor-label="getReceiverNoAbort" id="-2109721483%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-receiver-no-abort.html"><span>get</span><wbr></wbr><span>Receiver</span><wbr></wbr><span>No</span><wbr></wbr><span><span>Abort</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2109721483%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-receiver-no-abort.html"><span class="token function">getReceiverNoAbort</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，这就是一个受保护的广播，接收者不能通过 <a href="https://developer.android.com/reference/kotlin/android/content/BroadcastReceiver.html#abortBroadcast()">android.content.BroadcastReceiver.abortBroadcast</a> 中止它。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_RECEIVER_NO_ABORT()">android.content.Intent.FLAG_RECEIVER_NO_ABORT</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1696337032%2FFunctions%2F540289978" anchor-label="getReceiverRegisteredOnly" id="1696337032%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-receiver-registered-only.html"><span>get</span><wbr></wbr><span>Receiver</span><wbr></wbr><span>Registered</span><wbr></wbr><span><span>Only</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1696337032%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-receiver-registered-only.html"><span class="token function">getReceiverRegisteredOnly</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，广播只会发送给动态注册的接收器（通过 <a href="https://developer.android.com/reference/kotlin/android/content/Context.html#registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)">android.content.Context.registerReceiver</a>）， 而不会发送给在 AndroidManifest.xml 中声明的接收器。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_RECEIVER_REGISTERED_ONLY()">android.content.Intent.FLAG_RECEIVER_REGISTERED_ONLY</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="428850995%2FFunctions%2F540289978" anchor-label="getReceiverReplacePending" id="428850995%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-receiver-replace-pending.html"><span>get</span><wbr></wbr><span>Receiver</span><wbr></wbr><span>Replace</span><wbr></wbr><span><span>Pending</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="428850995%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-receiver-replace-pending.html"><span class="token function">getReceiverReplacePending</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，如果系统中已有相同的挂起广播，则新的广播将替换旧的。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_RECEIVER_REPLACE_PENDING()">android.content.Intent.FLAG_RECEIVER_REPLACE_PENDING</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2010457840%2FFunctions%2F540289978" anchor-label="getReceiverVisibleToInstantApps" id="2010457840%2FFunctions%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-receiver-visible-to-instant-apps.html"><span>get</span><wbr></wbr><span>Receiver</span><wbr></wbr><span>Visible</span><wbr></wbr><span>To</span><wbr></wbr><span>Instant</span><wbr></wbr><span><span>Apps</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2010457840%2FFunctions%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-receiver-visible-to-instant-apps.html"><span class="token function">getReceiverVisibleToInstantApps</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">如果设置，广播将对免安装应用（Instant Apps）可见。 对应: <a href="https://developer.android.com/reference/kotlin/android/content/Intent.html#FLAG_RECEIVER_VISIBLE_TO_INSTANT_APPS()">android.content.Intent.FLAG_RECEIVER_VISIBLE_TO_INSTANT_APPS</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>powered by m8test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
