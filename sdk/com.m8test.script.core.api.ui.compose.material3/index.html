@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.m8test.script.core.api.ui.compose.material3</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../index.html" tabindex="1">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:app/main">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/main"
+                                       data-filter=":sdk:app/main"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="sdk::com.m8test.script.core.api.ui.compose.material3////PointingToDeclaration//540289978">
+  <div class="breadcrumbs"><a href="../../index.html">sdk</a><span class="delimiter">/</span><span class="current">com.m8test.script.core.api.ui.compose.material3</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="21772510%2FClasslikes%2F540289978" anchor-label="ColorScheme" id="21772510%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-color-scheme/index.html"><span>Color</span><wbr></wbr><span><span>Scheme</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="21772510%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-color-scheme/index.html">ColorScheme</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for androidx.compose.material3.ColorScheme<span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">封装了 Material Design 3 的颜色方案（Color Scheme）。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-864098362%2FClasslikes%2F540289978" anchor-label="DrawerValue" id="-864098362%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-drawer-value/index.html"><span>Drawer</span><wbr></wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-864098362%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-drawer-value/index.html">DrawerValue</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span><a href="-drawer-value/index.html">DrawerValue</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">定义了抽屉（Drawer）组件可能存在的状态。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1098363351%2FClasslikes%2F540289978" anchor-label="DrawerValues" id="-1098363351%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-drawer-values/index.html"><span>Drawer</span><wbr></wbr><span><span>Values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1098363351%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-drawer-values/index.html">DrawerValues</a></div><div class="brief "><p class="paragraph">提供了一组预定义的抽屉状态（DrawerValue）。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1554982774%2FClasslikes%2F540289978" anchor-label="FabPosition" id="1554982774%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-fab-position/index.html"><span>Fab</span><wbr></wbr><span><span>Position</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1554982774%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-fab-position/index.html">FabPosition</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span><a href="-fab-position/index.html">FabPosition</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">定义了 <a href="../com.m8test.script.core.api.ui.compose.widget/-floating-action-button/index.html">FloatingActionButton</a> 在 <a href="../com.m8test.script.core.api.ui.compose.widget/-scaffold/index.html">Scaffold</a> 中的位置。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="878707833%2FClasslikes%2F540289978" anchor-label="FabPositions" id="878707833%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-fab-positions/index.html"><span>Fab</span><wbr></wbr><span><span>Positions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="878707833%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-fab-positions/index.html">FabPositions</a></div><div class="brief "><p class="paragraph">提供了 <a href="-fab-position/index.html">FabPosition</a> 的一组预定义实例。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="379499466%2FClasslikes%2F540289978" anchor-label="Shapes" id="379499466%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-shapes/index.html"><span><span>Shapes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="379499466%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-shapes/index.html">Shapes</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for androidx.compose.material3.Shapes<span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">定义了 Material 3 设计系统中的形状体系。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="779246213%2FClasslikes%2F540289978" anchor-label="SheetValues" id="779246213%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sheet-values/index.html"><span>Sheet</span><wbr></wbr><span><span>Values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="779246213%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-sheet-values/index.html">SheetValues</a></div><div class="brief "><p class="paragraph">提供了一组预定义的底部动作条状态（SheetValue）。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1525693235%2FClasslikes%2F540289978" anchor-label="SnackbarData" id="-1525693235%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-snackbar-data/index.html"><span>Snackbar</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1525693235%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-snackbar-data/index.html">SnackbarData</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for androidx.compose.material3.SnackbarData<span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">代表一个特定 Snackbar 实例的数据。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1051332387%2FClasslikes%2F540289978" anchor-label="SnackbarDuration" id="1051332387%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-snackbar-duration/index.html"><span>Snackbar</span><wbr></wbr><span><span>Duration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1051332387%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-snackbar-duration/index.html">SnackbarDuration</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span><a href="-snackbar-duration/index.html">SnackbarDuration</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">定义了 Snackbar 在 SnackbarHost 中显示的持续时间。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1849552276%2FClasslikes%2F540289978" anchor-label="SnackbarDurations" id="-1849552276%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-snackbar-durations/index.html"><span>Snackbar</span><wbr></wbr><span><span>Durations</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1849552276%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-snackbar-durations/index.html">SnackbarDurations</a></div><div class="brief "><p class="paragraph">提供了 <a href="-snackbar-duration/index.html">SnackbarDuration</a> 的一组预定义实例。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1150130746%2FClasslikes%2F540289978" anchor-label="SnackbarResult" id="1150130746%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-snackbar-result/index.html"><span>Snackbar</span><wbr></wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1150130746%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-snackbar-result/index.html">SnackbarResult</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span><a href="-snackbar-result/index.html">SnackbarResult</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">SnackbarHostState.showSnackbar 调用的可能结果。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1213196853%2FClasslikes%2F540289978" anchor-label="SnackbarResults" id="1213196853%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-snackbar-results/index.html"><span>Snackbar</span><wbr></wbr><span><span>Results</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1213196853%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-snackbar-results/index.html">SnackbarResults</a></div><div class="brief "><p class="paragraph">提供了 <a href="-snackbar-result/index.html">SnackbarResult</a> 的一组预定义实例。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1724894312%2FClasslikes%2F540289978" anchor-label="SnackbarVisuals" id="-1724894312%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-snackbar-visuals/index.html"><span>Snackbar</span><wbr></wbr><span><span>Visuals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1724894312%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-snackbar-visuals/index.html">SnackbarVisuals</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for androidx.compose.material3.SnackbarVisuals<span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">代表一个 Snackbar 的视觉信息。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1788348447%2FClasslikes%2F540289978" anchor-label="SwipeToDismissBoxValue" id="-1788348447%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-swipe-to-dismiss-box-value/index.html"><span>Swipe</span><wbr></wbr><span>To</span><wbr></wbr><span>Dismiss</span><wbr></wbr><span>Box</span><wbr></wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1788348447%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-swipe-to-dismiss-box-value/index.html">SwipeToDismissBoxValue</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span><a href="-swipe-to-dismiss-box-value/index.html">SwipeToDismissBoxValue</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">定义了 SwipeToDismissBox 组件可以滑动的方向。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="314655086%2FClasslikes%2F540289978" anchor-label="SwipeToDismissBoxValues" id="314655086%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-swipe-to-dismiss-box-values/index.html"><span>Swipe</span><wbr></wbr><span>To</span><wbr></wbr><span>Dismiss</span><wbr></wbr><span>Box</span><wbr></wbr><span><span>Values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="314655086%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-swipe-to-dismiss-box-values/index.html">SwipeToDismissBoxValues</a></div><div class="brief "><p class="paragraph">提供了 <a href="-swipe-to-dismiss-box-value/index.html">SwipeToDismissBoxValue</a> 的一组预定义实例。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1205584728%2FClasslikes%2F540289978" anchor-label="TabPosition" id="-1205584728%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tab-position/index.html"><span>Tab</span><wbr></wbr><span><span>Position</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1205584728%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-tab-position/index.html">TabPosition</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span><a href="-tab-position/index.html">TabPosition</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">代表 TabRow 中单个标签页的位置和尺寸信息。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1702991021%2FClasslikes%2F540289978" anchor-label="Typography" id="1702991021%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-typography/index.html"><span><span>Typography</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1702991021%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-typography/index.html">Typography</a> : <span data-unresolved-link="com.m8test.script.core.api.ui.compose/ComposableProperties///PointingToDeclaration/">ComposableProperties</span><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for androidx.compose.material3.Typography<span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">封装了 Material Design 的类型比例（Typography Scale）。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>powered by m8test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
