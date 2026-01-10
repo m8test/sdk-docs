@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.m8test.script.core.api.ui.compose.widget</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../index.html" tabindex="1">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:app/main">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/main"
+                                       data-filter=":sdk:app/main"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="sdk::com.m8test.script.core.api.ui.compose.widget////PointingToDeclaration//540289978">
+  <div class="breadcrumbs"><a href="../../index.html">sdk</a><span class="delimiter">/</span><span class="current">com.m8test.script.core.api.ui.compose.widget</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-806705402%2FClasslikes%2F540289978" anchor-label="AlertDialog" id="-806705402%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-alert-dialog/index.html"><span>Alert</span><wbr></wbr><span><span>Dialog</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-806705402%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-alert-dialog/index.html">AlertDialog</a><span class="token operator">&lt;</span><a href="-alert-dialog/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-alert-dialog/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href=&quot;https://m3.material.io/components/dialogs/overview&quot; class=&quot;external&quot; target=&quot;_blank&quot;>Material Design 3 对话框</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="22633750%2FClasslikes%2F540289978" anchor-label="AndroidView" id="22633750%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-android-view/index.html"><span>Android</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="22633750%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-android-view/index.html">AndroidView</a><span class="token operator">&lt;</span><a href="-android-view/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-android-view/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">用于在 Compose 中嵌入 Android 原生 <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a> 的可组合项。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="480530499%2FClasslikes%2F540289978" anchor-label="AssistChip" id="480530499%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-assist-chip/index.html"><span>Assist</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="480530499%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-assist-chip/index.html">AssistChip</a><span class="token operator">&lt;</span><a href="-assist-chip/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-chip/index.html">Chip</a><span class="token operator">&lt;</span><a href="-assist-chip/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="-assist-chip/index.html">AssistChip</a> 和 <a href="-elevated-assist-chip/index.html">ElevatedAssistChip</a> 的参数接口。 辅助型 Chip 代表智能或自动化的操作。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-142461543%2FClasslikes%2F540289978" anchor-label="AsyncImage" id="-142461543%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-async-image/index.html"><span>Async</span><wbr></wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-142461543%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-async-image/index.html">AsyncImage</a><span class="token operator">&lt;</span><a href="-async-image/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-async-image/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">一个异步执行图片请求并渲染结果的 Composable。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1601231047%2FClasslikes%2F540289978" anchor-label="Badge" id="1601231047%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-badge/index.html"><span><span>Badge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1601231047%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-badge/index.html">Badge</a><span class="token operator">&lt;</span><a href="-badge/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-badge/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href=&quot;https://m3.material.io/components/badges/overview&quot; class=&quot;external&quot; target=&quot;_blank&quot;>Material Design 标记 (Badge)</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1304428768%2FClasslikes%2F540289978" anchor-label="BadgedBox" id="1304428768%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-badged-box/index.html"><span>Badged</span><wbr></wbr><span><span>Box</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1304428768%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-badged-box/index.html">BadgedBox</a><span class="token operator">&lt;</span><a href="-badged-box/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-badged-box/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href=&quot;https://m3.material.io/components/badges/overview&quot; class=&quot;external&quot; target=&quot;_blank&quot;>Material Design 带标记的容器 (BadgedBox)</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="821074331%2FClasslikes%2F540289978" anchor-label="BottomAppBar" id="821074331%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bottom-app-bar/index.html"><span>Bottom</span><wbr></wbr><span>App</span><wbr></wbr><span><span>Bar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="821074331%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-bottom-app-bar/index.html">BottomAppBar</a><span class="token operator">&lt;</span><a href="-bottom-app-bar/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-bottom-app-bar/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">BottomAppBar 可组合函数的参数接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1928462208%2FClasslikes%2F540289978" anchor-label="BottomSheetScaffold" id="-1928462208%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bottom-sheet-scaffold/index.html"><span>Bottom</span><wbr></wbr><span>Sheet</span><wbr></wbr><span><span>Scaffold</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1928462208%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-bottom-sheet-scaffold/index.html">BottomSheetScaffold</a><span class="token operator">&lt;</span><a href="-bottom-sheet-scaffold/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-bottom-sheet-scaffold/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Material 3 BottomSheetScaffold Composable 的参数接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="379164127%2FClasslikes%2F540289978" anchor-label="Box" id="379164127%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-box/index.html"><span><span>Box</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="379164127%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-box/index.html">Box</a><span class="token operator">&lt;</span><a href="-box/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-box/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Jetpack Compose Box Composable 的参数接口。 Box 会根据其内容调整自身大小。当子项小于 Box 时，它们会根据 contentAlignment 进行定位。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1697016442%2FClasslikes%2F540289978" anchor-label="Button" id="-1697016442%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-button/index.html"><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1697016442%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-button/index.html">Button</a><span class="token operator">&lt;</span><a href="-button/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-button/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph"><a href=&quot;https://m3.material.io/components/buttons/overview&quot; class=&quot;external&quot; target=&quot;_blank&quot;>Material Design 按钮</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1107467560%2FClasslikes%2F540289978" anchor-label="Card" id="1107467560%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-card/index.html"><span><span>Card</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1107467560%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-card/index.html">Card</a><span class="token operator">&lt;</span><a href="-card/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-card/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph">M3 填充卡片 (Filled Card) 的参数接口。 此接口代表了一个可交互的组件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-421756640%2FClasslikes%2F540289978" anchor-label="CenterAlignedTopAppBar" id="-421756640%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-center-aligned-top-app-bar/index.html"><span>Center</span><wbr></wbr><span>Aligned</span><wbr></wbr><span>Top</span><wbr></wbr><span>App</span><wbr></wbr><span><span>Bar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-421756640%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-center-aligned-top-app-bar/index.html">CenterAlignedTopAppBar</a><span class="token operator">&lt;</span><a href="-center-aligned-top-app-bar/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-top-app-bar/index.html">TopAppBar</a><span class="token operator">&lt;</span><a href="-center-aligned-top-app-bar/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">CenterAlignedTopAppBar 的标记接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="860471381%2FClasslikes%2F540289978" anchor-label="Checkbox" id="860471381%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-checkbox/index.html"><span><span>Checkbox</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="860471381%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-checkbox/index.html">Checkbox</a><span class="token operator">&lt;</span><a href="-checkbox/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-checkbox/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/checkbox/overview" class="external" target="_blank">Material Design 复选框</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-368042132%2FClasslikes%2F540289978" anchor-label="Chip" id="-368042132%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-chip/index.html"><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-368042132%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-chip/index.html">Chip</a><span class="token operator">&lt;</span><a href="-chip/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-chip/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph">所有 Chip 可组合函数的通用参数接口。 Chips 帮助人们输入信息、做出选择、过滤内容或触发操作。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1967308697%2FClasslikes%2F540289978" anchor-label="CircularProgressIndicator" id="-1967308697%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-circular-progress-indicator/index.html"><span>Circular</span><wbr></wbr><span>Progress</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1967308697%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-circular-progress-indicator/index.html">CircularProgressIndicator</a><span class="token operator">&lt;</span><a href="-circular-progress-indicator/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-progress-indicator/index.html">ProgressIndicator</a><span class="token operator">&lt;</span><a href="-circular-progress-indicator/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">CircularProgressIndicator (圆形进度指示器) 的参数接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-546956830%2FClasslikes%2F540289978" anchor-label="Column" id="-546956830%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-column/index.html"><span><span>Column</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-546956830%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-column/index.html">Column</a><span class="token operator">&lt;</span><a href="-column/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-column/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">用于存储 Jetpack Compose <a href="-column/index.html">Column</a> 可组合函数的接口。 Column 是一个布局可组合函数，将其子项垂直地依次放置。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="405513264%2FClasslikes%2F540289978" anchor-label="Dialog" id="405513264%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dialog/index.html"><span><span>Dialog</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="405513264%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-dialog/index.html">Dialog</a><span class="token operator">&lt;</span><a href="-dialog/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-dialog/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">用于存储 Jetpack Compose <a href="-dialog/index.html">Dialog</a> 可组合函数的接口。 Dialog 是一个小窗口，提示用户做出决定或输入额外信息。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1388920879%2FClasslikes%2F540289978" anchor-label="Divider" id="-1388920879%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-divider/index.html"><span><span>Divider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1388920879%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-divider/index.html">Divider</a><span class="token operator">&lt;</span><a href="-divider/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-divider/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="-horizontal-divider/index.html">HorizontalDivider</a> 和 <a href="-vertical-divider/index.html">VerticalDivider</a> 的基础接口。 Divider 是一条对列表和布局中的内容进行分组的细线。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="57738280%2FClasslikes%2F540289978" anchor-label="DropdownMenu" id="57738280%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dropdown-menu/index.html"><span>Dropdown</span><wbr></wbr><span><span>Menu</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="57738280%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-dropdown-menu/index.html">DropdownMenu</a><span class="token operator">&lt;</span><a href="-dropdown-menu/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-dropdown-menu/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">用于存储 Jetpack Compose <a href="-dropdown-menu/index.html">DropdownMenu</a> 可组合函数的接口。 菜单在临时表面上显示一个选择列表。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1326534443%2FClasslikes%2F540289978" anchor-label="DropdownMenuItem" id="-1326534443%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dropdown-menu-item/index.html"><span>Dropdown</span><wbr></wbr><span>Menu</span><wbr></wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1326534443%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-dropdown-menu-item/index.html">DropdownMenuItem</a><span class="token operator">&lt;</span><a href="-dropdown-menu-item/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-dropdown-menu-item/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">用于存储 Jetpack Compose <a href="-dropdown-menu-item/index.html">DropdownMenuItem</a> 可组合函数的接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="222746937%2FClasslikes%2F540289978" anchor-label="ElevatedAssistChip" id="222746937%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-elevated-assist-chip/index.html"><span>Elevated</span><wbr></wbr><span>Assist</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="222746937%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-elevated-assist-chip/index.html">ElevatedAssistChip</a><span class="token operator">&lt;</span><a href="-elevated-assist-chip/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-assist-chip/index.html">AssistChip</a><span class="token operator">&lt;</span><a href="-elevated-assist-chip/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">表示一个 Material Design 浮动辅助小纸条 (Elevated Assist Chip) 的属性。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-576416098%2FClasslikes%2F540289978" anchor-label="ElevatedCard" id="-576416098%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-elevated-card/index.html"><span>Elevated</span><wbr></wbr><span><span>Card</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-576416098%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-elevated-card/index.html">ElevatedCard</a><span class="token operator">&lt;</span><a href="-elevated-card/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-card/index.html">Card</a><span class="token operator">&lt;</span><a href="-elevated-card/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">M3 悬浮卡片 (Elevated Card) 的参数接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-279101814%2FClasslikes%2F540289978" anchor-label="ElevatedFilterChip" id="-279101814%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-elevated-filter-chip/index.html"><span>Elevated</span><wbr></wbr><span>Filter</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-279101814%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-elevated-filter-chip/index.html">ElevatedFilterChip</a><span class="token operator">&lt;</span><a href="-elevated-filter-chip/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-filter-chip/index.html">FilterChip</a><span class="token operator">&lt;</span><a href="-elevated-filter-chip/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">表示一个 Material Design 浮动筛选小纸条 (Elevated Filter Chip) 的属性。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2044507390%2FClasslikes%2F540289978" anchor-label="ElevatedSuggestionChip" id="2044507390%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-elevated-suggestion-chip/index.html"><span>Elevated</span><wbr></wbr><span>Suggestion</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2044507390%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-elevated-suggestion-chip/index.html">ElevatedSuggestionChip</a><span class="token operator">&lt;</span><a href="-elevated-suggestion-chip/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-suggestion-chip/index.html">SuggestionChip</a><span class="token operator">&lt;</span><a href="-elevated-suggestion-chip/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">表示一个 Material Design 浮动建议小纸条 (Elevated Suggestion Chip) 的属性。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1996589818%2FClasslikes%2F540289978" anchor-label="ExposedDropdownMenu" id="1996589818%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-exposed-dropdown-menu/index.html"><span>Exposed</span><wbr></wbr><span>Dropdown</span><wbr></wbr><span><span>Menu</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1996589818%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-exposed-dropdown-menu/index.html">ExposedDropdownMenu</a><span class="token operator">&lt;</span><a href="-exposed-dropdown-menu/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-exposed-dropdown-menu/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">包含 Exposed Dropdown Menu 内容的弹窗。应在 <a href="-exposed-dropdown-menu-box/index.html">ExposedDropdownMenuBox</a> 的内容中使用。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="660283773%2FClasslikes%2F540289978" anchor-label="ExposedDropdownMenuBox" id="660283773%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-exposed-dropdown-menu-box/index.html"><span>Exposed</span><wbr></wbr><span>Dropdown</span><wbr></wbr><span>Menu</span><wbr></wbr><span><span>Box</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="660283773%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-exposed-dropdown-menu-box/index.html">ExposedDropdownMenuBox</a><span class="token operator">&lt;</span><a href="-exposed-dropdown-menu-box/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-exposed-dropdown-menu-box/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/menus/overview" class="external" target="_blank">Material Design Exposed Dropdown Menu</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1386026991%2FClasslikes%2F540289978" anchor-label="ExtendedFloatingActionButton" id="-1386026991%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-extended-floating-action-button/index.html"><span>Extended</span><wbr></wbr><span>Floating</span><wbr></wbr><span>Action</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1386026991%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-extended-floating-action-button/index.html">ExtendedFloatingActionButton</a><span class="token operator">&lt;</span><a href="-extended-floating-action-button/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-extended-floating-action-button/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/extended-fab/overview" class="external" target="_blank">Material Design 可扩展的浮动操作按钮</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-21318252%2FClasslikes%2F540289978" anchor-label="FilterChip" id="-21318252%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-filter-chip/index.html"><span>Filter</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-21318252%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-filter-chip/index.html">FilterChip</a><span class="token operator">&lt;</span><a href="-filter-chip/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-selectable-chip/index.html">SelectableChip</a><span class="token operator">&lt;</span><a href="-filter-chip/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="-filter-chip/index.html">FilterChip</a> 和 <a href="-elevated-filter-chip/index.html">ElevatedFilterChip</a> 的参数接口。 过滤型 Chip 使用标签或描述性词语来过滤内容。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1607863350%2FClasslikes%2F540289978" anchor-label="FloatingActionButton" id="-1607863350%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-floating-action-button/index.html"><span>Floating</span><wbr></wbr><span>Action</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1607863350%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-floating-action-button/index.html">FloatingActionButton</a><span class="token operator">&lt;</span><a href="-floating-action-button/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-floating-action-button/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/floating-action-button/overview" class="external" target="_blank">Material Design 浮动操作按钮</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1789651755%2FClasslikes%2F540289978" anchor-label="HorizontalDivider" id="-1789651755%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-horizontal-divider/index.html"><span>Horizontal</span><wbr></wbr><span><span>Divider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1789651755%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-horizontal-divider/index.html">HorizontalDivider</a><span class="token operator">&lt;</span><a href="-horizontal-divider/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-divider/index.html">Divider</a><span class="token operator">&lt;</span><a href="-horizontal-divider/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">用于存储 Jetpack Compose <a href="-horizontal-divider/index.html">HorizontalDivider</a> 可组合函数的接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2113006625%2FClasslikes%2F540289978" anchor-label="Icon" id="-2113006625%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-icon/index.html"><span><span>Icon</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2113006625%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-icon/index.html">Icon</a><span class="token operator">&lt;</span><a href="-icon/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-icon/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/styles/icons/overview" class="external" target="_blank">Material Design 图标</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1184266675%2FClasslikes%2F540289978" anchor-label="IconButton" id="-1184266675%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-icon-button/index.html"><span>Icon</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1184266675%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-icon-button/index.html">IconButton</a><span class="token operator">&lt;</span><a href="-icon-button/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-icon-button/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/icon-button/overview" class="external" target="_blank">Material Design 标准图标按钮</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="323900889%2FClasslikes%2F540289978" anchor-label="IconToggleButton" id="323900889%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-icon-toggle-button/index.html"><span>Icon</span><wbr></wbr><span>Toggle</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="323900889%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-icon-toggle-button/index.html">IconToggleButton</a><span class="token operator">&lt;</span><a href="-icon-toggle-button/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-icon-toggle-button/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/icon-button/overview" class="external" target="_blank">Material Design 标准可切换状态的图标按钮</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-206008300%2FClasslikes%2F540289978" anchor-label="InputChip" id="-206008300%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-input-chip/index.html"><span>Input</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-206008300%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-input-chip/index.html">InputChip</a><span class="token operator">&lt;</span><a href="-input-chip/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-selectable-chip/index.html">SelectableChip</a><span class="token operator">&lt;</span><a href="-input-chip/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="-input-chip/index.html">InputChip</a> 的参数接口。 输入型 Chip 代表用户输入的离散信息片段。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1192980468%2FClasslikes%2F540289978" anchor-label="LargeTopAppBar" id="-1192980468%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-large-top-app-bar/index.html"><span>Large</span><wbr></wbr><span>Top</span><wbr></wbr><span>App</span><wbr></wbr><span><span>Bar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1192980468%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-large-top-app-bar/index.html">LargeTopAppBar</a><span class="token operator">&lt;</span><a href="-large-top-app-bar/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-top-app-bar/index.html">TopAppBar</a><span class="token operator">&lt;</span><a href="-large-top-app-bar/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">LargeTopAppBar 的参数接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-605247346%2FClasslikes%2F540289978" anchor-label="Layout" id="-605247346%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-layout/index.html"><span><span>Layout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-605247346%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-layout/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-layout/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">具有一个或者 <a href="../com.m8test.script.core.api.ui.compose.slot/-slot/index.html">Slot</a> 的 <a href="-widget/index.html">Widget</a>, 也就是布局。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-90663858%2FClasslikes%2F540289978" anchor-label="LazyColumn" id="-90663858%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-lazy-column/index.html"><span>Lazy</span><wbr></wbr><span><span>Column</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-90663858%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-lazy-column/index.html">LazyColumn</a><span class="token operator">&lt;</span><a href="-lazy-column/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-lazy-list/index.html">LazyList</a><span class="token operator">&lt;</span><a href="-lazy-column/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">表示一个纵向滚动的懒加载列表，它只合成和布局当前可见的项目。 内容 DSL 允许您发出不同类型的项目。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="526796998%2FClasslikes%2F540289978" anchor-label="LazyList" id="526796998%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-lazy-list/index.html"><span>Lazy</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="526796998%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-lazy-list/index.html">LazyList</a><span class="token operator">&lt;</span><a href="-lazy-list/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-lazy-list/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">表示一个懒加载列表的通用属性，该列表仅合成和布局当前可见的项目。 它是 <a href="-lazy-column/index.html">LazyColumn</a> 和 <a href="-lazy-row/index.html">LazyRow</a> 的基础接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="920270276%2FClasslikes%2F540289978" anchor-label="LazyRow" id="920270276%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-lazy-row/index.html"><span>Lazy</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="920270276%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-lazy-row/index.html">LazyRow</a><span class="token operator">&lt;</span><a href="-lazy-row/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-lazy-list/index.html">LazyList</a><span class="token operator">&lt;</span><a href="-lazy-row/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">表示一个横向滚动的懒加载列表，它只合成和布局当前可见的项目。 内容 DSL 允许您发出不同类型的项目。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-91417662%2FClasslikes%2F540289978" anchor-label="LeadingIconTab" id="-91417662%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-leading-icon-tab/index.html"><span>Leading</span><wbr></wbr><span>Icon</span><wbr></wbr><span><span>Tab</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-91417662%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-leading-icon-tab/index.html">LeadingIconTab</a><span class="token operator">&lt;</span><a href="-leading-icon-tab/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-leading-icon-tab/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/tabs/overview" class="external" target="_blank">Material Design 带前置图标的标签页</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1759347629%2FClasslikes%2F540289978" anchor-label="LinearProgressIndicator" id="1759347629%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-linear-progress-indicator/index.html"><span>Linear</span><wbr></wbr><span>Progress</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1759347629%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-linear-progress-indicator/index.html">LinearProgressIndicator</a><span class="token operator">&lt;</span><a href="-linear-progress-indicator/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-progress-indicator/index.html">ProgressIndicator</a><span class="token operator">&lt;</span><a href="-linear-progress-indicator/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">LinearProgressIndicator (线性进度指示器) 的参数接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2027349767%2FClasslikes%2F540289978" anchor-label="ListItem" id="2027349767%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-list-item/index.html"><span>List</span><wbr></wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2027349767%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-list-item/index.html">ListItem</a><span class="token operator">&lt;</span><a href="-list-item/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-list-item/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/lists/overview" class="external" target="_blank">Material Design 列表项</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="153313128%2FClasslikes%2F540289978" anchor-label="MaterialTheme" id="153313128%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-material-theme/index.html"><span>Material</span><wbr></wbr><span><span>Theme</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="153313128%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-material-theme/index.html">MaterialTheme</a><span class="token operator">&lt;</span><a href="-material-theme/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-material-theme/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/develop/android/theming" class="external" target="_blank">Material Design 主题</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1432348648%2FClasslikes%2F540289978" anchor-label="MediumTopAppBar" id="-1432348648%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-medium-top-app-bar/index.html"><span>Medium</span><wbr></wbr><span>Top</span><wbr></wbr><span>App</span><wbr></wbr><span><span>Bar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1432348648%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-medium-top-app-bar/index.html">MediumTopAppBar</a><span class="token operator">&lt;</span><a href="-medium-top-app-bar/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-top-app-bar/index.html">TopAppBar</a><span class="token operator">&lt;</span><a href="-medium-top-app-bar/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">MediumTopAppBar 的参数接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-273288047%2FClasslikes%2F540289978" anchor-label="ModalBottomSheet" id="-273288047%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-modal-bottom-sheet/index.html"><span>Modal</span><wbr></wbr><span>Bottom</span><wbr></wbr><span><span>Sheet</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-273288047%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-modal-bottom-sheet/index.html">ModalBottomSheet</a><span class="token operator">&lt;</span><a href="-modal-bottom-sheet/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-modal-bottom-sheet/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/bottom-sheets/overview" class="external" target="_blank">Material Design 模态底部工作表</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="328447191%2FClasslikes%2F540289978" anchor-label="ModalDrawerSheet" id="328447191%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-modal-drawer-sheet/index.html"><span>Modal</span><wbr></wbr><span>Drawer</span><wbr></wbr><span><span>Sheet</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="328447191%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-modal-drawer-sheet/index.html">ModalDrawerSheet</a><span class="token operator">&lt;</span><a href="-modal-drawer-sheet/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-modal-drawer-sheet/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">模态导航抽屉的内容部分。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1615008856%2FClasslikes%2F540289978" anchor-label="ModalNavigationDrawer" id="1615008856%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-modal-navigation-drawer/index.html"><span>Modal</span><wbr></wbr><span>Navigation</span><wbr></wbr><span><span>Drawer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1615008856%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-modal-navigation-drawer/index.html">ModalNavigationDrawer</a><span class="token operator">&lt;</span><a href="-modal-navigation-drawer/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-modal-navigation-drawer/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/navigation-drawer/overview" class="external" target="_blank">Material Design 模态导航抽屉</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1043044981%2FClasslikes%2F540289978" anchor-label="NavigationBar" id="-1043044981%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-navigation-bar/index.html"><span>Navigation</span><wbr></wbr><span><span>Bar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1043044981%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-navigation-bar/index.html">NavigationBar</a><span class="token operator">&lt;</span><a href="-navigation-bar/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-navigation-bar/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">代表一个 Material Design 风格的底部导航栏。 导航栏为应用内的主要目标页面切换提供了一种持久且便捷的方式。 本接口是对 Jetpack Compose <code class="lang-kotlin">androidx.compose.material3.NavigationBar</code> 组件的封装。 一个导航栏通常应包含三到五个 <a href="-navigation-bar-item/index.html">NavigationBarItem</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-500389704%2FClasslikes%2F540289978" anchor-label="NavigationBarItem" id="-500389704%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-navigation-bar-item/index.html"><span>Navigation</span><wbr></wbr><span>Bar</span><wbr></wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-500389704%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-navigation-bar-item/index.html">NavigationBarItem</a><span class="token operator">&lt;</span><a href="-navigation-bar-item/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-navigation-bar-item/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph">代表 Material Design <a href="-navigation-bar/index.html">NavigationBar</a> 中的单个目标项。 本接口是对 Jetpack Compose <code class="lang-kotlin">androidx.compose.material3.NavigationBarItem</code> 组件的封装。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-132778894%2FClasslikes%2F540289978" anchor-label="NavigationRail" id="-132778894%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-navigation-rail/index.html"><span>Navigation</span><wbr></wbr><span><span>Rail</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-132778894%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-navigation-rail/index.html">NavigationRail</a><span class="token operator">&lt;</span><a href="-navigation-rail/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-navigation-rail/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/navigation-rail/overview" class="external" target="_blank">Material Design 导航栏</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-307336161%2FClasslikes%2F540289978" anchor-label="NavigationRailItem" id="-307336161%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-navigation-rail-item/index.html"><span>Navigation</span><wbr></wbr><span>Rail</span><wbr></wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-307336161%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-navigation-rail-item/index.html">NavigationRailItem</a><span class="token operator">&lt;</span><a href="-navigation-rail-item/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-navigation-rail-item/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph">Material 3 导航栏中的单个项目。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2143761980%2FClasslikes%2F540289978" anchor-label="OutlinedButton" id="-2143761980%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-outlined-button/index.html"><span>Outlined</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2143761980%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-outlined-button/index.html">OutlinedButton</a><span class="token operator">&lt;</span><a href="-outlined-button/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-button/index.html">Button</a><span class="token operator">&lt;</span><a href="-outlined-button/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">轮廓按钮是中等强调度的按钮。它们包含一些重要操作，但并非应用中的主要操作。轮廓按钮与按钮搭配使用，可指示替代的次要操作。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="427673830%2FClasslikes%2F540289978" anchor-label="OutlinedCard" id="427673830%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-outlined-card/index.html"><span>Outlined</span><wbr></wbr><span><span>Card</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="427673830%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-outlined-card/index.html">OutlinedCard</a><span class="token operator">&lt;</span><a href="-outlined-card/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-card/index.html">Card</a><span class="token operator">&lt;</span><a href="-outlined-card/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">M3 轮廓卡片 (Outlined Card) 的参数接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1547656799%2FClasslikes%2F540289978" anchor-label="OutlinedTextField" id="1547656799%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-outlined-text-field/index.html"><span>Outlined</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Field</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1547656799%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-outlined-text-field/index.html">OutlinedTextField</a><span class="token operator">&lt;</span><a href="-outlined-text-field/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-text-field/index.html">TextField</a><span class="token operator">&lt;</span><a href="-outlined-text-field/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">文本字段允许用户在 UI 中输入文本。它们通常出现在表单和对话框中。空心文本字段的视觉强调程度不如填充文本字段。当它们出现在表单等多个文本字段集中放置的地方时，空心文本字段的强调程度降低有助于简化布局。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="735219678%2FClasslikes%2F540289978" anchor-label="Popup" id="735219678%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-popup/index.html"><span><span>Popup</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="735219678%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-popup/index.html">Popup</a><span class="token operator">&lt;</span><a href="-popup/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-popup/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">代表一个 Jetpack Compose 的 Popup（弹窗）组件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1544746460%2FClasslikes%2F540289978" anchor-label="PrimaryScrollableTabRow" id="1544746460%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-primary-scrollable-tab-row/index.html"><span>Primary</span><wbr></wbr><span>Scrollable</span><wbr></wbr><span>Tab</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1544746460%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-primary-scrollable-tab-row/index.html">PrimaryScrollableTabRow</a><span class="token operator">&lt;</span><a href="-primary-scrollable-tab-row/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-scrollable-tab-row/index.html">ScrollableTabRow</a><span class="token operator">&lt;</span><a href="-primary-scrollable-tab-row/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">代表一个 Material Design 3 的 <strong>主要可滚动</strong> 标签行 (<code class="lang-kotlin">PrimaryScrollableTabRow</code>)。 这是实验性 API。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1530435261%2FClasslikes%2F540289978" anchor-label="PrimaryTabRow" id="-1530435261%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-primary-tab-row/index.html"><span>Primary</span><wbr></wbr><span>Tab</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1530435261%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-primary-tab-row/index.html">PrimaryTabRow</a><span class="token operator">&lt;</span><a href="-primary-tab-row/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-tab-row/index.html">TabRow</a><span class="token operator">&lt;</span><a href="-primary-tab-row/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">代表一个 Material Design 3 的 <strong>主要固定宽度</strong> 标签行 (<code class="lang-kotlin">PrimaryTabRow</code>)。 这是实验性 API。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="669711720%2FClasslikes%2F540289978" anchor-label="ProgressIndicator" id="669711720%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-progress-indicator/index.html"><span>Progress</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="669711720%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-progress-indicator/index.html">ProgressIndicator</a><span class="token operator">&lt;</span><a href="-progress-indicator/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-progress-indicator/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">进度指示器的通用参数接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1288993245%2FClasslikes%2F540289978" anchor-label="RadioButton" id="1288993245%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-radio-button/index.html"><span>Radio</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1288993245%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-radio-button/index.html">RadioButton</a><span class="token operator">&lt;</span><a href="-radio-button/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-radio-button/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph">代表一个 Material Design 的 RadioButton (单选按钮) 组件。 单选按钮允许用户从一个集合中只选择一个选项。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1231106676%2FClasslikes%2F540289978" anchor-label="RangeSlider" id="-1231106676%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-range-slider/index.html"><span>Range</span><wbr></wbr><span><span>Slider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1231106676%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-range-slider/index.html">RangeSlider</a><span class="token operator">&lt;</span><a href="-range-slider/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-range-slider/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/sliders/overview" class="external" target="_blank">Material Design 范围滑块</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="567326896%2FClasslikes%2F540289978" anchor-label="Row" id="567326896%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-row/index.html"><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="567326896%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-row/index.html">Row</a><span class="token operator">&lt;</span><a href="-row/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-row/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">表示一个 Jetpack Compose <code class="lang-kotlin">Row</code> 布局的接口定义。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1319675006%2FClasslikes%2F540289978" anchor-label="Scaffold" id="-1319675006%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-scaffold/index.html"><span><span>Scaffold</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1319675006%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-scaffold/index.html">Scaffold</a><span class="token operator">&lt;</span><a href="-scaffold/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-scaffold/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="https://material.io/design/layout/understanding-layout.html" class="external" target="_blank">Material Design 布局</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-967578964%2FClasslikes%2F540289978" anchor-label="ScrollableTabRow" id="-967578964%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-scrollable-tab-row/index.html"><span>Scrollable</span><wbr></wbr><span>Tab</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-967578964%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-scrollable-tab-row/index.html">ScrollableTabRow</a><span class="token operator">&lt;</span><a href="-scrollable-tab-row/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-tab-row/index.html">TabRow</a><span class="token operator">&lt;</span><a href="-scrollable-tab-row/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">代表一个 Material Design 3 的 <strong>可滚动</strong> 标签行 (<code class="lang-kotlin">ScrollableTabRow</code>)。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1815095190%2FClasslikes%2F540289978" anchor-label="SecondaryScrollableTabRow" id="-1815095190%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-secondary-scrollable-tab-row/index.html"><span>Secondary</span><wbr></wbr><span>Scrollable</span><wbr></wbr><span>Tab</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1815095190%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-secondary-scrollable-tab-row/index.html">SecondaryScrollableTabRow</a><span class="token operator">&lt;</span><a href="-secondary-scrollable-tab-row/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-scrollable-tab-row/index.html">ScrollableTabRow</a><span class="token operator">&lt;</span><a href="-secondary-scrollable-tab-row/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">代表一个 Material Design 3 的 <strong>次要可滚动</strong> 标签行 (<code class="lang-kotlin">SecondaryScrollableTabRow</code>)。 这是实验性 API。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-705329839%2FClasslikes%2F540289978" anchor-label="SecondaryTabRow" id="-705329839%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-secondary-tab-row/index.html"><span>Secondary</span><wbr></wbr><span>Tab</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-705329839%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-secondary-tab-row/index.html">SecondaryTabRow</a><span class="token operator">&lt;</span><a href="-secondary-tab-row/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-tab-row/index.html">TabRow</a><span class="token operator">&lt;</span><a href="-secondary-tab-row/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">代表一个 Material Design 3 的 <strong>次要固定宽度</strong> 标签行 (<code class="lang-kotlin">SecondaryTabRow</code>)。 这是实验性 API。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1625313802%2FClasslikes%2F540289978" anchor-label="SelectableChip" id="-1625313802%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-selectable-chip/index.html"><span>Selectable</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1625313802%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-selectable-chip/index.html">SelectableChip</a><span class="token operator">&lt;</span><a href="-selectable-chip/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-chip/index.html">Chip</a><span class="token operator">&lt;</span><a href="-selectable-chip/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">可选择的 Chip 的通用参数接口，例如 <a href="-filter-chip/index.html">FilterChip</a> 和 <a href="-input-chip/index.html">InputChip</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-285722953%2FClasslikes%2F540289978" anchor-label="Slider" id="-285722953%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-slider/index.html"><span><span>Slider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-285722953%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-slider/index.html">Slider</a><span class="token operator">&lt;</span><a href="-slider/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-slider/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph">Material Design 滑块。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1061355181%2FClasslikes%2F540289978" anchor-label="Snackbar" id="-1061355181%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-snackbar/index.html"><span><span>Snackbar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1061355181%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-snackbar/index.html">Snackbar</a><span class="token operator">&lt;</span><a href="-snackbar/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-snackbar/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Material Design Snackbar 的视觉组件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="307054475%2FClasslikes%2F540289978" anchor-label="SnackbarHost" id="307054475%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-snackbar-host/index.html"><span>Snackbar</span><wbr></wbr><span><span>Host</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="307054475%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-snackbar-host/index.html">SnackbarHost</a><span class="token operator">&lt;</span><a href="-snackbar-host/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-snackbar-host/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">用于承载和管理 Snackbar 显示的宿主组件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1235568180%2FClasslikes%2F540289978" anchor-label="Spacer" id="-1235568180%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-spacer/index.html"><span><span>Spacer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1235568180%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-spacer/index.html">Spacer</a><span class="token operator">&lt;</span><a href="-spacer/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-spacer/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">表示一个用于在布局中创建空白空间的组件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="540251912%2FClasslikes%2F540289978" anchor-label="SuggestionChip" id="540251912%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-suggestion-chip/index.html"><span>Suggestion</span><wbr></wbr><span><span>Chip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="540251912%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-suggestion-chip/index.html">SuggestionChip</a><span class="token operator">&lt;</span><a href="-suggestion-chip/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-chip/index.html">Chip</a><span class="token operator">&lt;</span><a href="-suggestion-chip/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="-suggestion-chip/index.html">SuggestionChip</a> 和 <a href="-elevated-suggestion-chip/index.html">ElevatedSuggestionChip</a> 的参数接口。 建议型 Chip 通过呈现动态生成的建议来帮助缩小用户的意图。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-952953667%2FClasslikes%2F540289978" anchor-label="Surface" id="-952953667%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-surface/index.html"><span><span>Surface</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-952953667%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-surface/index.html">Surface</a><span class="token operator">&lt;</span><a href="-surface/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-surface/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/styles/elevation/overview" class="external" target="_blank">Material Design 表面</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-385866188%2FClasslikes%2F540289978" anchor-label="SwipeToDismissBox" id="-385866188%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-swipe-to-dismiss-box/index.html"><span>Swipe</span><wbr></wbr><span>To</span><wbr></wbr><span>Dismiss</span><wbr></wbr><span><span>Box</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-385866188%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-swipe-to-dismiss-box/index.html">SwipeToDismissBox</a><span class="token operator">&lt;</span><a href="-swipe-to-dismiss-box/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-swipe-to-dismiss-box/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">一个可以通过向左或向右滑动来关闭的 Composable。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2119478212%2FClasslikes%2F540289978" anchor-label="Switch" id="2119478212%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-switch/index.html"><span><span>Switch</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2119478212%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-switch/index.html">Switch</a><span class="token operator">&lt;</span><a href="-switch/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-switch/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/switch" class="external" target="_blank">Material Design 开关</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1171256491%2FClasslikes%2F540289978" anchor-label="Tab" id="-1171256491%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tab/index.html"><span><span>Tab</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1171256491%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-tab/index.html">Tab</a><span class="token operator">&lt;</span><a href="-tab/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-tab/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/tabs/overview" class="external" target="_blank">Material Design 标签页</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="855450131%2FClasslikes%2F540289978" anchor-label="TabRow" id="855450131%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tab-row/index.html"><span>Tab</span><wbr></wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="855450131%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-tab-row/index.html">TabRow</a><span class="token operator">&lt;</span><a href="-tab-row/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-tab-row/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">代表一个 Material Design 3 的 <strong>固定宽度</strong> 标签行 (<code class="lang-kotlin">TabRow</code>)。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="957382059%2FClasslikes%2F540289978" anchor-label="Text" id="957382059%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-text/index.html"><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="957382059%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-text/index.html">Text</a><span class="token operator">&lt;</span><a href="-text/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-text/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">表示一个 Jetpack Compose <code class="lang-kotlin">Text</code> 组件的接口定义。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1018193689%2FClasslikes%2F540289978" anchor-label="TextButton" id="1018193689%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-text-button/index.html"><span>Text</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1018193689%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-text-button/index.html">TextButton</a><span class="token operator">&lt;</span><a href="-text-button/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-outlined-button/index.html">OutlinedButton</a><span class="token operator">&lt;</span><a href="-text-button/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">表示一个 Jetpack Compose <code class="lang-kotlin">TextButton</code> (文本按钮) 组件的接口定义。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="440329053%2FClasslikes%2F540289978" anchor-label="TextField" id="440329053%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-text-field/index.html"><span>Text</span><wbr></wbr><span><span>Field</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="440329053%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-text-field/index.html">TextField</a><span class="token operator">&lt;</span><a href="-text-field/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-text-field/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph">描述: 文本输入框的基础接口，与 Material 3 Composable 的参数完全同步。 它包含了 <a href="-text-field/index.html">TextField</a> 和 <a href="-outlined-text-field/index.html">OutlinedTextField</a> 共有的所有配置选项。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-587197964%2FClasslikes%2F540289978" anchor-label="Thumb" id="-587197964%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-thumb/index.html"><span><span>Thumb</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-587197964%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-thumb/index.html">Thumb</a><span class="token operator">&lt;</span><a href="-thumb/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-thumb/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph"><a href="-slider/index.html">Slider</a> 和 <a href="-range-slider/index.html">RangeSlider</a> 的默认拇指（可拖动部分）的视觉组件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1927245693%2FClasslikes%2F540289978" anchor-label="TopAppBar" id="-1927245693%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-top-app-bar/index.html"><span>Top</span><wbr></wbr><span>App</span><wbr></wbr><span><span>Bar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1927245693%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-top-app-bar/index.html">TopAppBar</a><span class="token operator">&lt;</span><a href="-top-app-bar/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-layout/index.html">Layout</a><span class="token operator">&lt;</span><a href="-top-app-bar/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">所有 TopAppBar 可组合函数的通用参数接口。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2101587999%2FClasslikes%2F540289978" anchor-label="Track" id="2101587999%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-track/index.html"><span><span>Track</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2101587999%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-track/index.html">Track</a><span class="token operator">&lt;</span><a href="-track/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-track/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="-slider/index.html">Slider</a> 和 <a href="-range-slider/index.html">RangeSlider</a> 的默认轨道（滑块在其上移动的条）的视觉组件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="137048143%2FClasslikes%2F540289978" anchor-label="TriStateCheckbox" id="137048143%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tri-state-checkbox/index.html"><span>Tri</span><wbr></wbr><span>State</span><wbr></wbr><span><span>Checkbox</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="137048143%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-tri-state-checkbox/index.html">TriStateCheckbox</a><span class="token operator">&lt;</span><a href="-tri-state-checkbox/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-tri-state-checkbox/index.html">T</a><span class="token operator">&gt; </span>, <a href="../com.m8test.script.core.api.ui.compose.foundation.interaction/-interactable/index.html">Interactable</a></div><div class="brief "><p class="paragraph"><a href="https://m3.material.io/components/checkbox/guidelines" class="external" target="_blank">Material Design 三态复选框</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1358419353%2FClasslikes%2F540289978" anchor-label="VerticalDivider" id="-1358419353%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vertical-divider/index.html"><span>Vertical</span><wbr></wbr><span><span>Divider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1358419353%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-vertical-divider/index.html">VerticalDivider</a><span class="token operator">&lt;</span><a href="-vertical-divider/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="-divider/index.html">Divider</a><span class="token operator">&lt;</span><a href="-vertical-divider/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">表示一个垂直分割线，即一条用于在列表和布局中对内容进行分组的细垂直线。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1210817204%2FClasslikes%2F540289978" anchor-label="Widget" id="1210817204%2FClasslikes%2F540289978" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-widget/index.html"><span><span>Widget</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1210817204%2FClasslikes%2F540289978"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-widget/index.html">Widget</a><span class="token operator">&lt;</span><a href="-widget/index.html">T</a><span class="token operator"> : </span><a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a><span class="token operator">&gt;</span> : <a href="../com.m8test.script.core.api.engine/-script-contextual/index.html">ScriptContextual</a>, <a href="../com.m8test.script.core.api.ui.compose/-composable/index.html">Composable</a></div><div class="brief "><p class="paragraph"><a href="-widget/index.html">Widget</a> 表示 jetpack Compose 中的 @Composable () -> Unit,  T (<a href="../com.m8test.script.core.api.ui.compose.modifier/-modifier/index.html">Modifier</a>) 由其父节点决定,也就是由其所属的 <a href="../com.m8test.script.core.api.ui.compose.slot/-slot/index.html">Slot</a> 决定 (例如 <a href="-row/index.html">Row</a> 的 <a href="../com.m8test.script.core.api.ui.compose.slot/-slot/index.html">Slot</a> T 就是 <a href="../com.m8test.script.core.api.ui.compose.modifier/-row-scope-modifier/index.html">RowScopeModifier</a>)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>powered by m8test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
