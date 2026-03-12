@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Modifier</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:app/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/main"
+                                       data-filter=":sdk:app/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.script.core.api.ui.compose.modifier/Modifier///PointingToDeclaration//-12538097">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.script.core.api.ui.compose.modifier</a><span class="delimiter">/</span><span class="current">Modifier</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Modifier</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Modifier</a></div><p class="paragraph">一个有序且不可变的 <a href="index.html">Modifier</a> 元素集合，用于装饰 Compose UI 元素或向其添加行为。 例如，背景、内边距和点击事件监听器都可以装饰或为 Row、Text 或 Button 等组件添加行为。</p><p class="paragraph">Modifier 的元素可以使用 <a href="then.html">then</a> 方法进行组合。顺序非常重要；先出现的 Modifier 元素会先被应用。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">M8Test, contact@m8test.com, https://m8test.com</p></span><h4 class="tableheader">Inheritors</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-scope-modifier/index.html">ScopeModifier</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1204688773%2FFunctions%2F-12538097" anchor-label="absoluteOffset" id="1204688773%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="absolute-offset.html"><span>absolute</span><wbr></wbr><span><span>Offset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1204688773%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="absolute-offset.html"><span class="token function">absoluteOffset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetBuilder<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp-offset/index.html">DpOffset</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">在不影响其在父布局中所占空间的情况下，将内容偏移指定的量。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1767850690%2FFunctions%2F-12538097" anchor-label="alpha" id="1767850690%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="alpha.html"><span><span>alpha</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1767850690%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="alpha.html"><span class="token function">alpha</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">alpha<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">使用小于 1 的 alpha 来绘制内容，使其部分透明。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1362832676%2FFunctions%2F-12538097" anchor-label="background" id="1362832676%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="background.html"><span><span>background</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1362832676%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="background.html"><span class="token function">background</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">colorBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-color/index.html">Color</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter ">shapeBuilder<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-shapes/index.html">Shapes</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-shape/index.html">Shape</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">在内容的后面绘制一个带有指定颜色和形状的背景。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1267195254%2FFunctions%2F-12538097" anchor-label="border" id="1267195254%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="border.html"><span><span>border</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1267195254%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="border.html"><span class="token function">border</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">width<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp/index.html">Dp</a><span class="token punctuation">, </span></span><span class="parameter ">colorBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-color/index.html">Color</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter ">shapeBuilder<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-shapes/index.html">Shapes</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-shape/index.html">Shape</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">在内容的周围绘制一个带有指定宽度、颜色和形状的边框。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1849317306%2FFunctions%2F-12538097" anchor-label="clickable" id="1849317306%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clickable.html"><span><span>clickable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1849317306%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="clickable.html"><span class="token function">clickable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">onClickLabel<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">role<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.semantics/-roles/index.html">Roles</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.semantics/-role/index.html">Role</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">onClick<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">配置组件以响应点击事件。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="940251878%2FFunctions%2F-12538097" anchor-label="clip" id="940251878%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clip.html"><span><span>clip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="940251878%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="clip.html"><span class="token function">clip</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">shapeBuilder<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-shapes/index.html">Shapes</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-shape/index.html">Shape</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">将内容裁剪为指定的形状。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="534127799%2FFunctions%2F-12538097" anchor-label="combinedClickable" id="534127799%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="combined-clickable.html"><span>combined</span><wbr></wbr><span><span>Clickable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="534127799%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="combined-clickable.html"><span class="token function">combinedClickable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">onClickLabel<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">role<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.semantics/-roles/index.html">Roles</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.semantics/-role/index.html">Role</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">onLongClickLabel<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">onLongClick<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">onDoubleClick<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">onClick<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">配置组件以响应单击、双击和长按手势。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-777999624%2FFunctions%2F-12538097" anchor-label="fillMaxHeight" id="-777999624%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fill-max-height.html"><span>fill</span><wbr></wbr><span>Max</span><wbr></wbr><span><span>Height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-777999624%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="fill-max-height.html"><span class="token function">fillMaxHeight</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fraction<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">使组件填满父布局所允许的最大高度。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="140199070%2FFunctions%2F-12538097" anchor-label="fillMaxSize" id="140199070%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fill-max-size.html"><span>fill</span><wbr></wbr><span>Max</span><wbr></wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="140199070%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="fill-max-size.html"><span class="token function">fillMaxSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fraction<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">使组件填满父布局所允许的最大尺寸。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="926248887%2FFunctions%2F-12538097" anchor-label="fillMaxWidth" id="926248887%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fill-max-width.html"><span>fill</span><wbr></wbr><span>Max</span><wbr></wbr><span><span>Width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="926248887%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="fill-max-width.html"><span class="token function">fillMaxWidth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fraction<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">使组件填满父布局所允许的最大宽度。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-38967826%2FFunctions%2F-12538097" anchor-label="getName" id="-38967826%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-name.html"><span>get</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-38967826%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-name.html"><span class="token function">getName</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1015221809%2FFunctions%2F-12538097" anchor-label="height" id="-1015221809%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="height.html"><span><span>height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1015221809%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="height.html"><span class="token function">height</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">height<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp/index.html">Dp</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">声明布局的内容具有首选的高度。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="413337262%2FFunctions%2F-12538097" anchor-label="offset" id="413337262%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="offset.html"><span><span>offset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="413337262%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="offset.html"><span class="token function">offset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offsetBuilder<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp-offset/index.html">DpOffset</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">在测量之前，使用给定的偏移量来偏移内容。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1447519125%2FFunctions%2F-12538097" anchor-label="padding" id="1447519125%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="padding.html"><span><span>padding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1447519125%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="padding.html"><span class="token function">padding</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">paddingValuesBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.foundation.layout/-padding-values/index.html">PaddingValues</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">在布局周围应用额外的空间。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="601151000%2FFunctions%2F-12538097" anchor-label="paddingFromBaseline" id="601151000%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="padding-from-baseline.html"><span>padding</span><wbr></wbr><span>From</span><wbr></wbr><span><span>Baseline</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="601151000%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="padding-from-baseline.html"><span class="token function">paddingFromBaseline</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">top<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp/index.html">Dp</a><span class="token punctuation">, </span></span><span class="parameter ">bottom<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp/index.html">Dp</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">从布局的第一条或最后一条文本基线开始应用内边距。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1819268594%2FFunctions%2F-12538097" anchor-label="requiredHeight" id="-1819268594%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="required-height.html"><span>required</span><wbr></wbr><span><span>Height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1819268594%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="required-height.html"><span class="token function">requiredHeight</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">height<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp/index.html">Dp</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">声明布局的内容需要一个确切的高度。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="369617575%2FFunctions%2F-12538097" anchor-label="requiredHeightIn" id="369617575%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="required-height-in.html"><span>required</span><wbr></wbr><span>Height</span><wbr></wbr><span><span>In</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="369617575%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="required-height-in.html"><span class="token function">requiredHeightIn</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">min<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp/index.html">Dp</a><span class="token punctuation">, </span></span><span class="parameter ">max<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp/index.html">Dp</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">声明布局的内容需要在给定的高度边界内。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-412235063%2FFunctions%2F-12538097" anchor-label="requiredSize" id="-412235063%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="required-size.html"><span>required</span><wbr></wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-412235063%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="required-size.html"><span class="token function">requiredSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">height<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp-size/index.html">DpSize</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">声明布局的内容需要一个确切的尺寸。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1671150147%2FFunctions%2F-12538097" anchor-label="requiredSizeIn" id="1671150147%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="required-size-in.html"><span>required</span><wbr></wbr><span>Size</span><wbr></wbr><span><span>In</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1671150147%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="required-size-in.html"><span class="token function">requiredSizeIn</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">min<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp-size/index.html">DpSize</a><span class="token punctuation">, </span></span><span class="parameter ">max<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp-size/index.html">DpSize</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">声明布局的内容需要在给定的边界内。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1249393579%2FFunctions%2F-12538097" anchor-label="requiredWidth" id="1249393579%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="required-width.html"><span>required</span><wbr></wbr><span><span>Width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1249393579%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="required-width.html"><span class="token function">requiredWidth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">width<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp/index.html">Dp</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">声明布局的内容需要一个确切的宽度。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1678711108%2FFunctions%2F-12538097" anchor-label="requiredWidthIn" id="1678711108%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="required-width-in.html"><span>required</span><wbr></wbr><span>Width</span><wbr></wbr><span><span>In</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1678711108%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="required-width-in.html"><span class="token function">requiredWidthIn</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">min<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp/index.html">Dp</a><span class="token punctuation">, </span></span><span class="parameter ">max<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp/index.html">Dp</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">声明布局的内容需要在给定的宽度边界内。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1784631298%2FFunctions%2F-12538097" anchor-label="shadow" id="1784631298%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="shadow.html"><span><span>shadow</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1784631298%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="shadow.html"><span class="token function">shadow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">elevation<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp/index.html">Dp</a><span class="token punctuation">, </span></span><span class="parameter ">shapeBuilder<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-shapes/index.html">Shapes</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-shape/index.html">Shape</a><span class="token punctuation">, </span></span><span class="parameter ">clip<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">ambientColorBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-color/index.html">Color</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter ">spotColorBuilder<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.graphics/-color/index.html">Color</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">创建一个绘制阴影的 graphicsLayer。 <a href="shadow.html">elevation</a> 定义了物理对象的视觉深度，该物理对象具有由 <a href="shadow.html">shapeBuilder</a> 指定的形状。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-817387958%2FFunctions%2F-12538097" anchor-label="size" id="-817387958%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="size.html"><span><span>size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-817387958%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="size.html"><span class="token function">size</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp-size/index.html">DpSize</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">声明布局的内容具有首选的大小。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1285001660%2FFunctions%2F-12538097" anchor-label="sizeIn" id="-1285001660%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="size-in.html"><span>size</span><wbr></wbr><span><span>In</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1285001660%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="size-in.html"><span class="token function">sizeIn</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">min<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp-size/index.html">DpSize</a><span class="token punctuation">, </span></span><span class="parameter ">max<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp-size/index.html">DpSize</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">声明布局的内容在给定的边界内。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="304445594%2FFunctions%2F-12538097" anchor-label="tabIndicatorOffset" id="304445594%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tab-indicator-offset.html"><span>tab</span><wbr></wbr><span>Indicator</span><wbr></wbr><span><span>Offset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="304445594%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="tab-indicator-offset.html"><span class="token function">tabIndicatorOffset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tabPosition<span class="token operator">: </span><a href="../../com.m8test.script.core.api.ui.compose.material3/-tab-position/index.html">TabPosition</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">将此修饰符应用于仅测量和布置 Tab 的指示器。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="184070616%2FFunctions%2F-12538097" anchor-label="then" id="184070616%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="then.html"><span><span>then</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="184070616%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="then.html"><span class="token function">then</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Modifier</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">将此修饰符与另一个修饰符连接起来。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-941426742%2FFunctions%2F-12538097" anchor-label="width" id="-941426742%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="width.html"><span><span>width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-941426742%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="width.html"><span class="token function">width</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">width<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dimensions/index.html">Dimensions</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../com.m8test.script.core.api.ui.compose.unit/-dp/index.html">Dp</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Modifier</a></div><div class="brief "><p class="paragraph">声明布局的内容具有首选的宽度。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>powered by m8test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

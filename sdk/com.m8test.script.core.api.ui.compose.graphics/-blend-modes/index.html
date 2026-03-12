@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>BlendModes</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:app/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/main"
+                                       data-filter=":sdk:app/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.script.core.api.ui.compose.graphics/BlendModes///PointingToDeclaration//-12538097">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.script.core.api.ui.compose.graphics</a><span class="delimiter">/</span><span class="current">BlendModes</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Blend</span><wbr></wbr><span><span>Modes</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">BlendModes</a></div><p class="paragraph">描述混合模式（Blend Modes）的接口。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">M8Test, contact@m8test.com, https://m8test.com</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="461306632%2FFunctions%2F-12538097" anchor-label="getClear" id="461306632%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-clear.html"><span>get</span><wbr></wbr><span><span>Clear</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="461306632%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-clear.html"><span class="token function">getClear</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">丢弃源图像和目标图像，最终不绘制任何内容。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1335150258%2FFunctions%2F-12538097" anchor-label="getColor" id="1335150258%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-color.html"><span>get</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1335150258%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-color.html"><span class="token function">getColor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">使用源图像的色相和饱和度，以及目标图像的亮度。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="491567395%2FFunctions%2F-12538097" anchor-label="getColorBurn" id="491567395%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-color-burn.html"><span>get</span><wbr></wbr><span>Color</span><wbr></wbr><span><span>Burn</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="491567395%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-color-burn.html"><span class="token function">getColorBurn</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">用目标图像的反色除以源图像，再对结果取反。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="479667729%2FFunctions%2F-12538097" anchor-label="getColorDodge" id="479667729%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-color-dodge.html"><span>get</span><wbr></wbr><span>Color</span><wbr></wbr><span><span>Dodge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="479667729%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-color-dodge.html"><span class="token function">getColorDodge</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">用目标图像除以源图像的反色。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1310023686%2FFunctions%2F-12538097" anchor-label="getDarken" id="1310023686%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-darken.html"><span>get</span><wbr></wbr><span><span>Darken</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1310023686%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-darken.html"><span class="token function">getDarken</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">对源图像和目标图像的每个颜色通道取最小值进行合成。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1290562344%2FFunctions%2F-12538097" anchor-label="getDifference" id="1290562344%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-difference.html"><span>get</span><wbr></wbr><span><span>Difference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1290562344%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-difference.html"><span class="token function">getDifference</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">对每个通道，用较大值减去较小值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1714938000%2FFunctions%2F-12538097" anchor-label="getDst" id="1714938000%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-dst.html"><span>get</span><wbr></wbr><span><span>Dst</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1714938000%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-dst.html"><span class="token function">getDst</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">仅绘制目标图像，丢弃源图像。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-728613860%2FFunctions%2F-12538097" anchor-label="getDstAtop" id="-728613860%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-dst-atop.html"><span>get</span><wbr></wbr><span>Dst</span><wbr></wbr><span><span>Atop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-728613860%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-dst-atop.html"><span class="token function">getDstAtop</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">将目标图像绘制在源图像之上，但仅限于两者重叠的区域。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-224692693%2FFunctions%2F-12538097" anchor-label="getDstIn" id="-224692693%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-dst-in.html"><span>get</span><wbr></wbr><span>Dst</span><wbr></wbr><span><span>In</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-224692693%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-dst-in.html"><span class="token function">getDstIn</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">仅在源图像与目标图像重叠的区域显示目标图像。源图像不会被渲染，仅作为遮罩使用。 源图像的颜色通道被忽略，仅其不透明度（alpha）起作用。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-165320036%2FFunctions%2F-12538097" anchor-label="getDstOut" id="-165320036%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-dst-out.html"><span>get</span><wbr></wbr><span>Dst</span><wbr></wbr><span><span>Out</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-165320036%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-dst-out.html"><span class="token function">getDstOut</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">仅在源图像与目标图像不重叠的区域显示目标图像。源图像不会被渲染，仅作为遮罩使用。 源图像的颜色通道被忽略，仅其不透明度（alpha）起作用。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1088763748%2FFunctions%2F-12538097" anchor-label="getDstOver" id="-1088763748%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-dst-over.html"><span>get</span><wbr></wbr><span>Dst</span><wbr></wbr><span><span>Over</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1088763748%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-dst-over.html"><span class="token function">getDstOver</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">将源图像绘制在目标图像之下。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-263816537%2FFunctions%2F-12538097" anchor-label="getExclusion" id="-263816537%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-exclusion.html"><span>get</span><wbr></wbr><span><span>Exclusion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-263816537%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-exclusion.html"><span class="token function">getExclusion</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">用两图像之和减去两倍的乘积。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1941347286%2FFunctions%2F-12538097" anchor-label="getHardLight" id="-1941347286%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-hard-light.html"><span>get</span><wbr></wbr><span>Hard</span><wbr></wbr><span><span>Light</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1941347286%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-hard-light.html"><span class="token function">getHardLight</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">在偏向源图像的前提下，对源图像和目标图像的颜色分量进行调整后相乘。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2141044547%2FFunctions%2F-12538097" anchor-label="getHue" id="-2141044547%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-hue.html"><span>get</span><wbr></wbr><span><span>Hue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2141044547%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-hue.html"><span class="token function">getHue</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">使用源图像的色相（Hue），以及目标图像的饱和度和亮度（Luminosity）。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1183200086%2FFunctions%2F-12538097" anchor-label="getLighten" id="1183200086%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-lighten.html"><span>get</span><wbr></wbr><span><span>Lighten</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1183200086%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-lighten.html"><span class="token function">getLighten</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">对源图像和目标图像的每个颜色通道取最大值进行合成。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1502250204%2FFunctions%2F-12538097" anchor-label="getLuminosity" id="-1502250204%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-luminosity.html"><span>get</span><wbr></wbr><span><span>Luminosity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1502250204%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-luminosity.html"><span class="token function">getLuminosity</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">使用源图像的亮度，以及目标图像的色相和饱和度。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1864397044%2FFunctions%2F-12538097" anchor-label="getModulate" id="-1864397044%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-modulate.html"><span>get</span><wbr></wbr><span><span>Modulate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1864397044%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-modulate.html"><span class="token function">getModulate</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">将源图像和目标图像的颜色分量相乘。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1666997793%2FFunctions%2F-12538097" anchor-label="getMultiply" id="1666997793%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-multiply.html"><span>get</span><wbr></wbr><span><span>Multiply</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1666997793%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-multiply.html"><span class="token function">getMultiply</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">将源图像和目标图像的颜色分量（包括 alpha 通道）全部相乘。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="859359333%2FFunctions%2F-12538097" anchor-label="getOverlay" id="859359333%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-overlay.html"><span>get</span><wbr></wbr><span><span>Overlay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="859359333%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-overlay.html"><span class="token function">getOverlay</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">在偏向目标图像的前提下，对源图像和目标图像的颜色分量进行调整后相乘。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1366813547%2FFunctions%2F-12538097" anchor-label="getPlus" id="1366813547%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-plus.html"><span>get</span><wbr></wbr><span><span>Plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1366813547%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-plus.html"><span class="token function">getPlus</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">将源图像和目标图像的颜色分量相加。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1012513229%2FFunctions%2F-12538097" anchor-label="getSaturation" id="-1012513229%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-saturation.html"><span>get</span><wbr></wbr><span><span>Saturation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1012513229%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-saturation.html"><span class="token function">getSaturation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">使用源图像的饱和度，以及目标图像的色相和亮度。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-466860327%2FFunctions%2F-12538097" anchor-label="getScreen" id="-466860327%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-screen.html"><span>get</span><wbr></wbr><span><span>Screen</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-466860327%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-screen.html"><span class="token function">getScreen</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">将源图像和目标图像的反色分量相乘，再对结果取反。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-88301783%2FFunctions%2F-12538097" anchor-label="getSoftLight" id="-88301783%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-soft-light.html"><span>get</span><wbr></wbr><span>Soft</span><wbr></wbr><span><span>Light</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-88301783%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-soft-light.html"><span class="token function">getSoftLight</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">当源值低于 0.5 时使用 <a href="get-color-dodge.html">getColorDodge</a>，高于 0.5 时使用 <a href="get-color-burn.html">getColorBurn</a>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="699906385%2FFunctions%2F-12538097" anchor-label="getSrc" id="699906385%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-src.html"><span>get</span><wbr></wbr><span><span>Src</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="699906385%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-src.html"><span class="token function">getSrc</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">仅绘制源图像，丢弃目标图像。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1358574499%2FFunctions%2F-12538097" anchor-label="getSrcAtop" id="-1358574499%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-src-atop.html"><span>get</span><wbr></wbr><span>Src</span><wbr></wbr><span><span>Atop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1358574499%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-src-atop.html"><span class="token function">getSrcAtop</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">将源图像绘制在目标图像之上，但仅限于两者重叠的区域。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-712498516%2FFunctions%2F-12538097" anchor-label="getSrcIn" id="-712498516%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-src-in.html"><span>get</span><wbr></wbr><span>Src</span><wbr></wbr><span><span>In</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-712498516%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-src-in.html"><span class="token function">getSrcIn</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">仅在源图像与目标图像重叠的区域显示源图像。目标图像不会被渲染，仅作为遮罩使用。 目标图像的颜色通道被忽略，仅其不透明度（alpha）起作用。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1892568635%2FFunctions%2F-12538097" anchor-label="getSrcOut" id="1892568635%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-src-out.html"><span>get</span><wbr></wbr><span>Src</span><wbr></wbr><span><span>Out</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1892568635%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-src-out.html"><span class="token function">getSrcOut</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">仅在源图像与目标图像不重叠的区域显示源图像。目标图像不会被渲染，仅作为遮罩使用。 目标图像的颜色通道被忽略，仅其不透明度（alpha）起作用。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1718724387%2FFunctions%2F-12538097" anchor-label="getSrcOver" id="-1718724387%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-src-over.html"><span>get</span><wbr></wbr><span>Src</span><wbr></wbr><span><span>Over</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1718724387%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-src-over.html"><span class="token function">getSrcOver</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">将源图像绘制在目标图像之上。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1301646010%2FFunctions%2F-12538097" anchor-label="getXor" id="1301646010%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-xor.html"><span>get</span><wbr></wbr><span><span>Xor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1301646010%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-xor.html"><span class="token function">getXor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">对源图像和目标图像应用按位异或（XOR）操作。重叠区域将变为透明。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>powered by m8test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
