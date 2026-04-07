@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ContentTypes</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:app/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/main"
+                                       data-filter=":sdk:app/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.script.core.api.http.common/ContentTypes///PointingToDeclaration//-12538097">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.script.core.api.http.common</a><span class="delimiter">/</span><span class="current">ContentTypes</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Content</span><wbr></wbr><span><span>Types</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">ContentTypes</a></div><p class="paragraph">提供了一系列预定义的、标准的 <a href="../-content-type/index.html">ContentType</a> 实例以及用于创建自定义内容类型的工厂方法。</p><p class="paragraph">使用此接口可以以类型安全的方式引用常见的 MIME 类型，避免在代码中使用 &quot;魔术字符串&quot;（hardcoded strings）， 从而减少拼写错误并利用 IDE 的自动补全功能。</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">M8Test, contact@m8test.com, https://m8test.com</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="699445909%2FFunctions%2F-12538097" anchor-label="create" id="699445909%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create.html"><span><span>create</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="699445909%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="create.html"><span class="token function">create</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">contentType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">contentSubtype<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">通过指定主类型和子类型来创建一个 <a href="../-content-type/index.html">ContentType</a> 对象。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1428103334%2FFunctions%2F-12538097" anchor-label="getAny" id="-1428103334%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-any.html"><span>get</span><wbr></wbr><span><span>Any</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1428103334%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-any.html"><span class="token function">getAny</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表任意内容类型 <code class="lang-kotlin">* / *</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1983887080%2FFunctions%2F-12538097" anchor-label="getApplicationAny" id="-1983887080%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-any.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Any</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1983887080%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-any.html"><span class="token function">getApplicationAny</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表任意 application 类型 <code class="lang-kotlin">application / *</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1749521061%2FFunctions%2F-12538097" anchor-label="getApplicationAtom" id="1749521061%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-atom.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Atom</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1749521061%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-atom.html"><span class="token function">getApplicationAtom</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/atom+xml</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-713853292%2FFunctions%2F-12538097" anchor-label="getApplicationCbor" id="-713853292%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-cbor.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Cbor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-713853292%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-cbor.html"><span class="token function">getApplicationCbor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/cbor</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1800674154%2FFunctions%2F-12538097" anchor-label="getApplicationDocx" id="-1800674154%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-docx.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Docx</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1800674154%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-docx.html"><span class="token function">getApplicationDocx</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/vnd.openxmlformats-officedocument.wordprocessingml.document</code> (Word)。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-227521421%2FFunctions%2F-12538097" anchor-label="getApplicationFormUrlEncoded" id="-227521421%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-form-url-encoded.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span>Form</span><wbr></wbr><span>Url</span><wbr></wbr><span><span>Encoded</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-227521421%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-form-url-encoded.html"><span class="token function">getApplicationFormUrlEncoded</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/x-www-form-urlencoded</code>，用于网页表单提交。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1735277860%2FFunctions%2F-12538097" anchor-label="getApplicationGZip" id="-1735277860%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-g-zip.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>GZip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1735277860%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-g-zip.html"><span class="token function">getApplicationGZip</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/gzip</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-718710711%2FFunctions%2F-12538097" anchor-label="getApplicationHalJson" id="-718710711%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-hal-json.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span>Hal</span><wbr></wbr><span><span>Json</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-718710711%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-hal-json.html"><span class="token function">getApplicationHalJson</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/hal+json</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-685167831%2FFunctions%2F-12538097" anchor-label="getApplicationJavaScript" id="-685167831%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-java-script.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span>Java</span><wbr></wbr><span><span>Script</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-685167831%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-java-script.html"><span class="token function">getApplicationJavaScript</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/javascript</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-316741906%2FFunctions%2F-12538097" anchor-label="getApplicationJson" id="-316741906%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-json.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Json</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-316741906%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-json.html"><span class="token function">getApplicationJson</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/json</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="186709813%2FFunctions%2F-12538097" anchor-label="getApplicationOctetStream" id="186709813%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-octet-stream.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span>Octet</span><wbr></wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="186709813%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-octet-stream.html"><span class="token function">getApplicationOctetStream</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/octet-stream</code>，用于通用的二进制数据。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1169417426%2FFunctions%2F-12538097" anchor-label="getApplicationPdf" id="1169417426%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-pdf.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Pdf</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1169417426%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-pdf.html"><span class="token function">getApplicationPdf</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/pdf</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1134411474%2FFunctions%2F-12538097" anchor-label="getApplicationPptx" id="1134411474%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-pptx.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Pptx</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1134411474%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-pptx.html"><span class="token function">getApplicationPptx</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/vnd.openxmlformats-officedocument.presentationml.presentation</code> (PowerPoint)。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-397690819%2FFunctions%2F-12538097" anchor-label="getApplicationProblemJson" id="-397690819%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-problem-json.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span>Problem</span><wbr></wbr><span><span>Json</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-397690819%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-problem-json.html"><span class="token function">getApplicationProblemJson</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/problem+json</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-343281122%2FFunctions%2F-12538097" anchor-label="getApplicationProblemXml" id="-343281122%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-problem-xml.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span>Problem</span><wbr></wbr><span><span>Xml</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-343281122%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-problem-xml.html"><span class="token function">getApplicationProblemXml</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/problem+xml</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="26072395%2FFunctions%2F-12538097" anchor-label="getApplicationProtoBuf" id="26072395%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-proto-buf.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span>Proto</span><wbr></wbr><span><span>Buf</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="26072395%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-proto-buf.html"><span class="token function">getApplicationProtoBuf</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/protobuf</code> (Protocol Buffers)。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1692457102%2FFunctions%2F-12538097" anchor-label="getApplicationRss" id="-1692457102%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-rss.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Rss</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1692457102%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-rss.html"><span class="token function">getApplicationRss</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/rss+xml</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2129497515%2FFunctions%2F-12538097" anchor-label="getApplicationSoap" id="2129497515%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-soap.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Soap</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2129497515%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-soap.html"><span class="token function">getApplicationSoap</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/soap+xml</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-85594958%2FFunctions%2F-12538097" anchor-label="getApplicationWasm" id="-85594958%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-wasm.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Wasm</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-85594958%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-wasm.html"><span class="token function">getApplicationWasm</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/wasm</code> (WebAssembly)。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1853377379%2FFunctions%2F-12538097" anchor-label="getApplicationXlsx" id="-1853377379%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-xlsx.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Xlsx</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1853377379%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-xlsx.html"><span class="token function">getApplicationXlsx</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</code> (Excel)。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-617764531%2FFunctions%2F-12538097" anchor-label="getApplicationXml" id="-617764531%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-xml.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Xml</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-617764531%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-xml.html"><span class="token function">getApplicationXml</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/xml</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="208599289%2FFunctions%2F-12538097" anchor-label="getApplicationXmlDtd" id="208599289%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-xml-dtd.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span>Xml</span><wbr></wbr><span><span>Dtd</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="208599289%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-xml-dtd.html"><span class="token function">getApplicationXmlDtd</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/xml-dtd</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-205128177%2FFunctions%2F-12538097" anchor-label="getApplicationYaml" id="-205128177%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-yaml.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Yaml</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-205128177%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-yaml.html"><span class="token function">getApplicationYaml</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/yaml</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-554647165%2FFunctions%2F-12538097" anchor-label="getApplicationZip" id="-554647165%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-application-zip.html"><span>get</span><wbr></wbr><span>Application</span><wbr></wbr><span><span>Zip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-554647165%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-application-zip.html"><span class="token function">getApplicationZip</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">application/zip</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-392935458%2FFunctions%2F-12538097" anchor-label="getAudioAny" id="-392935458%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-audio-any.html"><span>get</span><wbr></wbr><span>Audio</span><wbr></wbr><span><span>Any</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-392935458%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-audio-any.html"><span class="token function">getAudioAny</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表任意 audio 类型 <code class="lang-kotlin">audio / *</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-78822823%2FFunctions%2F-12538097" anchor-label="getAudioMP4" id="-78822823%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-audio-m-p4.html"><span>get</span><wbr></wbr><span>Audio</span><wbr></wbr><span><span>MP4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-78822823%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-audio-m-p4.html"><span class="token function">getAudioMP4</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">audio/mp4</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1220412171%2FFunctions%2F-12538097" anchor-label="getAudioMPEG" id="1220412171%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-audio-m-p-e-g.html"><span>get</span><wbr></wbr><span>Audio</span><wbr></wbr><span><span>MPEG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1220412171%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-audio-m-p-e-g.html"><span class="token function">getAudioMPEG</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">audio/mpeg</code> (MP3)。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-63511141%2FFunctions%2F-12538097" anchor-label="getAudioOGG" id="-63511141%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-audio-o-g-g.html"><span>get</span><wbr></wbr><span>Audio</span><wbr></wbr><span><span>OGG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-63511141%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-audio-o-g-g.html"><span class="token function">getAudioOGG</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">audio/ogg</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1521637065%2FFunctions%2F-12538097" anchor-label="getFontAny" id="1521637065%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-any.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Any</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1521637065%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-any.html"><span class="token function">getFontAny</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表任意 font 类型 <code class="lang-kotlin">font / *</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1309130649%2FFunctions%2F-12538097" anchor-label="getFontCollection" id="-1309130649%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-collection.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Collection</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1309130649%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-collection.html"><span class="token function">getFontCollection</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">font/collection</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1159334092%2FFunctions%2F-12538097" anchor-label="getFontOtf" id="-1159334092%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-otf.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Otf</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1159334092%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-otf.html"><span class="token function">getFontOtf</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">font/otf</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1164384780%2FFunctions%2F-12538097" anchor-label="getFontSfnt" id="1164384780%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-sfnt.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Sfnt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1164384780%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-sfnt.html"><span class="token function">getFontSfnt</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">font/sfnt</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1861950479%2FFunctions%2F-12538097" anchor-label="getFontTtf" id="1861950479%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-ttf.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Ttf</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1861950479%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-ttf.html"><span class="token function">getFontTtf</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">font/ttf</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2106907821%2FFunctions%2F-12538097" anchor-label="getFontWoff" id="2106907821%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-woff.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Woff</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2106907821%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-woff.html"><span class="token function">getFontWoff</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">font/woff</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="439600347%2FFunctions%2F-12538097" anchor-label="getFontWoff2" id="439600347%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-font-woff2.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Woff2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="439600347%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-font-woff2.html"><span class="token function">getFontWoff2</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">font/woff2</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1197634589%2FFunctions%2F-12538097" anchor-label="getImageAny" id="-1197634589%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-any.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>Any</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1197634589%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-any.html"><span class="token function">getImageAny</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表任意 image 类型 <code class="lang-kotlin">image / *</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1913118621%2FFunctions%2F-12538097" anchor-label="getImageAPNG" id="-1913118621%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-a-p-n-g.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>APNG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1913118621%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-a-p-n-g.html"><span class="token function">getImageAPNG</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/apng</code> (Animated PNG)。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="309306809%2FFunctions%2F-12538097" anchor-label="getImageAVIF" id="309306809%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-a-v-i-f.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>AVIF</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="309306809%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-a-v-i-f.html"><span class="token function">getImageAVIF</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/avif</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-97707414%2FFunctions%2F-12538097" anchor-label="getImageBMP" id="-97707414%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-b-m-p.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>BMP</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-97707414%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-b-m-p.html"><span class="token function">getImageBMP</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/bmp</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1233076981%2FFunctions%2F-12538097" anchor-label="getImageGIF" id="-1233076981%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-g-i-f.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>GIF</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1233076981%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-g-i-f.html"><span class="token function">getImageGIF</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/gif</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="808545940%2FFunctions%2F-12538097" anchor-label="getImageHEIC" id="808545940%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-h-e-i-c.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>HEIC</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="808545940%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-h-e-i-c.html"><span class="token function">getImageHEIC</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/heic</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="901605361%2FFunctions%2F-12538097" anchor-label="getImageHEIF" id="901605361%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-h-e-i-f.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>HEIF</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="901605361%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-h-e-i-f.html"><span class="token function">getImageHEIF</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/heif</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-34762205%2FFunctions%2F-12538097" anchor-label="getImageJPEG" id="-34762205%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-j-p-e-g.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>JPEG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-34762205%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-j-p-e-g.html"><span class="token function">getImageJPEG</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/jpeg</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-271859407%2FFunctions%2F-12538097" anchor-label="getImageJXL" id="-271859407%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-j-x-l.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>JXL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-271859407%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-j-x-l.html"><span class="token function">getImageJXL</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/jxl</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1313384006%2FFunctions%2F-12538097" anchor-label="getImagePNG" id="1313384006%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-p-n-g.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>PNG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1313384006%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-p-n-g.html"><span class="token function">getImagePNG</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/png</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-347848085%2FFunctions%2F-12538097" anchor-label="getImageSVG" id="-347848085%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-s-v-g.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>SVG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-347848085%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-s-v-g.html"><span class="token function">getImageSVG</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/svg+xml</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1020070198%2FFunctions%2F-12538097" anchor-label="getImageTIFF" id="1020070198%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-t-i-f-f.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>TIFF</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1020070198%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-t-i-f-f.html"><span class="token function">getImageTIFF</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/tiff</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="582063471%2FFunctions%2F-12538097" anchor-label="getImageWEBP" id="582063471%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-w-e-b-p.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>WEBP</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="582063471%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-w-e-b-p.html"><span class="token function">getImageWEBP</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/webp</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="692901854%2FFunctions%2F-12538097" anchor-label="getImageXIcon" id="692901854%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-image-x-icon.html"><span>get</span><wbr></wbr><span>Image</span><wbr></wbr><span><span>XIcon</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="692901854%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-image-x-icon.html"><span class="token function">getImageXIcon</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">image/x-icon</code> (Favicon)。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="832200399%2FFunctions%2F-12538097" anchor-label="getMessageAny" id="832200399%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-message-any.html"><span>get</span><wbr></wbr><span>Message</span><wbr></wbr><span><span>Any</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="832200399%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-message-any.html"><span class="token function">getMessageAny</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表任意 message 类型 <code class="lang-kotlin">message / *</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="16826487%2FFunctions%2F-12538097" anchor-label="getMessageHttp" id="16826487%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-message-http.html"><span>get</span><wbr></wbr><span>Message</span><wbr></wbr><span><span>Http</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="16826487%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-message-http.html"><span class="token function">getMessageHttp</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">message/http</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1203245389%2FFunctions%2F-12538097" anchor-label="getMultiPartAlternative" id="-1203245389%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-multi-part-alternative.html"><span>get</span><wbr></wbr><span>Multi</span><wbr></wbr><span>Part</span><wbr></wbr><span><span>Alternative</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1203245389%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-multi-part-alternative.html"><span class="token function">getMultiPartAlternative</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">multipart/alternative</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1199768660%2FFunctions%2F-12538097" anchor-label="getMultiPartAny" id="1199768660%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-multi-part-any.html"><span>get</span><wbr></wbr><span>Multi</span><wbr></wbr><span>Part</span><wbr></wbr><span><span>Any</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1199768660%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-multi-part-any.html"><span class="token function">getMultiPartAny</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表任意 multipart 类型 <code class="lang-kotlin">multipart / *</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-478038756%2FFunctions%2F-12538097" anchor-label="getMultiPartByteRanges" id="-478038756%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-multi-part-byte-ranges.html"><span>get</span><wbr></wbr><span>Multi</span><wbr></wbr><span>Part</span><wbr></wbr><span>Byte</span><wbr></wbr><span><span>Ranges</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-478038756%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-multi-part-byte-ranges.html"><span class="token function">getMultiPartByteRanges</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">multipart/byteranges</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="242432316%2FFunctions%2F-12538097" anchor-label="getMultiPartEncrypted" id="242432316%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-multi-part-encrypted.html"><span>get</span><wbr></wbr><span>Multi</span><wbr></wbr><span>Part</span><wbr></wbr><span><span>Encrypted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="242432316%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-multi-part-encrypted.html"><span class="token function">getMultiPartEncrypted</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">multipart/encrypted</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1157422644%2FFunctions%2F-12538097" anchor-label="getMultiPartFormData" id="-1157422644%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-multi-part-form-data.html"><span>get</span><wbr></wbr><span>Multi</span><wbr></wbr><span>Part</span><wbr></wbr><span>Form</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1157422644%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-multi-part-form-data.html"><span class="token function">getMultiPartFormData</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">multipart/form-data</code>，用于文件上传和表单。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="683990117%2FFunctions%2F-12538097" anchor-label="getMultiPartMixed" id="683990117%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-multi-part-mixed.html"><span>get</span><wbr></wbr><span>Multi</span><wbr></wbr><span>Part</span><wbr></wbr><span><span>Mixed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="683990117%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-multi-part-mixed.html"><span class="token function">getMultiPartMixed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">multipart/mixed</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="759192949%2FFunctions%2F-12538097" anchor-label="getMultiPartRelated" id="759192949%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-multi-part-related.html"><span>get</span><wbr></wbr><span>Multi</span><wbr></wbr><span>Part</span><wbr></wbr><span><span>Related</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="759192949%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-multi-part-related.html"><span class="token function">getMultiPartRelated</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">multipart/related</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1589194690%2FFunctions%2F-12538097" anchor-label="getMultiPartSigned" id="-1589194690%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-multi-part-signed.html"><span>get</span><wbr></wbr><span>Multi</span><wbr></wbr><span>Part</span><wbr></wbr><span><span>Signed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1589194690%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-multi-part-signed.html"><span class="token function">getMultiPartSigned</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">multipart/signed</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="50116263%2FFunctions%2F-12538097" anchor-label="getTextAny" id="50116263%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-any.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Any</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="50116263%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-any.html"><span class="token function">getTextAny</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表任意 text 类型 <code class="lang-kotlin">text / *</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1831884176%2FFunctions%2F-12538097" anchor-label="getTextCSS" id="-1831884176%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-c-s-s.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>CSS</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1831884176%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-c-s-s.html"><span class="token function">getTextCSS</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">text/css</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1738824755%2FFunctions%2F-12538097" anchor-label="getTextCSV" id="-1738824755%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-c-s-v.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>CSV</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1738824755%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-c-s-v.html"><span class="token function">getTextCSV</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">text/csv</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1831963545%2FFunctions%2F-12538097" anchor-label="getTextEventStream" id="1831963545%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-event-stream.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span>Event</span><wbr></wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1831963545%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-event-stream.html"><span class="token function">getTextEventStream</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">text/event-stream</code> (Server-Sent Events)。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1018388004%2FFunctions%2F-12538097" anchor-label="getTextHtml" id="-1018388004%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-html.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Html</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1018388004%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-html.html"><span class="token function">getTextHtml</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">text/html</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1454362950%2FFunctions%2F-12538097" anchor-label="getTextJavaScript" id="-1454362950%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-java-script.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span>Java</span><wbr></wbr><span><span>Script</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1454362950%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-java-script.html"><span class="token function">getTextJavaScript</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">text/javascript</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1081422071%2FFunctions%2F-12538097" anchor-label="getTextPlain" id="-1081422071%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-plain.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Plain</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1081422071%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-plain.html"><span class="token function">getTextPlain</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">text/plain</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="388469677%2FFunctions%2F-12538097" anchor-label="getTextVCard" id="388469677%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-v-card.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>VCard</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="388469677%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-v-card.html"><span class="token function">getTextVCard</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">text/vcard</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1416238812%2FFunctions%2F-12538097" anchor-label="getTextXml" id="1416238812%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-text-xml.html"><span>get</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Xml</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1416238812%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-text-xml.html"><span class="token function">getTextXml</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">text/xml</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-699332861%2FFunctions%2F-12538097" anchor-label="getVideoAny" id="-699332861%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-video-any.html"><span>get</span><wbr></wbr><span>Video</span><wbr></wbr><span><span>Any</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-699332861%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-video-any.html"><span class="token function">getVideoAny</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表任意 video 类型 <code class="lang-kotlin">video / *</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-385220226%2FFunctions%2F-12538097" anchor-label="getVideoMP4" id="-385220226%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-video-m-p4.html"><span>get</span><wbr></wbr><span>Video</span><wbr></wbr><span><span>MP4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-385220226%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-video-m-p4.html"><span class="token function">getVideoMP4</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">video/mp4</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="312027270%2FFunctions%2F-12538097" anchor-label="getVideoMPEG" id="312027270%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-video-m-p-e-g.html"><span>get</span><wbr></wbr><span>Video</span><wbr></wbr><span><span>MPEG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="312027270%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-video-m-p-e-g.html"><span class="token function">getVideoMPEG</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">video/mpeg</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-369908544%2FFunctions%2F-12538097" anchor-label="getVideoOGG" id="-369908544%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-video-o-g-g.html"><span>get</span><wbr></wbr><span>Video</span><wbr></wbr><span><span>OGG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-369908544%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-video-o-g-g.html"><span class="token function">getVideoOGG</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">video/ogg</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-340558635%2FFunctions%2F-12538097" anchor-label="getVideoQuickTime" id="-340558635%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-video-quick-time.html"><span>get</span><wbr></wbr><span>Video</span><wbr></wbr><span>Quick</span><wbr></wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-340558635%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-video-quick-time.html"><span class="token function">getVideoQuickTime</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">代表 <code class="lang-kotlin">video/quicktime</code>。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1784868333%2FFunctions%2F-12538097" anchor-label="parse" id="1784868333%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="parse.html"><span><span>parse</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1784868333%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="parse.html"><span class="token function">parse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">从一个包含完整内容类型值的字符串中解析出 <a href="../-content-type/index.html">ContentType</a> 对象。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>powered by m8test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>MutableMapWrapper</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    sdk
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk:app/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":sdk:app/main"
+                                       data-filter=":sdk:app/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    sdk
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="sdk::com.m8test.script.core.api.wrapper/MutableMapWrapper///PointingToDeclaration//-12538097">
+  <div class="breadcrumbs"><a href="../../../index.html">sdk</a><span class="delimiter">/</span><a href="../index.html">com.m8test.script.core.api.wrapper</a><span class="delimiter">/</span><span class="current">MutableMapWrapper</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Mutable</span><wbr></wbr><span>Map</span><wbr></wbr><span><span>Wrapper</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">MutableMapWrapper</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span> : <a href="../-map-wrapper/index.html">MapWrapper</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt; </span></div><p class="paragraph"><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-map/index.html">MutableMap</a> 包装接口, 用于增强 <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-map/index.html">MutableMap</a> 功能.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">M8Test, contact@m8test.com, https://m8test.com</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1377133227%2FFunctions%2F-12538097" anchor-label="all" id="1377133227%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/all.html"><span><span>all</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1377133227%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/all.html"><span class="token function">all</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">如果所有元素都匹配给定的谓词，则返回 true。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1354775748%2FFunctions%2F-12538097" anchor-label="also" id="1354775748%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-object-wrapper/also.html"><span><span>also</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1354775748%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-object-wrapper/also.html"><span class="token function">also</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">对 ObjectWrapper<T> 调用给定的 <a href="../-object-wrapper/also.html">block</a> 函数，并返回 ObjectWrapper<T> 本身。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-599790080%2FFunctions%2F-12538097" anchor-label="any" id="-599790080%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/any.html"><span><span>any</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-599790080%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/any.html"><span class="token function">any</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">如果至少有一个元素匹配给定的谓词，则返回 true。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1238092181%2FFunctions%2F-12538097" anchor-label="apply" id="1238092181%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-object-wrapper/apply.html"><span><span>apply</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1238092181%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-object-wrapper/apply.html"><span class="token function">apply</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">对 ObjectWrapper<T> 调用给定的 <a href="../-object-wrapper/apply.html">block</a> 函数，并返回 ObjectWrapper<T> 本身。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1708065249%2FFunctions%2F-12538097" anchor-label="asIterable" id="1708065249%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/as-iterable.html"><span>as</span><wbr></wbr><span><span>Iterable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1708065249%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/as-iterable.html"><span class="token function">asIterable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-iterable-wrapper/index.html">IterableWrapper</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">将此包装器转换为 IterableWrapper。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1032476018%2FFunctions%2F-12538097" anchor-label="asSequence" id="1032476018%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/as-sequence.html"><span>as</span><wbr></wbr><span><span>Sequence</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1032476018%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/as-sequence.html"><span class="token function">asSequence</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-sequence-wrapper/index.html">SequenceWrapper</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">将此包装器转换为 SequenceWrapper。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="614378584%2FFunctions%2F-12538097" anchor-label="contains" id="614378584%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/contains.html"><span><span>contains</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="614378584%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/contains.html"><span class="token function">contains</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="index.html">K</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">如果此 MapWrapper 包含指定键的映射关系，则返回 true。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1368142437%2FFunctions%2F-12538097" anchor-label="containsValue" id="-1368142437%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/contains-value.html"><span>contains</span><wbr></wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1368142437%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/contains-value.html"><span class="token function">containsValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="index.html">V</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">如果此 MapWrapper 包含指定的值，则返回 true。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1768904323%2FFunctions%2F-12538097" anchor-label="count" id="-1768904323%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/count.html"><span><span>count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1768904323%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/count.html"><span class="token function">count</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">返回匹配给定谓词的元素数。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="260479684%2FFunctions%2F-12538097" anchor-label="filter" id="260479684%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/filter.html"><span><span>filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="260479684%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/filter.html"><span class="token function">filter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-map-wrapper/index.html">MapWrapper</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">返回一个新的 MapWrapper，其中包含与此 MapWrapper 中匹配给定谓词的所有元素。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1506792750%2FFunctions%2F-12538097" anchor-label="filterKeys" id="1506792750%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/filter-keys.html"><span>filter</span><wbr></wbr><span><span>Keys</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1506792750%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/filter-keys.html"><span class="token function">filterKeys</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="index.html">K</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-map-wrapper/index.html">MapWrapper</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">返回一个新的 MapWrapper，其中包含与此 MapWrapper 中键匹配给定谓词的所有元素。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-794113839%2FFunctions%2F-12538097" anchor-label="filterNot" id="-794113839%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/filter-not.html"><span>filter</span><wbr></wbr><span><span>Not</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-794113839%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/filter-not.html"><span class="token function">filterNot</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-map-wrapper/index.html">MapWrapper</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">返回一个新的 MapWrapper，其中包含与此 MapWrapper 中不匹配给定谓词的所有元素。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="183809685%2FFunctions%2F-12538097" anchor-label="filterNotTo" id="183809685%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/filter-not-to.html"><span>filter</span><wbr></wbr><span>Not</span><wbr></wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="183809685%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/filter-not-to.html">M</a><span class="token operator"> : </span><a href="index.html">MutableMapWrapper</a><span class="token operator">&lt;</span><span class="token keyword">in </span><a href="index.html">K</a><span class="token punctuation">, </span><span class="token keyword">in </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/filter-not-to.html"><span class="token function">filterNotTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">destination<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/filterNotTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],kotlin.Boolean]/PointingToGenericParameters(0)/">M</span><span class="token punctuation">, </span></span><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/filterNotTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],kotlin.Boolean]/PointingToGenericParameters(0)/">M</span></div><div class="brief "><p class="paragraph">将与此 MapWrapper 中不匹配给定谓词的所有元素添加到目标可变 MapWrapper 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="838075400%2FFunctions%2F-12538097" anchor-label="filterTo" id="838075400%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/filter-to.html"><span>filter</span><wbr></wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="838075400%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/filter-to.html">M</a><span class="token operator"> : </span><a href="index.html">MutableMapWrapper</a><span class="token operator">&lt;</span><span class="token keyword">in </span><a href="index.html">K</a><span class="token punctuation">, </span><span class="token keyword">in </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/filter-to.html"><span class="token function">filterTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">destination<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/filterTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],kotlin.Boolean]/PointingToGenericParameters(0)/">M</span><span class="token punctuation">, </span></span><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/filterTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],kotlin.Boolean]/PointingToGenericParameters(0)/">M</span></div><div class="brief "><p class="paragraph">将与此 MapWrapper 中匹配给定谓词的所有元素添加到目标可变 MapWrapper 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1465847360%2FFunctions%2F-12538097" anchor-label="filterValues" id="-1465847360%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/filter-values.html"><span>filter</span><wbr></wbr><span><span>Values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1465847360%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/filter-values.html"><span class="token function">filterValues</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="index.html">V</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-map-wrapper/index.html">MapWrapper</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">返回一个新的 MapWrapper，其中包含与此 MapWrapper 中值匹配给定谓词的所有元素。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="747598452%2FFunctions%2F-12538097" anchor-label="firstNotNullOf" id="747598452%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/first-not-null-of.html"><span>first</span><wbr></wbr><span>Not</span><wbr></wbr><span>Null</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="747598452%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/first-not-null-of.html">R</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-map-wrapper/first-not-null-of.html"><span class="token function">firstNotNullOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/firstNotNullOf/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any])?]/PointingToGenericParameters(0)/">R</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/firstNotNullOf/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any])?]/PointingToGenericParameters(0)/">R</span></div><div class="brief "><p class="paragraph">返回由给定转换函数产生的第一个非空元素。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="821713886%2FFunctions%2F-12538097" anchor-label="firstNotNullOfOrNull" id="821713886%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/first-not-null-of-or-null.html"><span>first</span><wbr></wbr><span>Not</span><wbr></wbr><span>Null</span><wbr></wbr><span>Of</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="821713886%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/first-not-null-of-or-null.html">R</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-map-wrapper/first-not-null-of-or-null.html"><span class="token function">firstNotNullOfOrNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/firstNotNullOfOrNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any])?]/PointingToGenericParameters(0)/">R</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/firstNotNullOfOrNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any])?]/PointingToGenericParameters(0)/">R</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">返回由给定转换函数产生的第一个非空元素，如果所有元素均为空，则返回 null。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1601439530%2FFunctions%2F-12538097" anchor-label="flatMap" id="1601439530%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/flat-map.html"><span>flat</span><wbr></wbr><span><span>Map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1601439530%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/flat-map.html">R</a><span class="token operator">&gt; </span><a href="../-map-wrapper/flat-map.html"><span class="token function">flatMap</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/flatMap/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],kotlin.collections.Iterable[TypeParam(bounds=[kotlin.Any?])]]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-list-wrapper/index.html">ListWrapper</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/flatMap/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],kotlin.collections.Iterable[TypeParam(bounds=[kotlin.Any?])]]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">返回一个列表，其中包含将给定转换函数应用于每个元素的结果。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1199895046%2FFunctions%2F-12538097" anchor-label="flatMapTo" id="-1199895046%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/flat-map-to.html"><span>flat</span><wbr></wbr><span>Map</span><wbr></wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1199895046%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/flat-map-to.html">R</a><span class="token punctuation">, </span><a href="../-map-wrapper/flat-map-to.html">C</a><span class="token operator"> : </span><a href="../-mutable-collection-wrapper/index.html">MutableCollectionWrapper</a><span class="token operator">&lt;</span><span class="token keyword">in </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/flatMapTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableCollectionWrapper[TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],kotlin.collections.Iterable[TypeParam(bounds=[kotlin.Any?])]]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/flat-map-to.html"><span class="token function">flatMapTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">destination<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/flatMapTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableCollectionWrapper[TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],kotlin.collections.Iterable[TypeParam(bounds=[kotlin.Any?])]]/PointingToGenericParameters(1)/">C</span><span class="token punctuation">, </span></span><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/flatMapTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableCollectionWrapper[TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],kotlin.collections.Iterable[TypeParam(bounds=[kotlin.Any?])]]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/flatMapTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableCollectionWrapper[TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],kotlin.collections.Iterable[TypeParam(bounds=[kotlin.Any?])]]/PointingToGenericParameters(1)/">C</span></div><div class="brief "><p class="paragraph">将给定转换函数应用于每个元素的结果累积到给定的目标集合中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="380913106%2FFunctions%2F-12538097" anchor-label="forEach" id="380913106%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/for-each.html"><span>for</span><wbr></wbr><span><span>Each</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="380913106%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/for-each.html"><span class="token function">forEach</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">对每个元素执行给定的操作。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1368621985%2FFunctions%2F-12538097" anchor-label="get" id="-1368621985%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/get.html"><span><span>get</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1368621985%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="index.html">K</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">V</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">返回与此 MapWrapper 中指定键关联的值，如果此 MapWrapper 不包含键的映射关系，则返回 null。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-452416523%2FFunctions%2F-12538097" anchor-label="getOrElse" id="-452416523%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/get-or-else.html"><span>get</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Else</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-452416523%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/get-or-else.html"><span class="token function">getOrElse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="index.html">K</a><span class="token punctuation">, </span></span><span class="parameter ">defaultValue<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="index.html">V</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">V</a></div><div class="brief "><p class="paragraph">返回指定键映射到的值，如果此 MapWrapper 不包含键的映射关系，则返回由 defaultValue 函数提供的值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-763492365%2FFunctions%2F-12538097" anchor-label="getOrigin" id="-763492365%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-origin.html"><span>get</span><wbr></wbr><span><span>Origin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-763492365%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-origin.html"><span class="token function">getOrigin</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-map/index.html">MutableMap</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">获取被包装的对象.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="298324259%2FFunctions%2F-12538097" anchor-label="getOrPut" id="298324259%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-or-put.html"><span>get</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Put</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="298324259%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-or-put.html"><span class="token function">getOrPut</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="index.html">K</a><span class="token punctuation">, </span></span><span class="parameter ">defaultValue<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="index.html">V</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">V</a></div><div class="brief "><p class="paragraph">如果给定 <a href="get-or-put.html">key</a> 的值存在，则返回该值；否则，使用提供的 <a href="get-or-put.html">defaultValue</a> 函数计算值，将其与 <a href="get-or-put.html">key</a> 关联并返回计算出的值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-362071106%2FFunctions%2F-12538097" anchor-label="getSize" id="-362071106%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/get-size.html"><span>get</span><wbr></wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-362071106%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/get-size.html"><span class="token function">getSize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">返回此包装器中的元素数。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="951708148%2FFunctions%2F-12538097" anchor-label="getValue" id="951708148%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/get-value.html"><span>get</span><wbr></wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="951708148%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/get-value.html"><span class="token function">getValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="index.html">K</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">V</a></div><div class="brief "><p class="paragraph">返回指定键映射到的值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1898701023%2FFunctions%2F-12538097" anchor-label="isNotEmpty" id="-1898701023%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/is-not-empty.html"><span>is</span><wbr></wbr><span>Not</span><wbr></wbr><span><span>Empty</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1898701023%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/is-not-empty.html"><span class="token function">isNotEmpty</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">如果此 MapWrapper 不为空，则返回 true。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2147109284%2FFunctions%2F-12538097" anchor-label="isNullOrEmpty" id="-2147109284%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/is-null-or-empty.html"><span>is</span><wbr></wbr><span>Null</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Empty</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2147109284%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/is-null-or-empty.html"><span class="token function">isNullOrEmpty</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">如果此 MapWrapper 为 null 或为空，则返回 true。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-569661065%2FFunctions%2F-12538097" anchor-label="iterator" id="-569661065%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/iterator.html"><span><span>iterator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-569661065%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/iterator.html"><span class="token function">iterator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterator/index.html">Iterator</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">返回此 MapWrapper 条目的迭代器。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1762225557%2FFunctions%2F-12538097" anchor-label="let" id="1762225557%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-object-wrapper/let.html"><span><span>let</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1762225557%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-object-wrapper/let.html">R</a><span class="token operator">&gt; </span><a href="../-object-wrapper/let.html"><span class="token function">let</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/let/#kotlin.Function1[kotlin.collections.Map[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/let/#kotlin.Function1[kotlin.collections.Map[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">对 ObjectWrapper<T> 调用给定的 <a href="../-object-wrapper/let.html">block</a> 函数，并返回 <a href="../-object-wrapper/let.html">block</a> 函数的结果包装在 ObjectWrapper<R> 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1395224937%2FFunctions%2F-12538097" anchor-label="map" id="-1395224937%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/map.html"><span><span>map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1395224937%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/map.html">R</a><span class="token operator">&gt; </span><a href="../-map-wrapper/map.html"><span class="token function">map</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/map/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-list-wrapper/index.html">ListWrapper</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/map/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">返回一个列表，其中包含将给定转换函数应用于每个元素的结果。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="295291563%2FFunctions%2F-12538097" anchor-label="mapKeys" id="295291563%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/map-keys.html"><span>map</span><wbr></wbr><span><span>Keys</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="295291563%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/map-keys.html">R</a><span class="token operator">&gt; </span><a href="../-map-wrapper/map-keys.html"><span class="token function">mapKeys</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapKeys/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-map-wrapper/index.html">MapWrapper</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapKeys/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">返回一个新的 MapWrapper，其中包含将给定转换函数应用于原始 MapWrapper 的每个条目的键的结果。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="890742247%2FFunctions%2F-12538097" anchor-label="mapKeysTo" id="890742247%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/map-keys-to.html"><span>map</span><wbr></wbr><span>Keys</span><wbr></wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="890742247%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/map-keys-to.html">R</a><span class="token punctuation">, </span><a href="../-map-wrapper/map-keys-to.html">M</a><span class="token operator"> : </span><a href="index.html">MutableMapWrapper</a><span class="token operator">&lt;</span><span class="token keyword">in </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapKeysTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token punctuation">, </span><span class="token keyword">in </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/map-keys-to.html"><span class="token function">mapKeysTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">destination<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapKeysTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(1)/">M</span><span class="token punctuation">, </span></span><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapKeysTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapKeysTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(1)/">M</span></div><div class="brief "><p class="paragraph">将给定转换函数应用于原始 MapWrapper 的每个条目的键的结果累积到给定的目标可变 MapWrapper 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1191983569%2FFunctions%2F-12538097" anchor-label="mapNotNull" id="1191983569%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/map-not-null.html"><span>map</span><wbr></wbr><span>Not</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1191983569%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/map-not-null.html">R</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-map-wrapper/map-not-null.html"><span class="token function">mapNotNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapNotNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any])?]/PointingToGenericParameters(0)/">R</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-list-wrapper/index.html">ListWrapper</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapNotNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any])?]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">返回一个列表，其中包含将给定转换函数应用于每个元素的结果，并过滤掉所有空元素。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1853466898%2FFunctions%2F-12538097" anchor-label="mapNotNullTo" id="-1853466898%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/map-not-null-to.html"><span>map</span><wbr></wbr><span>Not</span><wbr></wbr><span>Null</span><wbr></wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1853466898%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/map-not-null-to.html">R</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><a href="../-map-wrapper/map-not-null-to.html">C</a><span class="token operator"> : </span><a href="../-mutable-collection-wrapper/index.html">MutableCollectionWrapper</a><span class="token operator">&lt;</span><span class="token keyword">in </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapNotNullTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableCollectionWrapper[TypeParam(bounds=[kotlin.Any])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any])?]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/map-not-null-to.html"><span class="token function">mapNotNullTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">destination<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapNotNullTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableCollectionWrapper[TypeParam(bounds=[kotlin.Any])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any])?]/PointingToGenericParameters(1)/">C</span><span class="token punctuation">, </span></span><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapNotNullTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableCollectionWrapper[TypeParam(bounds=[kotlin.Any])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any])?]/PointingToGenericParameters(0)/">R</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapNotNullTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableCollectionWrapper[TypeParam(bounds=[kotlin.Any])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any])?]/PointingToGenericParameters(1)/">C</span></div><div class="brief "><p class="paragraph">将给定转换函数应用于每个元素的结果累积到给定的目标集合中，并过滤掉所有空元素。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1348141749%2FFunctions%2F-12538097" anchor-label="mapTo" id="1348141749%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/map-to.html"><span>map</span><wbr></wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1348141749%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/map-to.html">R</a><span class="token punctuation">, </span><a href="../-map-wrapper/map-to.html">C</a><span class="token operator"> : </span><a href="../-mutable-collection-wrapper/index.html">MutableCollectionWrapper</a><span class="token operator">&lt;</span><span class="token keyword">in </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableCollectionWrapper[TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/map-to.html"><span class="token function">mapTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">destination<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableCollectionWrapper[TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(1)/">C</span><span class="token punctuation">, </span></span><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableCollectionWrapper[TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableCollectionWrapper[TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(1)/">C</span></div><div class="brief "><p class="paragraph">将给定转换函数应用于每个元素的结果累积到给定的目标集合中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="72395481%2FFunctions%2F-12538097" anchor-label="mapValues" id="72395481%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/map-values.html"><span>map</span><wbr></wbr><span><span>Values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="72395481%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/map-values.html">R</a><span class="token operator">&gt; </span><a href="../-map-wrapper/map-values.html"><span class="token function">mapValues</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapValues/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-map-wrapper/index.html">MapWrapper</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapValues/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">返回一个新的 MapWrapper，其中包含将给定转换函数应用于原始 MapWrapper 的每个条目的值的结果。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1219023125%2FFunctions%2F-12538097" anchor-label="mapValuesTo" id="1219023125%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/map-values-to.html"><span>map</span><wbr></wbr><span>Values</span><wbr></wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1219023125%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/map-values-to.html">R</a><span class="token punctuation">, </span><a href="../-map-wrapper/map-values-to.html">M</a><span class="token operator"> : </span><a href="index.html">MutableMapWrapper</a><span class="token operator">&lt;</span><span class="token keyword">in </span><a href="index.html">K</a><span class="token punctuation">, </span><span class="token keyword">in </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapValuesTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/map-values-to.html"><span class="token function">mapValuesTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">destination<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapValuesTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(1)/">M</span><span class="token punctuation">, </span></span><span class="parameter ">transform<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapValuesTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/mapValuesTo/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(1)/">M</span></div><div class="brief "><p class="paragraph">将给定转换函数应用于原始 MapWrapper 的每个条目的值的结果累积到给定的目标可变 MapWrapper 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1335556339%2FFunctions%2F-12538097" anchor-label="maxByOrNull" id="1335556339%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/max-by-or-null.html"><span>max</span><wbr></wbr><span>By</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1335556339%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/max-by-or-null.html">R</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxByOrNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/max-by-or-null.html"><span class="token function">maxByOrNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">selector<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxByOrNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">返回按给定选择器函数选择的最大元素。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-606266851%2FFunctions%2F-12538097" anchor-label="maxOf" id="-606266851%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/max-of.html"><span>max</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-606266851%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/max-of.html">R</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxOf/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/max-of.html"><span class="token function">maxOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">selector<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxOf/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxOf/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span></div><div class="brief "><p class="paragraph">返回按给定选择器函数选择的最大元素的值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1840203635%2FFunctions%2F-12538097" anchor-label="maxOfOrNull" id="1840203635%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/max-of-or-null.html"><span>max</span><wbr></wbr><span>Of</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1840203635%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/max-of-or-null.html">R</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxOfOrNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/max-of-or-null.html"><span class="token function">maxOfOrNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">selector<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxOfOrNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxOfOrNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">返回按给定选择器函数选择的最大元素的值，如果集合为空，则返回 null。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1145362113%2FFunctions%2F-12538097" anchor-label="maxOfWith" id="1145362113%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/max-of-with.html"><span>max</span><wbr></wbr><span>Of</span><wbr></wbr><span><span>With</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1145362113%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/max-of-with.html">R</a><span class="token operator">&gt; </span><a href="../-map-wrapper/max-of-with.html"><span class="token function">maxOfWith</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">comparator<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparator/index.html">Comparator</a><span class="token operator">&lt;</span><span class="token keyword">in </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxOfWith/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">selector<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxOfWith/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxOfWith/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></div><div class="brief "><p class="paragraph">返回按给定比较器和选择器函数选择的最大元素的值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1882744661%2FFunctions%2F-12538097" anchor-label="maxOfWithOrNull" id="-1882744661%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/max-of-with-or-null.html"><span>max</span><wbr></wbr><span>Of</span><wbr></wbr><span>With</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1882744661%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/max-of-with-or-null.html">R</a><span class="token operator">&gt; </span><a href="../-map-wrapper/max-of-with-or-null.html"><span class="token function">maxOfWithOrNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">comparator<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparator/index.html">Comparator</a><span class="token operator">&lt;</span><span class="token keyword">in </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxOfWithOrNull/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">selector<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxOfWithOrNull/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/maxOfWithOrNull/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">返回按给定比较器和选择器函数选择的最大元素的值，如果集合为空，则返回 null。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1664101641%2FFunctions%2F-12538097" anchor-label="maxWith" id="-1664101641%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/max-with.html"><span>max</span><wbr></wbr><span><span>With</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1664101641%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/max-with.html"><span class="token function">maxWith</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">comparator<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparator/index.html">Comparator</a><span class="token operator">&lt;</span><span class="token keyword">in </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">返回按给定比较器选择的最大元素。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="820199585%2FFunctions%2F-12538097" anchor-label="maxWithOrNull" id="820199585%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/max-with-or-null.html"><span>max</span><wbr></wbr><span>With</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="820199585%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/max-with-or-null.html"><span class="token function">maxWithOrNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">comparator<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparator/index.html">Comparator</a><span class="token operator">&lt;</span><span class="token keyword">in </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">返回按给定比较器选择的最大元素，如果集合为空，则返回 null。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1892112325%2FFunctions%2F-12538097" anchor-label="minByOrNull" id="1892112325%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/min-by-or-null.html"><span>min</span><wbr></wbr><span>By</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1892112325%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/min-by-or-null.html">R</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minByOrNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/min-by-or-null.html"><span class="token function">minByOrNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">selector<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minByOrNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">返回按给定选择器函数选择的最小元素，如果集合为空，则返回 null。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-232423825%2FFunctions%2F-12538097" anchor-label="minOf" id="-232423825%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/min-of.html"><span>min</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-232423825%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/min-of.html">R</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minOf/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/min-of.html"><span class="token function">minOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">selector<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minOf/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minOf/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span></div><div class="brief "><p class="paragraph">返回按给定选择器函数选择的最小元素的值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1898207675%2FFunctions%2F-12538097" anchor-label="minOfOrNull" id="-1898207675%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/min-of-or-null.html"><span>min</span><wbr></wbr><span>Of</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1898207675%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/min-of-or-null.html">R</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minOfOrNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/min-of-or-null.html"><span class="token function">minOfOrNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">selector<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minOfOrNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minOfOrNull/#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Comparable[^]])]/PointingToGenericParameters(0)/">R</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">返回按给定选择器函数选择的最小元素的值，如果集合为空，则返回 null。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1412966575%2FFunctions%2F-12538097" anchor-label="minOfWith" id="1412966575%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/min-of-with.html"><span>min</span><wbr></wbr><span>Of</span><wbr></wbr><span><span>With</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1412966575%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/min-of-with.html">R</a><span class="token operator">&gt; </span><a href="../-map-wrapper/min-of-with.html"><span class="token function">minOfWith</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">comparator<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparator/index.html">Comparator</a><span class="token operator">&lt;</span><span class="token keyword">in </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minOfWith/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">selector<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minOfWith/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minOfWith/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></div><div class="brief "><p class="paragraph">返回按给定比较器和选择器函数选择的最小元素的值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1538965479%2FFunctions%2F-12538097" anchor-label="minOfWithOrNull" id="-1538965479%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/min-of-with-or-null.html"><span>min</span><wbr></wbr><span>Of</span><wbr></wbr><span>With</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1538965479%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/min-of-with-or-null.html">R</a><span class="token operator">&gt; </span><a href="../-map-wrapper/min-of-with-or-null.html"><span class="token function">minOfWithOrNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">comparator<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparator/index.html">Comparator</a><span class="token operator">&lt;</span><span class="token keyword">in </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minOfWithOrNull/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">selector<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minOfWithOrNull/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/minOfWithOrNull/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]#kotlin.Function1[kotlin.collections.Map.Entry[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">返回按给定比较器和选择器函数选择的最小元素的值，如果集合为空，则返回 null。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1562046071%2FFunctions%2F-12538097" anchor-label="minus" id="-1562046071%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/minus.html"><span><span>minus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1562046071%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/minus.html"><span class="token function">minus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">keys<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-map-wrapper/index.html">MapWrapper</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">从此 map 中移除指定 key 对应的 entry，并返回一个新的 MapWrapper。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2123150188%2FFunctions%2F-12538097" anchor-label="minusAssign" id="-2123150188%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="minus-assign.html"><span>minus</span><wbr></wbr><span><span>Assign</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2123150188%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="minus-assign.html"><span class="token function">minusAssign</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">keys<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">从此可变映射中移除指定的 <a href="minus-assign.html">keys</a> 中包含的所有键及其对应的值。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="738154469%2FFunctions%2F-12538097" anchor-label="minWith" id="738154469%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/min-with.html"><span>min</span><wbr></wbr><span><span>With</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="738154469%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/min-with.html"><span class="token function">minWith</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">comparator<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparator/index.html">Comparator</a><span class="token operator">&lt;</span><span class="token keyword">in </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">返回按给定比较器选择的最小元素。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1164630799%2FFunctions%2F-12538097" anchor-label="minWithOrNull" id="1164630799%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/min-with-or-null.html"><span>min</span><wbr></wbr><span>With</span><wbr></wbr><span>Or</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1164630799%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/min-with-or-null.html"><span class="token function">minWithOrNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">comparator<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-comparator/index.html">Comparator</a><span class="token operator">&lt;</span><span class="token keyword">in </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">返回按给定比较器选择的最小元素，如果集合为空，则返回 null。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1574107396%2FFunctions%2F-12538097" anchor-label="none" id="1574107396%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/none.html"><span><span>none</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1574107396%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/none.html"><span class="token function">none</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">如果没有任何元素与给定谓词匹配，则返回 true。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="782061336%2FFunctions%2F-12538097" anchor-label="onEach" id="782061336%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/on-each.html"><span>on</span><wbr></wbr><span><span>Each</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="782061336%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/on-each.html"><span class="token function">onEach</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-map-wrapper/index.html">MapWrapper</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">对每个元素执行给定的操作。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1291172334%2FFunctions%2F-12538097" anchor-label="onEachIndexed" id="-1291172334%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/on-each-indexed.html"><span>on</span><wbr></wbr><span>Each</span><wbr></wbr><span><span>Indexed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1291172334%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/on-each-indexed.html"><span class="token function">onEachIndexed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><span class="token punctuation">(</span>index<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/-entry/index.html">Map.Entry</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-map-wrapper/index.html">MapWrapper</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">对每个元素执行给定的操作，并提供元素的索引。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1871529905%2FFunctions%2F-12538097" anchor-label="plus" id="1871529905%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/plus.html"><span><span>plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1871529905%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/plus.html"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">map<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-map-wrapper/index.html">MapWrapper</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">将指定的 map 添加到此 map 中，并返回一个新的 MapWrapper。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2100944762%2FFunctions%2F-12538097" anchor-label="plusAssign" id="2100944762%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="plus-assign.html"><span>plus</span><wbr></wbr><span><span>Assign</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2100944762%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="plus-assign.html"><span class="token function">plusAssign</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">map<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">将指定的 <a href="plus-assign.html">map</a> 中的所有键值对添加到此可变映射中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="928394999%2FFunctions%2F-12538097" anchor-label="remove" id="928394999%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove.html"><span><span>remove</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="928394999%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="remove.html"><span class="token function">remove</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="index.html">K</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">V</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">从此映射中移除指定 <a href="remove.html">key</a> 的映射关系（如果存在）。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2123335163%2FFunctions%2F-12538097" anchor-label="run" id="-2123335163%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-object-wrapper/run.html"><span><span>run</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2123335163%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-object-wrapper/run.html">R</a><span class="token operator">&gt; </span><a href="../-object-wrapper/run.html"><span class="token function">run</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/run/#kotlin.Function1[kotlin.collections.Map[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/run/#kotlin.Function1[kotlin.collections.Map[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])],TypeParam(bounds=[kotlin.Any?])]/PointingToGenericParameters(0)/">R</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">对 ObjectWrapper<T> 调用给定的 <a href="../-object-wrapper/run.html">block</a> 函数，并返回 <a href="../-object-wrapper/run.html">block</a> 函数的结果包装在 ObjectWrapper<R> 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-320465392%2FFunctions%2F-12538097" anchor-label="set" id="-320465392%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set.html"><span><span>set</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-320465392%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="index.html">K</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="index.html">V</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">将指定 <a href="set.html">value</a> 与指定 <a href="set.html">key</a> 关联。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1994096366%2FFunctions%2F-12538097" anchor-label="setOrigin" id="1994096366%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-object-wrapper/set-origin.html"><span>set</span><wbr></wbr><span><span>Origin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1994096366%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-object-wrapper/set-origin.html"><span class="token function">setOrigin</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">origin<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">设置原始对象</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="650651827%2FFunctions%2F-12538097" anchor-label="takeIf" id="650651827%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-object-wrapper/take-if.html"><span>take</span><wbr></wbr><span><span>If</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="650651827%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-object-wrapper/take-if.html"><span class="token function">takeIf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">如果 ObjectWrapper<T> 满足给定的 <a href="../-object-wrapper/take-if.html">predicate</a>，则返回 ObjectWrapper<T> 本身，否则返回 null 包装在 ObjectWrapper<T>? 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1297441982%2FFunctions%2F-12538097" anchor-label="takeUnless" id="1297441982%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-object-wrapper/take-unless.html"><span>take</span><wbr></wbr><span><span>Unless</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1297441982%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-object-wrapper/take-unless.html"><span class="token function">takeUnless</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-object-wrapper/index.html">ObjectWrapper</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">如果 ObjectWrapper<T> 不满足给定的 <a href="../-object-wrapper/take-unless.html">predicate</a>，则返回 ObjectWrapper<T> 本身，否则返回 null 包装在 ObjectWrapper<T>? 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1232119948%2FFunctions%2F-12538097" anchor-label="toList" id="1232119948%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/to-list.html"><span>to</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1232119948%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-map-wrapper/to-list.html"><span class="token function">toList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-list-wrapper/index.html">ListWrapper</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="index.html">K</a><span class="token punctuation">, </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">将此 MapWrapper 转换为 ListWrapper，其中每个元素都是一个 Pair，表示 Map 中的一个键值对。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1851031404%2FFunctions%2F-12538097" anchor-label="toMap" id="1851031404%2FFunctions%2F-12538097" data-filterable-set=":sdk:app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk:app/main" data-filterable-set=":sdk:app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-wrapper/to-map.html"><span>to</span><wbr></wbr><span><span>Map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1851031404%2FFunctions%2F-12538097"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk:app/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-map-wrapper/to-map.html">M</a><span class="token operator"> : </span><a href="index.html">MutableMapWrapper</a><span class="token operator">&lt;</span><span class="token keyword">in </span><a href="index.html">K</a><span class="token punctuation">, </span><span class="token keyword">in </span><a href="index.html">V</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-map-wrapper/to-map.html"><span class="token function">toMap</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">destination<span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/toMap/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])/PointingToGenericParameters(0)/">M</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="com.m8test.script.core.api.wrapper/MutableMapWrapper/toMap/#TypeParam(bounds=[com.m8test.script.core.api.wrapper.MutableMapWrapper[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]])/PointingToGenericParameters(0)/">M</span></div><div class="brief "><p class="paragraph">将此 MapWrapper 的所有 entry 复制到指定的 MutableMapWrapper 中。</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>powered by m8test</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
